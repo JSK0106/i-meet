@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_03">
+                <%-/*header_03 불러오기*/ include ("./templates/header_03") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_03">
+                        <%-/*aside_03 불러오기*/ include ("./templates/aside_03") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before03">마이 페이지</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Parents_Mypage_Option">마이 페이지</a>
+                                </li>
+                                <li>
+                                    <a href="Parents_Mypage_Option" class="nav_active">알림 설정</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between2">
+                                <h3 class="h3_G_type01">알림 설정</h3>
+                                <ol class="article_top_tabs flex_right">
+                                    <li class="art_alarm art_active03"><a href="Parents_Mypage_Option">알림 설정</a></li>
+                                    <li class="art_mypage"><a href="Parents_Mypage_Login">회원정보</a></li>
+                                </ol>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <div id="option_info">
+                                    <div class="form_contents flex_start">
+                                        <label for="공지사항 알림">모든 알림</label>
+                                        <div class="option_notice">
+                                            <ul class="flex_start">
+                                                <li class="flex_start">
+                                                    <input type="checkbox" name="실시간위치알림" value="실시간위치알림" class="checkbox03">
+                                                    <p class="p_14px">실시간 위치 알림</p>
+                                                </li>
+                                                <li class="flex_start">
+                                                    <input type="checkbox" name="등하원알림" value="등하원알림" class="checkbox03">
+                                                    <p class="p_14px">등하원 알림</p>
+                                                </li>
+                                                <li class="flex_start">
+                                                    <input type="checkbox" name="출석현황변경알림" value="출석현황변경알림" class="checkbox03">
+                                                    <p class="p_14px">출석현황 변경 알림</p>
+                                                </li>
+                                                <li class="flex_start">
+                                                    <input type="checkbox" name="공지사항알림" value="공지사항알림" class="checkbox03">
+                                                    <p class="p_14px">공지사항 알림</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="form_contents flex_start">
+                                        <label for="방해금지 시간">방해금지 시간</label>
+                                        <div class="option_notset">
+                                            <div class="flex_start">
+                                                <p class="p_14px">금일</p>
+                                                <select name="not_time01" class="select_03 select_parents">
+                                                    <option disabled selected>선택</option>
+                                                    <option value="오후 4시">오후 4시</option>
+                                                    <option value="오후 5시">오후 5시</option>
+                                                    <option value="오후 6시">오후 6시</option>
+                                                    <option value="오후 7시">오후 7시</option>
+                                                    <option value="오후 8시">오후 8시</option>
+                                                    <option value="오후 9시">오후 9시</option>
+                                                    <option value="오후 10시" selected>오후 10시</option>
+                                                    <option value="오후 11시">오후 11시</option>
+                                                </select>
+                                                <p class="p_14px">익일</p>
+                                                <select name="not_time01" class="select_03 select_parents">
+                                                    <option disabled selected>선택</option>
+                                                    <option value="오전 12시">오전 12시</option>
+                                                    <option value="오전 1시">오전 1시</option>
+                                                    <option value="오전 2시">오전 2시</option>
+                                                    <option value="오전 3시">오전 3시</option>
+                                                    <option value="오전 4시">오전 4시</option>
+                                                    <option value="오전 5시">오전 5시</option>
+                                                    <option value="오전 6시">오전 6시</option>
+                                                    <option value="오전 7시" selected>오전 7시</option>
+                                                    <option value="오전 8시">오전 8시</option>
+                                                    <option value="오전 9시">오전 9시</option>
+                                                </select>
+                                                <p class="p_14px p_02">까지 모든 알림 끄기</p>
+                                            </div>
+                                            <p class="p_12px">제한시간 설정과 상관없이 자정부터 새벽 6시까지 모든 알림이 금지돼요</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 버튼 -->
+                                <div class="form_btn_wrap flex_right">
+                                    <a href="Parents_Mypage_Option" type="button" class="btn_orange01">완료</a>
+                                    <a href="Parents_Mypage_Option" type="button" class="btn_orangeline02">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_parents">
+            <ul class="flex_center">
+                <li>
+                    <a href="Parents_Child_List" class="m_nav03">
+                        <div class="m_icon"><span class="blind">자녀 정보 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Parents_Goto_Location" class="m_nav01">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+</html>

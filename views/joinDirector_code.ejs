@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">원 찾기</h2>
+                            <p class="join_guide p_12px">등록한 원의 코드를 입력하세요</p>
+                            <br>
+                            <p class="join_guide p_12px">코드를 발급하지 못한 원장님께서는 '원 등록하기'부터 진행해 주세요</p>
+                        </div>
+                        <div class="info_wrap01 wrap_bottom">
+                            <h3 class="h3_N_type01">코드</h3>
+                            <div class="contents_box flex_start">
+                                <input type="text" placeholder="원 코드를 입력해 주세요" id="kinder_code" class="text_input">
+                                <label for="text_delete" class="label_tdelete flex_center">
+                                    <button type="button" class="btn_tdelete" onclick="clearInputText(this)">
+                                        <span class="blind">삭제</span>
+                                    </button>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap flex_start">
+                        <a href="joinUser_choose" class="user_btn_gray01">이전</a>
+                        <button id="qurifybtn" type="button" class="user_btn_blue03">다음</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 원 등록 모달 -->
+        <div id="kinderAddress_modal" class="modal_container hidden">
+            <%-/* 원 등록 모달*/ include ("./templates/kinderAddress_modal") %>
+        </div>
+        <!-- 원 등록 모달 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+
+    <script>
+        //입력값 삭제
+        function clearInputText(button) {
+            const label = button.closest('label'); // 버튼 기준으로 가장 가까운 label 찾기
+            const contentsBox = label.parentElement; // label의 부모 = .contents_box
+            const input = contentsBox.querySelector('input'); // 그 안의 input 찾기
+
+            if (input) {
+                input.value = ''; // 입력값 비우기
+                input.focus(); // 포커스 주기 (선택사항)
+            }
+        }
+
+        const kinderAddressModal = document.getElementById('kinderAddress_modal');
+        const modalModifyBtn = document.getElementById('modalModifyBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalCancelBtn = document.getElementById('modalCancelBtn');
+        const qurifyBtn = document.getElementById('qurifybtn');
+
+        // 다음 버튼 클릭 시 모달 열기
+        qurifyBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            kinderAddressModal.style.display = 'flex';
+        });
+
+        // 각 닫기 버튼에 이벤트 추가
+        modalCloseBtn?.addEventListener('click', () => {
+            kinderAddressModal.style.display = 'none';
+        });
+        modalCancelBtn?.addEventListener('click', () => {
+            kinderAddressModal.style.display = 'none';
+        });
+
+        // 모달 외부 영역 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === kinderAddressModal) {
+                kinderAddressModal.style.display = 'none';
+            }
+        });
+
+        // 등록 버튼 클릭 시 joinUser_01.ejs로 이동
+        modalRegisterBtn?.addEventListener('click', () => {
+            window.location.href = 'joinUser_01';
+        });
+    </script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">회원가입을 진행합니다!</h2>
+                            <p class="join_guide p_12px">본인의 역할을 선택해 주세요</p>
+                        </div>
+                        <div class="role_choose">
+                            <ul class="flex_between">
+                                <li>
+                                    <a href="joinDirector_code" id="role_director" class="flex_center_column">
+                                        <div class="role_img">
+                                            <span class="blind">원장님 이미지</span>
+                                        </div>
+                                        <h3 class="h3_N_type01">원장님</h3>
+                                        <p class="p_12px">원을 운영하고 계신 원장님</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="joinUser_01" id="role_teacher" class="flex_center_column">
+                                        <div class="role_img">
+                                            <span class="blind">선생님 이미지</span>
+                                        </div>
+                                        <h3 class="h3_N_type01">선생님</h3>
+                                        <p class="p_12px">원을 소속되어 계신 선생님</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="joinUser_01" id="role_parents" class="flex_center_column">
+                                        <div class="role_img">
+                                            <span class="blind">보호자 이미지</span>
+                                        </div>
+                                        <h3 class="h3_N_type01">보호자</h3>
+                                        <p class="p_12px">원에 원아를 보내는 보호자</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="joinUser_01" id="role_driver" class="flex_center_column">
+                                        <div class="role_img">
+                                            <span class="blind">기사님 이미지</span>
+                                        </div>
+                                        <h3 class="h3_N_type01">기사님</h3>
+                                        <p class="p_12px">등하원 운전을 해주시는 운전 기사님</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap">
+                        <a href="#none" class="user_btn_blue01">다음</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+    <script>
+        //역할 선택 후 페이지 이동
+        document.addEventListener('DOMContentLoaded', function() {
+            const roleChooseLinks = document.querySelectorAll('.role_choose ul li a');
+            const nextButton = document.querySelector('.user_btn_wrap a');
+
+            roleChooseLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    roleChooseLinks.forEach(link => link.classList.remove('role_active'));
+                    this.classList.add('role_active');
+                });
+            });
+
+            nextButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const activeLink = document.querySelector('.role_active');
+                if (activeLink) {
+                    window.location.href = activeLink.href;
+                }
+            });
+        });
+    </script>
+</html>

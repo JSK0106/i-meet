@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <ul class="join_progess flex_start">
+                            <li class="join_active"><span class="blind">가입 1단계</span></li>
+                            <li class="join_active"><span class="blind">가입 2단계</span></li>
+                            <li class="join_active"><span class="blind">가입 3단계</span></li>
+                            <li class="join_active"><span class="blind">가입 4단계</span></li>
+                            <li class="join_active"><span class="blind">가입 5단계</span></li>
+                        </ul>
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">기사 등록</h2>
+                            <p class="join_guide p_12px">프로필을 입력해 주세요</p>
+                        </div>
+                        <!-- 프로필 이미지 첨부 -->
+                        <div class="flex_center">
+                            <div class="profile_file">
+                                <button class="btn_delete">
+                                    <span class="blind">이미지 삭제</span>
+                                </button>
+                                <button id="profile_img">
+                                    <div class="img_upload">
+                                        <span class="blind">업로드 이미지</span>
+                                    </div>
+                                    <input type="file" id="profile_input" accept="image/*" style="display: none;">
+                                    <span class="blind">프로필 이미지 첨부</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 프로필 이미지 첨부 -->
+                        <div class="info_wrap01 wrap_bottom">
+                            <h3 class="h3_N_type01">이름</h3>
+                            <div class="contents_box_disabled flex_start">
+                                <input type="text" placeholder="김운혁 (자동입력O, 수정X)" id="user_name" class="text_input" disabled>
+                            </div>
+                        </div>
+                        <div class="info_wrap01 wrap_bottom">
+                            <h3 class="h3_N_type01">휴대폰 번호</h3>
+                            <div class="contents_box_disabled flex_start">
+                                <input type="text" placeholder="010-XXXX-XXXX (자동입력O, 수정X)" id="user_phone" class="text_input" disabled>
+                            </div>
+                        </div>
+                        <div class="info_wrap03 wrap_bottom">
+                            <h3 class="h3_N_type01">면허 종류</h3>
+                            <div class="teacher_info flex_start">
+                                <select name="driver_license01" class="select_03">
+                                    <option disabled selected>선택</option>
+                                    <option value="1종 대형">1종 대형</option>
+                                    <option value="1종 보통">1종 보통</option>
+                                    <option value="2종 보통">2종 보통</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="info_wrap01 wrap_bottom">
+                            <h3 class="h3_N_type01">갱신 만료일자</h3>
+                            <div class="contents_box flex_start">
+                                <input type="text" placeholder="만료일자 8자리를 입력해 주세요" id="driver_license02" class="text_input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap flex_start">
+                        <a href="joinUser_04" class="user_btn_gray01">이전</a>
+                        <button id="completeBtn" type="button" class="user_btn_blue03">완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 회원가입 완료 모달 -->
+        <div id="joinComplete_modal" class="modal_container hidden">
+            <%-/* 원 등록 모달*/ include ("./templates/joinComplete02_modal") %>
+        </div>
+        <!-- 회원가입 완료 모달 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+
+    <script>
+        //입력값 삭제
+        function clearInputText(button) {
+            const label = button.closest('label'); // 버튼 기준으로 가장 가까운 label 찾기
+            const contentsBox = label.parentElement; // label의 부모 = .contents_box
+            const input = contentsBox.querySelector('input'); // 그 안의 input 찾기
+
+            if (input) {
+                input.value = ''; // 입력값 비우기
+                input.focus(); // 포커스 주기 (선택사항)
+            }
+        }
+
+        const joinCompleteModal = document.getElementById('joinComplete_modal');
+        const completeBtn = document.getElementById('completeBtn');
+
+        // 다음 버튼 클릭 시 모달 열기
+        completeBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            joinCompleteModal.style.display = 'flex';
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const profileImgBtn = document.getElementById('profile_img');
+        const profileInput = document.getElementById('profile_input');
+        const btnDelete = document.querySelector('.btn_delete');
+    
+        const defaultImage = 'url(../images/img_profile.png)';
+        const profileFile = document.querySelector('.profile_file #profile_img');
+    
+        // 이미지 업로드 버튼 클릭 시 파일 입력창 열기
+        profileImgBtn.addEventListener('click', function () {
+            profileInput.click();
+        });
+    
+        // 파일 선택 시 이미지 미리보기로 변경
+        profileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profileFile.style.backgroundImage = `url(${e.target.result})`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    
+        // 삭제 버튼 클릭 시 이미지 초기화
+        btnDelete.addEventListener('click', function (e) {
+            e.stopPropagation(); // 클릭 이벤트 버블링 방지
+            profileFile.style.backgroundImage = defaultImage;
+            profileInput.value = ''; // 파일 입력 초기화
+        });
+    });
+    </script>
+</html>

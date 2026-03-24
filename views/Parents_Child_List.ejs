@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_03">
+                <%-/*header_03 불러오기*/ include ("./templates/header_03") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_03">
+                        <%-/*aside_03 불러오기*/ include ("./templates/aside_03") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before03">자녀 정보 관리</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Parents_Child_List">자녀 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Parents_Child_List" class="nav_active">자녀 정보 관리</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between">
+                                <h3 class="h3_G_type01">자녀 정보 등록</h3>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <!-- 원 기본 정보 설정 -->
+                                <div id="child_info">
+                                    <ul class="list_type03 flex_start">
+                                        <li class="child">
+                                            <a href="Parents_Child_Info" id="child" class="flex_center_column" onclick="showProfileModal()">
+                                                <div id="profile_img" class="flex_center">
+                                                    <img src="/images/img_child_175.png" alt="자녀 이미지">
+                                                </div>
+                                                <p class="p_20px">서하린</p>
+                                                <p class="p_14px">한마음 어린이집<span>별님반</span></p>
+                                                <div class="child_state flex_center">
+                                                    <p class="p_14px">씩씩하게 잘 다니고 있어요!</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="child">
+                                            <a href="Parents_Child_Info" id="child" class="flex_center_column" onclick="showProfileModal()">
+                                                <div id="profile_img" class="flex_center">
+                                                    <img src="/images/img_child02_175.png" alt="자녀 이미지">
+                                                </div>
+                                                <p class="p_20px">서하준</p>
+                                                <p class="p_14px">한마음 어린이집<span>별님반</span></p>
+                                                <div class="child_state flex_center">
+                                                    <p class="p_14px">씩씩하게 잘 다니고 있어요!</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="child_plus">
+                                            <a href="Parents_Child_Info" id="child_plus" class="flex_center_column" onclick="openModifyModal()">
+                                                <p class="p_G_20px">+ 추가</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_parents">
+            <ul class="flex_center">
+                <li>
+                    <a href="Parents_Child_List" class="m_nav03 m_active">
+                        <div class="m_icon"><span class="blind">자녀 정보 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Parents_Goto_Location" class="m_nav01">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+</html>

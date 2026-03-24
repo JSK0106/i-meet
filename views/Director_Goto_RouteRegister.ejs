@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_01">
+                <%-/*header_01 불러오기*/ include ("./templates/header_01") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_01">
+                        <%-/*aside_01 불러오기*/ include ("./templates/aside_01") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before01">차량 노선 관리</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Director_Goto_Teacher">등하원 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Director_Goto_Route" class="nav_active">차량 노선 관리</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between">
+                                <h3 class="h3_G_type01">차량 배차 설정</h3>
+                                <a href="Director_Goto_Route" class="back">
+                                    <span class="blind">뒤로가기</span>
+                                </a>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <!-- 차량 노선 설정 -->
+                                <div id="route_plus" class="flex_between2">
+                                    <div id="route_info">
+                                        <div class="form_contents flex_start">
+                                            <label for="유형 선택">배차명</label>
+                                            <input id="route_name" type="text" class="Text_input05" placeholder="노선 이름을 설정하세요">
+                                        </div>
+                                        <div class="form_contents flex_start">
+                                            <label for="차량 선택">차량 선택</label>
+                                            <select name="driver_car01" class="select_03">
+                                                <option disabled selected>선택</option>
+                                                <option value="1호차">1호차</option>
+                                                <option value="2호차">2호차</option>
+                                                <option value="3호차">3호차</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_contents flex_start">
+                                            <label for="유형 선택">유형 선택</label>
+                                            <select name="attendance_state" class="select_03">
+                                                <option disabled selected>선택</option>
+                                                <option value="등원">등원</option>
+                                                <option value="하원">하원</option>
+                                            </select>
+                                        </div>
+                                        <div class="form_contents flex_start">
+                                            <label for="운행 요일">운행 요일</label>
+                                            <div class="option_day">
+                                                <ul class="flex_between">
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="전체" class="checkbox">
+                                                        <p class="p_14px">전체</p>
+                                                    </li>
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="월" class="checkbox">
+                                                        <p class="p_14px">월</p>
+                                                    </li>
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="화" class="checkbox">
+                                                        <p class="p_14px">화</p>
+                                                    </li>
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="수" class="checkbox">
+                                                        <p class="p_14px">수</p>
+                                                    </li>
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="목" class="checkbox">
+                                                        <p class="p_14px">목</p>
+                                                    </li>
+                                                    <li class="flex_start">
+                                                        <input type="checkbox" name="운행 요일" value="금" class="checkbox">
+                                                        <p class="p_14px">금</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div id="route_line">
+                                        <div class="flex_between route_top">
+                                            <p class="p_16px"><span>승하차</span>시간</p>
+                                            <p class="p_16px"><span>승하차</span>위치</p>
+                                        </div>
+                                        <ol>
+                                            <li id="first_input" class="flex_start">
+                                                <input id="route_time" type="time" class="time_input">
+                                                <input id="route_location" type="text" class="Text_input04" placeholder="한마음 어린이집" disabled>
+                                                <button type="button" class="btn_plus">
+                                                    <span class="blind">추가</span>
+                                                </button>
+                                            </li>
+                                            <li id="route_input" class="flex_start">
+                                                <input id="route_time" type="time" class="time_input">
+                                                <input id="route_location" type="text" class="Text_input04" placeholder="승하차 위치를 입력하세요">
+                                                <button type="button" class="btn_plus">
+                                                    <span class="blind">추가</span>
+                                                </button>
+                                                <button type="button" class="btn_delete">
+                                                    <span class="blind">삭제</span>
+                                                </button>
+                                            </li>
+                                            <li id="last_input" class="flex_start">
+                                                <input id="route_time" type="time" class="time_input">
+                                                <input id="route_location" type="text" class="Text_input04" placeholder="한마음 어린이집" disabled>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <!-- 버튼 -->
+                                <div class="form_btn_wrap flex_right">
+                                    <a href="Director_Goto_RouteView" type="button" class="btn_blue01">완료</a>
+                                    <a href="Director_Goto_RouteView" type="button" class="btn_blueline02">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_director">
+            <ul class="flex_center">
+                <li>
+                    <a href="Director_Goto_Driver" class="m_nav01 m_active">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Attendance_Register" class="m_nav02">
+                        <div class="m_icon"><span class="blind">출석부 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Member_Teacher" class="m_nav03">
+                        <div class="m_icon"><span class="blind">멤버 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Setting_Kinder" class="m_nav04">
+                        <div class="m_icon"><span class="blind">원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Notice" class="m_nav05">
+                        <div class="m_icon"><span class="blind">공지사항 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const originalInput = document.querySelector('li#route_input');
+            const routeTemplate = originalInput.cloneNode(true);
+            routeTemplate.removeAttribute('id');
+
+            function resetTemplateFields(element) {
+                const timeInput = element.querySelector('input[type="time"]');
+                const textInput = element.querySelector('input[type="text"]');
+                if (timeInput) timeInput.value = '';
+                if (textInput) textInput.value = '';
+            }
+
+            document.querySelector('#route_line ol').addEventListener('click', function (e) {
+                const plusBtn = e.target.closest('.btn_plus');
+                const deleteBtn = e.target.closest('.btn_delete');
+
+                // 공통: 버튼이 disabled 상태인지 확인
+                if ((plusBtn && plusBtn.disabled) || (deleteBtn && deleteBtn.disabled)) {
+                    return; // disabled면 아무것도 하지 않음
+                }
+
+                // 추가 버튼 클릭
+                if (plusBtn) {
+                    const currentLi = plusBtn.closest('li');
+                    const newRoute = routeTemplate.cloneNode(true);
+                    resetTemplateFields(newRoute);
+                    currentLi.parentNode.insertBefore(newRoute, currentLi.nextSibling);
+                }
+
+                // 삭제 버튼 클릭
+                if (deleteBtn) {
+                    const currentLi = deleteBtn.closest('li');
+                    currentLi.remove();
+                }
+            });
+        });
+        
+        const reserveCurrentModal = document.getElementById('reserveCurrent_modal');
+        const reserveNotModal = document.getElementById('reserveNot_modal');
+        const modalModifyBtn = document.getElementById('modalModifyBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalCancelBtn = document.getElementById('modalCancelBtn');
+        const modalCloseBtn2 = document.getElementById('modalCloseBtn2');
+        const modalCancelBtn2 = document.getElementById('modalCancelBtn2');
+        const gotoList = document.querySelectorAll('#goto_list');
+        const btnReserveNot = document.getElementById('btn_reserveNot');
+
+        // 현황 클릭 시 모달 열기
+        gotoList.forEach(item => {
+            item.addEventListener('click', () => {
+                reserveCurrentModal.style.display = 'flex';
+            });
+        });
+
+        // 미예약 원아 클릭 시 모달 열기
+        btnReserveNot.addEventListener('click', () => {
+            reserveNotModal.style.display = 'flex';
+        });
+
+        // 각 닫기 버튼에 이벤트 추가
+        modalCloseBtn?.addEventListener('click', () => {
+            reserveCurrentModal.style.display = 'none';
+        });
+        modalCancelBtn?.addEventListener('click', () => {
+            reserveCurrentModal.style.display = 'none';
+        });
+        modalCloseBtn2?.addEventListener('click', () => {
+            reserveNotModal.style.display = 'none';
+        });
+        modalCancelBtn2?.addEventListener('click', () => {
+            reserveNotModal.style.display = 'none';
+        });
+
+        // 모달 외부 영역 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === reserveCurrentModal || e.target === reserveNotModal) {
+                reserveCurrentModal.style.display = 'none';
+                reserveNotModal.style.display = 'none';
+            }
+        });
+    </script>
+</html>

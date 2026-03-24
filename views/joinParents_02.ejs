@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <ul class="join_progess flex_start">
+                            <li class="join_active"><span class="blind">가입 1단계</span></li>
+                            <li class="join_active"><span class="blind">가입 2단계</span></li>
+                            <li class="join_active"><span class="blind">가입 3단계</span></li>
+                            <li class="join_active"><span class="blind">가입 4단계</span></li>
+                            <li class="join_active"><span class="blind">가입 5단계</span></li>
+                        </ul>
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">자녀 등록</h2>
+                            <p class="join_guide p_12px">유치원/어린이집에 다니고 있는 자녀를 등록해 주세요</p>
+                        </div>
+                        <div class="info_wrap01 wrap_bottom">
+                            <div class="child_wrap contents_box flex_start">
+                                <div id="profile_img">
+                                    <img src="/images/img_profile.png" alt="자녀 이미지">
+                                </div>
+                                <div class="profile_text">
+                                    <ul class="flex_start">
+                                        <li><p class="p_12px">이름</p></li>
+                                        <li><p class="p_12px">생년월일</p></li>
+                                        <li><p class="p_12px">성별</p></li>
+                                        <li><p class="p_12px">반</p></li>
+                                    </ul>
+                                    <p class="p_12px">어린이집 주소</p>
+                                </div>
+                                <label for="text_delete" class="label_tdelete flex_center">
+                                    <button type="button" class="btn_tdelete" onclick="clearInputText(this)">
+                                        <span class="blind">삭제</span>
+                                    </button>
+                                </label>
+                            </div>
+                            <a href="joinUser_04" class="btn_blueline01">추가</a>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap flex_start">
+                        <a href="joinParents_01" class="user_btn_gray01">이전</a>
+                        <button id="completeBtn" type="button" class="user_btn_blue03">완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 회원가입 완료 모달 -->
+        <div id="joinComplete_modal" class="modal_container hidden">
+            <%-/* 원 등록 모달*/ include ("./templates/joinComplete02_modal") %>
+        </div>
+        <!-- 회원가입 완료 모달 -->
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+
+    <script>
+        // 삭제 버튼 클릭
+        function clearInputText(button) {
+            const childWrap = button.closest('.child_wrap');
+            if (childWrap) {
+                childWrap.remove();
+            }
+        }
+
+        const joinCompleteModal = document.getElementById('joinComplete_modal');
+        const completeBtn = document.getElementById('completeBtn');
+
+        // 다음 버튼 클릭 시 모달 열기
+        completeBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            joinCompleteModal.style.display = 'flex';
+        });
+    </script>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_02">
+                <%-/*header_02 불러오기*/ include ("./templates/header_02") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_02">
+                        <%-/*aside_02 불러오기*/ include ("./templates/aside_02") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before02">출석부 관리</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Teacher_Attendance_Register">출석부 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Teacher_Attendance_Register" class="nav_active">출석부 작성</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between">
+                                <h3 class="h3_G_type01">출석부 작성</h3>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <!-- 반/날짜 선택 -->
+                                <div class="schedule_top flex_between">
+                                    <div class="flex_start">
+                                        <select name="class_nmae" class="select_04">
+                                            <option disabled selected>반 전체</option>
+                                            <option value="햇님반">햇님반</option>
+                                            <option value="달님반">달님반</option>
+                                            <option value="별님반">별님반</option>
+                                        </select>
+                                        <input type="date" class="schedule_date">
+                                    </div>
+                                    <ul class="flex_right">
+                                        <li><button class="btn_graytext01 btn_textactive02" onclick="handleButtonClick(this)">출석<span>(01)</span></button></li>
+                                        <li><button class="btn_graytext01" onclick="handleButtonClick(this)">조퇴<span>(01)</span></button></li>
+                                        <li><button class="btn_graytext01" onclick="handleButtonClick(this)">무단결석<span>(01)</span></button></li>
+                                        <li><button class="btn_graytext01" onclick="handleButtonClick(this)">인정결석<span>(01)</span></button></li>
+                                    </ul>
+                                </div>
+
+                                <ul class="attendance_list list_type02 flex_between">
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child01.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">서하린</p>
+                                                    <p class="p_14px">별님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child02.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">서하준</p>
+                                                    <p class="p_14px">별님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child03.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">정하은</p>
+                                                    <p class="p_14px">햇님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child04.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">최서준</p>
+                                                    <p class="p_14px">햇님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child01.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">서하린</p>
+                                                    <p class="p_14px">별님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child02.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">서하준</p>
+                                                    <p class="p_14px">별님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child03.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">정하은</p>
+                                                    <p class="p_14px">햇님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <a href="#none" id="attendance" onclick="showProfileModal()">
+                                            <div class="flex_start">
+                                                <div id="profile_img">
+                                                    <img src="../images/img_child04.png" alt="원아 이미지">
+                                                </div>
+                                                <div class="profile_text flex_start_column">
+                                                    <p class="p_18px">최서준</p>
+                                                    <p class="p_14px">햇님반</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <ol class="attendance_state flex_between">
+                                            <li><button class="btn_pinkline03 btn_active" onclick="attendanceStateClick(this)">출석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">조퇴</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">무단결석</button></li>
+                                            <li><button class="btn_pinkline03" onclick="attendanceStateClick(this)">인정결석</button></li>
+                                        </ol>
+                                    </li>
+                                </ul>
+
+                                <!-- pagination -->
+                                <div id="report_page" class="pagination">
+                                    <ul class="flex_center">
+                                        <li>
+                                            <a href="#none" class="first_page flex_center">
+                                                <span class="blind">첫 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="prev_page flex_center ">
+                                                <span class="blind">이전 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#none" class="num num_active02">1</a></li>
+                                        <li><a href="#none" class="num active">2</a></li>
+                                        <li><a href="#none" class="num active">3</a></li>
+                                        <li><a href="#none" class="num active">4</a></li>
+                                        <li><a href="#none" class="num active">5</a></li>
+                                        <li>
+                                            <a href="#none" class="next_page flex_center">
+                                                <span class="blind">다음 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="last_page flex_center">
+                                                <span class="blind">마지막 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- pagination -->
+                        </div>
+                    </article>
+                    <!-- article -->
+                </div>
+
+                <!-- 원아 출석부 모달 -->
+                <div id="attendance_modal02" class="modal_container hidden">
+                    <%-/* 원아 출석부 */ include ("./templates/attendance_modal02") %>
+                </div>
+                <!-- 원아 출석부 모달 -->
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_teacher">
+            <ul class="flex_center">
+                <li>
+                    <a href="Teacher_Goto_Schedule" class="m_nav01">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Teacher_Attendance_Register" class="m_nav02 m_active">
+                        <div class="m_icon"><span class="blind">출석부 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+    <script>
+        const attendanceModal2 = document.getElementById('attendance_modal02');
+        const modalModifyBtn = document.getElementById('modalModifyBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalCancelBtn = document.getElementById('modalCancelBtn');
+        const attendance = document.querySelectorAll('[id="attendance"]');
+
+        // 현황 클릭 시 모달 열기
+        attendance.forEach(item => {
+            item.addEventListener('click', () => {
+                attendanceModal2.style.display = 'flex';
+            });
+        });
+
+        // 각 닫기 버튼에 이벤트 추가
+        modalCloseBtn?.addEventListener('click', () => {
+            attendanceModal2.style.display = 'none';
+        });
+        modalCancelBtn?.addEventListener('click', () => {
+            attendanceModal2.style.display = 'none';
+        });
+
+        // 모달 외부 영역 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === attendanceModal2) {
+                attendanceModal2.style.display = 'none';
+            }
+        });
+
+        // 버튼 클릭 시 btn_textactive 클래스 토글
+        function handleButtonClick(clickedButton) {
+            // 모든 버튼에서 btn_textactive 클래스 제거
+            const buttons = document.querySelectorAll('.schedule_top ul li button');
+            buttons.forEach(button => {
+                button.classList.remove('btn_textactive02');
+            });
+            
+            // 클릭된 버튼에만 btn_textactive 클래스 추가
+            clickedButton.classList.add('btn_textactive02');
+        }
+
+        // 등원 버튼 클릭 시 btn_active 클래스 토글
+        function toKinderButtonClick(clickedButton) {
+            // toKinder_btn 안의 모든 버튼에서 btn_active 클래스 제거
+            const buttons = document.querySelectorAll('.toKinder_btn li button');
+            buttons.forEach(button => {
+                button.classList.remove('btn_active02');
+            });
+            // 클릭된 버튼에만 btn_active 클래스 추가
+            clickedButton.classList.add('btn_active02');
+        }
+
+        // 하원 버튼 클릭 시 btn_active 클래스 토글 
+        function toHomeButtonClick(clickedButton) {
+            // toHome_btn 안의 모든 버튼에서 btn_active 클래스 제거
+            const buttons = document.querySelectorAll('.toHome_btn li button');
+            buttons.forEach(button => {
+                button.classList.remove('btn_active02');
+            });
+            // 클릭된 버튼에만 btn_active 클래스 추가
+            clickedButton.classList.add('btn_active02');
+        }
+
+        // 출석 상태 버튼 클릭 시 btn_active 클래스 토글
+        function attendanceStateClick(clickedButton) {
+            // 클릭된 버튼의 부모 li 요소 찾기
+            const parentLi = clickedButton.closest('li');
+            // 부모 li 안의 모든 버튼에서 btn_active 클래스 제거
+            const buttons = parentLi.parentElement.querySelectorAll('button');
+            buttons.forEach(button => {
+                button.classList.remove('btn_active');
+            });
+            // 클릭된 버튼에만 btn_active 클래스 추가
+            clickedButton.classList.add('btn_active');
+        }
+    </script>
+</html>

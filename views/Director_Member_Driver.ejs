@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_01">
+                <%-/*header_01 불러오기*/ include ("./templates/header_01") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_01">
+                        <%-/*aside_01 불러오기*/ include ("./templates/aside_01") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before01">기사님 관리</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Director_Member_Teacher">멤버 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Director_Member_Driver" class="nav_active">기사님 관리</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between2">
+                                <h3 class="h3_G_type01">기사님 목록</h3>
+                                <div class="search_wrap flex_right">
+                                    <div class="search_box flex_between">
+                                        <input type="text" placeholder="검색어를 입력해 주세요" id="search">
+                                        <label for="search" class="label_search flex_center">
+                                            <button type="button" id="btn_search" class="flex_center">
+                                                <div class="icon_search"><span class="blind">검색 아이콘</span></div>
+                                                <span class="blind">검색</span>
+                                            </button>
+                                        </label>
+                                    </div>
+                                    <a href="Director_Member_DApprove" type="button" class="btn_blue01">승인 요청</a>
+                                </div>
+                            </div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <div id="grid_wrap" class="grid">
+                                    <!-- grid title -->
+                                    <div class="grid_driverList grid_head01 flex_center">
+                                        <span class="grid_tit">번호</span>
+                                        <span class="grid_tit">이름</span>
+                                        <span class="grid_tit">생년월일</span>
+                                        <span class="grid_tit">연락처</span>
+                                        <span class="grid_tit">면허 종류</span>
+                                        <span class="grid_tit">갱신 만료일자</span>
+                                        <span class="grid_tit">차량 번호</span>
+                                    </div>
+                                    <!-- grid title -->
+            
+                                    <!-- grid inner -->
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">10</span>
+                                        <span class="grid_item01">김운혁</span>
+                                        <span class="grid_item01">19760202(만 58세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">1종 보통</span>
+                                        <span class="grid_item01">20300101</span>
+                                        <span class="grid_item01">1호차 (12가 1234)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">9</span>
+                                        <span class="grid_item01">이전우</span>
+                                        <span class="grid_item01">19771012(만 56세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">1종 보통</span>
+                                        <span class="grid_item01">20320404</span>
+                                        <span class="grid_item01">1호차 (12가 1234)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">8</span>
+                                        <span class="grid_item01">박기상</span>
+                                        <span class="grid_item01">19761014(만 57세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">1종 보통</span>
+                                        <span class="grid_item01">20341130</span>
+                                        <span class="grid_item01">1호차 (12가 1234)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">7</span>
+                                        <span class="grid_item01">최운혁</span>
+                                        <span class="grid_item01">19760202(만 58세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20300101</span>
+                                        <span class="grid_item01">2호차 (34가 3456)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">6</span>
+                                        <span class="grid_item01">조전우</span>
+                                        <span class="grid_item01">19771012(만 56세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20320404</span>
+                                        <span class="grid_item01">2호차 (34가 3456)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">5</span>
+                                        <span class="grid_item01">정기상</span>
+                                        <span class="grid_item01">19761014(만 57세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20341130</span>
+                                        <span class="grid_item01">2호차 (34가 3456)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">4</span>
+                                        <span class="grid_item01">전운혁</span>
+                                        <span class="grid_item01">19760202(만 58세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20300101</span>
+                                        <span class="grid_item01">3호차 (56가 5678)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">3</span>
+                                        <span class="grid_item01">임전우</span>
+                                        <span class="grid_item01">19771012(만 56세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20320404</span>
+                                        <span class="grid_item01">3호차 (56가 5678)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">2</span>
+                                        <span class="grid_item01">강기상</span>
+                                        <span class="grid_item01">19761014(만 57세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20341130</span>
+                                        <span class="grid_item01">3호차 (56가 5678)</span>
+                                    </button>
+                                    <button class="grid_driverList grid_contents01 flex_center" onclick="showProfileModal()">
+                                        <span class="grid_item01">1</span>
+                                        <span class="grid_item01">민운혁</span>
+                                        <span class="grid_item01">19760202(만 58세)</span>
+                                        <span class="grid_item01">010-XXXX-XXXX</span>
+                                        <span class="grid_item01">2종 보통</span>
+                                        <span class="grid_item01">20300101</span>
+                                        <span class="grid_item01">3호차 (56가 5678)</span>
+                                    </button>
+                                </div>
+
+                                <!-- pagination -->
+                                <div id="report_page" class="pagination">
+                                    <ul class="flex_center">
+                                        <li>
+                                            <a href="#none" class="first_page flex_center">
+                                                <span class="blind">첫 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="prev_page flex_center ">
+                                                <span class="blind">이전 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li><a href="#none" class="num num_active">1</a></li>
+                                        <li><a href="#none" class="num active">2</a></li>
+                                        <li><a href="#none" class="num active">3</a></li>
+                                        <li><a href="#none" class="num active">4</a></li>
+                                        <li><a href="#none" class="num active">5</a></li>
+                                        <li>
+                                            <a href="#none" class="next_page flex_center">
+                                                <span class="blind">다음 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#none" class="last_page flex_center">
+                                                <span class="blind">마지막 페이지 이동</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- pagination -->
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+                </div>
+
+                <!-- 프로필 (기사님) 모달 -->
+                <div id="profileDriver_modal" class="modal_container hidden">
+                    <%-/* 프로필 (원아) 모달*/ include ("./templates/profileDriver_modal") %>
+                </div>
+                <!-- 프로필 (기사님) 모달 -->
+
+                <!-- 프로필 (기사님) 수정 모달 -->
+                <div id="profileDriver_modify_modal" class="modal_container hidden">
+                    <%-/* 프로필 (원아) 수정 모달*/ include ("./templates/profileDriver_modify_modal") %>
+                </div>
+                <!-- 프로필 (기사님) 수정 모달 -->
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_director">
+            <ul class="flex_center">
+                <li>
+                    <a href="Director_Goto_Driver" class="m_nav01">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Attendance_Register" class="m_nav02">
+                        <div class="m_icon"><span class="blind">출석부 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Member_Teacher" class="m_nav03 m_active">
+                        <div class="m_icon"><span class="blind">멤버 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Setting_Kinder" class="m_nav04">
+                        <div class="m_icon"><span class="blind">원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Notice" class="m_nav05">
+                        <div class="m_icon"><span class="blind">공지사항 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+    <script>
+        const profileDriverModal = document.getElementById('profileDriver_modal');
+        const profileDriverModifyModal = document.getElementById('profileDriver_modify_modal');
+        const modalModifyBtn = document.getElementById('modalModifyBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalCancelBtn = document.getElementById('modalCancelBtn');
+        const modalCloseBtn2 = document.getElementById('modalCloseBtn2');
+        const modalCancelBtn2 = document.getElementById('modalCancelBtn2');
+        const modalRegisterBtn = document.getElementById('modalRegisterBtn');
+        const gridContents01 = document.querySelectorAll('.grid_contents01');
+
+        // 프로필 클릭 시 모달 열기
+        gridContents01.forEach(gridContent => {
+            gridContent.addEventListener('click', () => {
+                profileDriverModal.style.display = 'flex';
+            });
+        });
+
+
+        // 수정 버튼 클릭 시 수정 모달 열기, 원래 모달 닫기
+        modalModifyBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            profileDriverModal.style.display = 'none';
+            profileDriverModifyModal.style.display = 'flex';
+        });
+
+        // 각 닫기 버튼에 이벤트 추가
+        modalCloseBtn?.addEventListener('click', () => {
+            profileDriverModal.style.display = 'none';
+        });
+        modalCancelBtn?.addEventListener('click', () => {
+            profileDriverModal.style.display = 'none';
+        });
+        modalCloseBtn2?.addEventListener('click', () => {
+            profileDriverModifyModal.style.display = 'none';
+        });
+        modalCancelBtn2?.addEventListener('click', () => {
+            profileDriverModifyModal.style.display = 'none';
+        });
+        modalRegisterBtn?.addEventListener('click', () => {
+            profileDriverModifyModal.style.display = 'none';
+        });
+
+        // 모달 외부 영역 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === profileDriverModal || e.target === profileDriverModifyModal) {
+                profileDriverModal.style.display = 'none';
+                profileDriverModifyModal.style.display = 'none';
+            }
+        });
+
+        // 모달에 이미지 등록
+        let uploadedImgUrl = ""; // 전역에 업로드된 이미지 URL 저장
+        
+        // 업로드 버튼 클릭 시 파일 선택
+        document.getElementById('profile_img_upload').addEventListener('click', function () {
+            document.getElementById('file_input').click();
+        });
+        
+        // 파일 선택 시 미리보기 출력
+        document.getElementById('file_input').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedImgUrl = e.target.result;
+        
+                    // 수정 모달에 이미지 삽입
+                    const modifyContainer = document.querySelector('#profileDriver_modify_modal #profile_img');
+                    modifyContainer.querySelectorAll('img').forEach(img => img.remove()); // 기존 이미지 제거
+        
+                    const img = document.createElement('img');
+                    img.src = uploadedImgUrl;
+                    img.alt = '업로드 이미지';
+                    modifyContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert("이미지 파일만 업로드할 수 있습니다.");
+            }
+        });
+        
+        // 등록 버튼 클릭 시 본 모달에 이미지 복사
+        document.getElementById('modalRegisterBtn').addEventListener('click', function () {
+            if (!uploadedImgUrl) {
+                alert("이미지를 먼저 업로드해주세요.");
+                return;
+            }
+        
+            const mainContainer = document.querySelector('#profileDriver_modal #profile_img');
+            mainContainer.querySelectorAll('img').forEach(img => img.remove()); // 기존 이미지 제거
+        
+            const img = document.createElement('img');
+            img.src = uploadedImgUrl;
+            img.alt = '등록된 이미지';
+            mainContainer.appendChild(img);
+        });
+    </script>
+</html>

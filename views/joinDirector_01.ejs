@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">원 찾기</h2>
+                            <p class="join_guide p_12px">운영 중인 유치원/어린이집을 검색해 주세요</p>
+                        </div>
+                        <div class="info_wrap02 wrap_bottom">
+                            <h3 class="h3_N_type01">주소</h3>
+                            <div class="kinder_address flex_between">
+                                <select name="address01" class="select_03">
+                                    <option disabled selected>전국</option>
+                                    <option value="서울특별시">서울특별시</option>
+                                    <option value="부산광역시">부산광역시</option>
+                                    <option value="대구광역시">대구광역시</option>
+                                    <option value="인천광역시">인천광역시</option>
+                                    <option value="광주광역시">광주광역시</option>
+                                    <option value="대전광역시">대전광역시</option>
+                                    <option value="울산광역시">울산광역시</option>
+                                    <option value="세종특별자치시">세종특별자치시</option>
+                                    <option value="경기도">경기도</option>
+                                    <option value="강원도">강원도</option>
+                                    <option value="충청북도">충청북도</option>
+                                    <option value="충청남도">충청남도</option>
+                                    <option value="전라북도">전라북도</option>
+                                    <option value="전라남도">전라남도</option>
+                                    <option value="경상북도">경상북도</option>
+                                    <option value="경상남도">경상남도</option>
+                                    <option value="제주특별자치도">제주특별자치도</option>
+                                </select>
+                                <select name="address02" class="select_03">
+                                    <option disabled selected>시/군구</option>
+                                    <option value="군구">군구</option>
+                                    <option value="군구">군구</option>
+                                    <option value="군구">군구</option>
+                                    <option value="군구">군구</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="info_wrap02 wrap_bottom">
+                            <h3 class="h3_N_type01">원 명</h3>
+                            <div class="flex_between">
+                                <div class="contents_box search_wrap flex_start">
+                                    <input type="text" placeholder="원 명을 검색해 주세요" id="kinder_name" class="text_input">
+                                    <label for="text_delete" class="label_tdelete flex_center">
+                                        <button type="button" class="btn_tdelete" onclick="clearInputText(this)">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </label>
+                                </div>
+                                <button type="button" class="btn_search user_btn_blue04">검색</button>
+                            </div>
+                        </div>
+                        <div id="kinder_list">
+                            <p class="p_16px">총 12개</p>
+                            <ul>
+                                <li class="flex_between">
+                                    <div class="kinder_wrap">
+                                        <p class="p_14px">e편한산들어린이집</p>
+                                        <div class="kinder_address_num flex_start_column">
+                                            <p class="p_12px">경기도 남양주시 오남읍 양지로 240번길 37 관리동</p>
+                                            <p class="p_12px">031-514-1001</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn_blueline02">선택</button>
+                                </li>
+                                <li class="flex_between">
+                                    <div class="kinder_wrap">
+                                        <p class="p_14px">e편한산들어린이집</p>
+                                        <div class="kinder_address_num flex_start_column">
+                                            <p class="p_12px">경기도 남양주시 오남읍 양지로 240번길 37 관리동</p>
+                                            <p class="p_12px">031-514-1001</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn_blueline02">선택</button>
+                                </li>
+                                <li class="flex_between">
+                                    <div class="kinder_wrap">
+                                        <p class="p_14px">e편한산들어린이집</p>
+                                        <div class="kinder_address_num flex_start_column">
+                                            <p class="p_12px">경기도 남양주시 오남읍 양지로 240번길 37 관리동</p>
+                                            <p class="p_12px">031-514-1001</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn_blueline02">선택</button>
+                                </li>
+                                <li class="flex_between">
+                                    <div class="kinder_wrap">
+                                        <p class="p_14px">e편한산들어린이집</p>
+                                        <div class="kinder_address_num flex_start_column">
+                                            <p class="p_12px">경기도 남양주시 오남읍 양지로 240번길 37 관리동</p>
+                                            <p class="p_12px">031-514-1001</p>
+                                        </div>
+                                    </div>
+                                    <button class="btn_blueline02">선택</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap flex_start">
+                        <a href="joinUser_choose" class="user_btn_gray01">이전</a>
+                        <a href="joinDirector_02" class="user_btn_blue03">다음</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+
+    <script>
+        //입력값 삭제
+        function clearInputText(button) {
+            const label = button.closest('label'); // 버튼 기준으로 가장 가까운 label 찾기
+            const contentsBox = label.parentElement; // label의 부모 = .contents_box
+            const input = contentsBox.querySelector('input'); // 그 안의 input 찾기
+
+            if (input) {
+                input.value = ''; // 입력값 비우기
+                input.focus(); // 포커스 주기 (선택사항)
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <ul class="join_progess flex_start">
+                            <li class="join_active"><span class="blind">가입 1단계</span></li>
+                            <li><span class="blind">가입 2단계</span></li>
+                            <li><span class="blind">가입 3단계</span></li>
+                            <li><span class="blind">가입 4단계</span></li>
+                            <li><span class="blind">가입 5단계</span></li>
+                        </ul>
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">이용 약관 및 정보 동의</h2>
+                            <p class="join_guide p_12px">서비스 가입을 위해 아래 약관에 동의가 필요해요</p>
+                        </div>
+                        <ol class="join_consent">
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_all" onclick="toggleAllConsent(this)" class="checkbox">
+                                <p class="p_14px">약관 전체 동의</p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_age" class="checkbox">
+                                <p class="p_14px">만 14세 이상 회원입니다<span class="consenst_essential">(필수)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_terms" class="checkbox">
+                                <p class="p_14px">이용약관 동의<span class="consenst_essential">(필수)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_privacy" class="checkbox">
+                                <p class="p_14px">개인정보 수집 및 이용 동의<span class="consenst_essential">(필수)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_location" class="checkbox">
+                                <p class="p_14px">위치기반 서비스 이용약관 동의<span class="consenst_essential">(필수)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_sensitive" class="checkbox">
+                                <p class="p_14px">민감정보 수집 및 이용 동의<span class="consenst_essential">(필수)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_third_party" class="checkbox">
+                                <p class="p_14px">개인정보 제 3자 제공 동의<span class="consenst_choose">(선택)</span></p>
+                            </li>
+                            <li class="flex_start">
+                                <input type="checkbox" name="consent" id="consent_marketing" class="checkbox">
+                                <p class="p_14px">마케팅 정보 수신 동의<span class="consenst_choose">(선택)</span></p>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap">
+                        <a href="joinUser_02" class="user_btn_blue01">다음</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+    <script>
+        function toggleAllConsent(element) {
+            const consentCheckboxes = document.querySelectorAll('input[name="consent"]');
+            consentCheckboxes.forEach(checkbox => {
+                checkbox.checked = element.checked;
+            });
+        }
+    </script>
+</html>

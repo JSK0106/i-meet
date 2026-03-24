@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <ul class="join_progess flex_start">
+                            <li class="join_active"><span class="blind">가입 1단계</span></li>
+                            <li class="join_active"><span class="blind">가입 2단계</span></li>
+                            <li class="join_active"><span class="blind">가입 3단계</span></li>
+                            <li class="join_active"><span class="blind">가입 4단계</span></li>
+                            <li><span class="blind">가입 5단계</span></li>
+                        </ul>
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">반 등록</h2>
+                            <p class="join_guide p_12px">유치원/어린이집의 반 정보를 입력해 주세요</p>
+                        </div>
+                        <div class="info_wrap02 wrap_bottom">
+                            <div class="class_name_wrap flex_between">
+                                <div class="contents_box flex_start">
+                                    <input type="text" placeholder="반 이름을 입력하세요" id="class_name" class="text_input">
+                                    <label for="text_delete" class="label_tdelete flex_center">
+                                        <button type="button" class="btn_tdelete" onclick="clearInputText(this)">
+                                            <span class="blind">삭제</span>
+                                        </button>
+                                    </label>
+                                </div>
+                                <div class="btn_delete_wrap flex_center">
+                                    <button type="button" class="btn_delete">
+                                        <span class="blind">삭제</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button id="btn_add" class="btn_blueline01">추가</button>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap flex_start">
+                        <a href="joinUser_03" class="user_btn_gray01">이전</a>
+                        <a href="joinDirector_04" class="user_btn_blue03">다음</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+    <script>
+        //입력값 삭제
+        function clearInputText(button) {
+            const label = button.closest('label'); // 버튼 기준으로 가장 가까운 label 찾기
+            const contentsBox = label.parentElement; // label의 부모 = .contents_box
+            const input = contentsBox.querySelector('input'); // 그 안의 input 찾기
+
+            if (input) {
+                input.value = ''; // 입력값 비우기
+                input.focus(); // 포커스 주기 (선택사항)
+            }
+        }
+
+        // 삭제 버튼 클릭
+        document.addEventListener('click', function(event) {
+            if (event.target.closest('.btn_delete')) {
+                const btn = event.target.closest('.btn_delete');
+                const classWrap = btn.closest('.class_name_wrap');
+                const parent = classWrap.parentElement; // .info_wrap02
+                
+                const allClassWraps = parent.querySelectorAll('.class_name_wrap');
+                if (allClassWraps.length > 1) {
+                    classWrap.remove(); // 하나 이상이면 삭제
+                } else {
+                    alert('반 정보는 최소 1개 이상 필요합니다.');
+                }
+            }
+        });
+
+        // 추가 버튼 클릭
+        document.getElementById('btn_add').addEventListener('click', function() {
+            const parent = this.closest('.info_wrap02');
+            const classWrap = parent.querySelector('.class_name_wrap');
+            const clone = classWrap.cloneNode(true); // 깊은 복제
+
+            // 복제한 input 초기화
+            const input = clone.querySelector('input');
+            if (input) {
+                input.value = '';
+            }
+
+            parent.insertBefore(clone, this); // '추가' 버튼 바로 앞에 삽입
+        });
+    </script>
+</html>

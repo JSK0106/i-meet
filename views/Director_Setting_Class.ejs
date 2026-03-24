@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_01">
+                <%-/*header_01 불러오기*/ include ("./templates/header_01") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_01">
+                        <%-/*aside_01 불러오기*/ include ("./templates/aside_01") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before01">반 설정</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Director_Setting_Kinder">원 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Director_Setting_Class" class="nav_active">반 설정</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between2">
+                                <h3 class="h3_G_type01">정보 및 기능 설정</h3>
+                                <ol class="article_top_tabs flex_right">
+                                    <li class="art_kinder"><a href="Director_Setting_Kinder">원 정보</a></li>
+                                    <li class="art_option"><a href="Director_Setting_Option">기능</a></li>
+                                    <li class="art_class art_active"><a href="Director_Setting_Class">반</a></li>
+                                    <li class="art_class"><a href="Director_Setting_Car">차량</a></li>
+                                </ol>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <!-- 원 기본 정보 설정 -->
+                                <div id="class_info">
+                                    <ul class="list_type03 flex_start">
+                                        <li class="class">
+                                            <button id="class_type" class="flex_center_column" onclick="showProfileModal()">
+                                                <div id="img_class" class="flex_center">
+                                                    <img src="images/img_profile.png" alt="반 이미지">
+                                                </div>
+                                                <p class="p_20px">햇님반</p>
+                                                <div class="class_teacher flex_center">
+                                                    <p class="p_14px">담당</p>
+                                                    <p id="teacher_name" class="p_14px">이아현</p>
+                                                </div>
+                                                <div class="class_num flex_center">
+                                                    <p id="child_num"class="p_14px">20</p>
+                                                    <p class="p_14px">명의 아이들이 있어요!</p>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="class">
+                                            <button id="class_type" class="flex_center_column" onclick="showProfileModal()">
+                                                <div id="img_class" class="flex_center">
+                                                    <img src="images/img_profile.png" alt="반 이미지">
+                                                </div>
+                                                <p class="p_20px">달님반</p>
+                                                <div class="class_teacher flex_center">
+                                                    <p class="p_14px">담당</p>
+                                                    <p id="teacher_name" class="p_14px">김유진</p>
+                                                </div>
+                                                <div class="class_num flex_center">
+                                                    <p id="child_num"class="p_14px">20</p>
+                                                    <p class="p_14px">명의 아이들이 있어요!</p>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="class">
+                                            <button id="class_type" class="flex_center_column" onclick="showProfileModal()">
+                                                <div id="img_class" class="flex_center">
+                                                    <img src="images/img_profile.png" alt="반 이미지">
+                                                </div>
+                                                <p class="p_20px">별님반</p>
+                                                <div class="class_teacher flex_center">
+                                                    <p class="p_14px">담당</p>
+                                                    <p id="teacher_name" class="p_14px">최재현</p>
+                                                </div>
+                                                <div class="class_num flex_center">
+                                                    <p id="child_num"class="p_14px">20</p>
+                                                    <p class="p_14px">명의 아이들이 있어요!</p>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li class="class_plus">
+                                            <button id="class_plus" class="flex_center_column" onclick="openModifyModal()">
+                                                <p class="p_G_20px">+ 추가</p>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+
+                    <!-- 반 상세 모달 -->
+                    <div id="ClassInfo_modal" class="modal_container hidden">
+                        <%-/* 반 상세 모달*/ include ("./templates/ClassInfo_modal") %>
+                    </div>
+                    <!-- 반 상세 모달 -->
+
+                    <!-- 반 상세 (수정/등록) 모달 -->
+                    <div id="ClassInfo_modify_modal" class="modal_container hidden">
+                        <%-/* 반 상세 (수정/등록) 모달*/ include ("./templates/ClassInfo_modify_modal") %>
+                    </div>
+                    <!-- 반 상세 (수정/등록) 모달 -->
+                    </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_director">
+            <ul class="flex_center">
+                <li>
+                    <a href="Director_Goto_Driver" class="m_nav01">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Attendance_Register" class="m_nav02">
+                        <div class="m_icon"><span class="blind">출석부 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Member_Teacher" class="m_nav03">
+                        <div class="m_icon"><span class="blind">멤버 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Setting_Kinder" class="m_nav04 m_active">
+                        <div class="m_icon"><span class="blind">원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Notice" class="m_nav05">
+                        <div class="m_icon"><span class="blind">공지사항 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+    <script>
+        const ClassInfoModal = document.getElementById('ClassInfo_modal');
+        const ClassInfoModifyModal = document.getElementById('ClassInfo_modify_modal');
+        const modalModifyBtn = document.getElementById('modalModifyBtn');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        const modalCancelBtn = document.getElementById('modalCancelBtn');
+        const modalCloseBtn2 = document.getElementById('modalCloseBtn2');
+        const modalCancelBtn2 = document.getElementById('modalCancelBtn2');
+        const classTypes = document.querySelectorAll('#class_type');
+        const classPlus = document.getElementById('class_plus');
+
+        // 모든 class_type 요소에 클릭 이벤트 추가
+        classTypes.forEach(classType => {
+            classType.addEventListener('click', () => {
+                ClassInfoModal.style.display = 'flex';
+            });
+        });
+
+        // 수정 버튼 클릭 시 수정 모달 열기, 원래 모달 닫기
+        modalModifyBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            ClassInfoModal.style.display = 'none';
+            ClassInfoModifyModal.style.display = 'flex';
+        });
+
+        // 추가 버튼 클릭 시 수정 모달 열기
+        classPlus?.addEventListener('click', () => {
+            ClassInfoModifyModal.style.display = 'flex';
+        });
+
+        // 각 닫기 버튼에 이벤트 추가
+        modalCloseBtn?.addEventListener('click', () => {
+            ClassInfoModal.style.display = 'none';
+        });
+        modalCancelBtn?.addEventListener('click', () => {
+            ClassInfoModal.style.display = 'none';
+        });
+        modalCloseBtn2?.addEventListener('click', () => {
+            ClassInfoModifyModal.style.display = 'none';
+        });
+        modalCancelBtn2?.addEventListener('click', () => {
+            ClassInfoModifyModal.style.display = 'none';
+        });
+
+        // 모달 외부 영역 클릭 시 닫기
+        window.addEventListener('click', (e) => {
+            if (e.target === ClassInfoModal || e.target === ClassInfoModifyModal) {
+                ClassInfoModal.style.display = 'none';
+                ClassInfoModifyModal.style.display = 'none';
+            }
+        });
+    </script>
+</html>

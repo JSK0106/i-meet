@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul> 
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- 로그인 -->
+            <div class="flex_center_column">
+                <div class="user_wrap">
+                    <!-- 로고 -->
+                    <div class="flex_center">
+                        <a href="login">
+                            <h1 class="h1_logo">
+                                <span class="blind">아이-밋 로고</span>
+                            </h1>
+                        </a>
+                    </div>
+
+                    <!-- 컨텐츠 -->
+                    <div class="user_contents">
+                        <div class="user_head">
+                            <h2 class="h2_G_type01">로그인</h2>
+                        </div>
+                        <div class="id_wrap wrap_bottom">
+                            <h3 class="h3_N_type01">아이디</h3>
+                            <div class="login_contents flex_start">
+                                <label for="typeUserId" class="label_userID flex_center">
+                                    <div class="icon_user"><span class="blind">아이디 아이콘</span></div>
+                                </label>
+                                <input type="text" placeholder="아이디" id="user_ID">
+                            </div>
+                        </div>
+                        <div class="pw_wrap wrap_bottom">
+                            <h3 class="h3_N_type01">비밀번호</h3>
+                            <div class="login_contents flex_start">
+                                <label for="typeUserPW" class="label_userPW flex_center">
+                                    <div class="icon_user"><span class="blind">비밀번호 아이콘</span></div>
+                                </label>
+                                <input type="password" placeholder="비밀번호" id="user_PW">
+                                <label for="PWview" class="label_view flex_center">
+                                    <button type="button" class="btn_view" onclick="togglePasswordView()">
+                                        <div class="icon_user"><span class="blind">비밀번호 표시 아이콘</span></div>
+                                    </button>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 로그인 상태 유지 -->
+                        <div class="keep_wrap flex_start">
+                            <input type="checkbox" id="keep_login_status" class="checkbox">
+                            <p class="p_12px">로그인 상태 유지</p>
+                        </div>
+                    </div>
+
+                    <!-- 하단 버튼 -->
+                    <div class="user_btn_wrap">
+                        <button class="user_btn_blue01">로그인</button>
+                        <ul class="flex_center">
+                            <li>
+                                <a href="kinderRegister_01">원 등록하기</a>
+                            </li>
+                            <li>
+                                <a href="joinUser_choose">회원가입</a>
+                            </li>
+                            <li>
+                                <a href="#none">아이디/비밀번호 찾기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+    </body>
+    <script>
+        function logIn() {
+            // index 페이지로 이동
+            window.location.href = 'index';
+        }
+
+        function togglePasswordView() {
+            const passwordInput = document.getElementById('user_PW');
+            const viewButton = document.querySelector('.label_view button');
+            const viewIcon = viewButton.querySelector('.icon_user');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                viewIcon.style.background = 'url(../images/icon_login_view2.svg) no-repeat center/contain';
+            } else {
+                passwordInput.type = 'password';
+                viewIcon.style.background = 'url(../images/icon_login_view.svg) no-repeat center/contain';
+            }
+        }
+    </script>
+</html>

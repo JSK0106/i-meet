@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="keywords" content="아이-밋, 등하원안심알리미" />
+        <meta name="description" content="등하원안심알리미 아이-밋"/>
+        <meta name="author" content="쿠노소프트" /> 
+
+        <!-- 상태바 색상-->
+        <meta name="theme-color" content="#0080F8"/>
+        <meta name="msapplication-navbutton-color" content="#0080F8" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0080F8" />
+
+        <!-- 홈화면추가시 주소창 제거 -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /> 
+        
+        <title>아이-밋</title>
+
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- favicon -->
+        
+        <link rel="stylesheet" href="css/total.css">
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- skip 네비게이션 영역 -->
+            <nav id="skipToContent">
+                <ul>
+                    <li><a href="#header">상단 바로가기</a></li>
+                    <li><a href="#gnb">주메뉴 바로가기</a></li>
+                    <li><a href="#snb">마이페이지 바로가기</a></li>
+                    <li><a href="#aside">사이드메뉴 바로가기</a></li>
+                    <li><a href="#section">본문 바로가기</a></li>
+                    <li><a href="#footer">하단 바로가기</a></li>
+                </ul>
+            </nav>
+            <!-- skip 네비게이션 영역 -->
+
+            <!-- header -->
+            <header id="header" class="header_01">
+                <%-/*header_01 불러오기*/ include ("./templates/header_01") %>
+            </header>
+            <!-- header -->
+
+            <section id="section" class="center">
+                <div class="flex_between2">
+                    <!-- aside -->
+                    <aside id="aside" class="aside_01">
+                        <%-/*aside_01 불러오기*/ include ("./templates/aside_01") %>
+                    </aside>
+                    <!-- aside -->
+
+                    <!-- article -->
+                    <article class="article_wrap">
+                        <!-- article title -->
+                        <div class="article_tit flex_between">
+                            <h2 class="h2_G_type02 h2_G_before01">출석부 관리</h2>
+                            <ul class="article_nav flex_right">
+                                <li>
+                                    <a href="#none">
+                                        <span class="blind">home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Director_Attendance_Register">출석부 관리</a>
+                                </li>
+                                <li>
+                                    <a href="Director_Attendance_CheckDay" class="nav_active">출석부 조회</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- article box -->
+                        <div class="article_box">
+                            <!-- article top -->
+                            <div class="article_top flex_between2">
+                                <h3 class="h3_G_type01">출석부 조회</h3>
+                                <div class="sub_btn_wrap flex_right">
+                                    <a href="Director_Attendance_CheckDay" class="btn_blue01">날짜별 조회</a>
+                                    <a href="Director_Attendance_CheckChild" class="btn_gray03">원아별 조회</a>
+                                </div>
+                            </div>
+
+                            <!-- article line -->
+                            <div class="article_line"></div>
+
+                            <!-- article contents -->
+                            <div class="article_contents">
+                                <!-- 날짜 선택 -->
+                                <div class="schedule_top flex_between">
+                                    <input type="month" class="schedule_date">
+                                    <div class="btn_schedule_wrap flex_right">
+                                        <button id="btn_schedule_week" type="button" class="btn_gray03" onclick="changeDateType('week')">주간</button>
+                                        <button id="btn_schedule_month" type="button" class="btn_gray03 btn_active01" onclick="changeDateType('month')">월간</button>
+                                    </div>
+                                </div>
+
+                                <div id="grid_wrap" class="grid">
+                                    <!-- grid title -->
+                                    <div class="grid_schedule01 grid_schedule01_top flex_center">
+                                        <div class="schedule_mon">SUN</div>
+                                        <div class="schedule_week">MON</div>
+                                        <div class="schedule_week">TUE</div>
+                                        <div class="schedule_week">WED</div>
+                                        <div class="schedule_week">THU</div>
+                                        <div class="schedule_week">FRI</div>
+                                        <div class="schedule_sat">SAT</div>
+                                    </div>
+                                    <!-- grid title -->
+            
+                                    <!-- grid inner -->
+                                    <div class="grid_schedule01 grid_schedule01_day flex_center">
+                                        <button class="schedule_day_sun flex_start_column">
+                                            <h4 class="h4_N_type02">01</h4>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">02</h4>
+                                                <span class="m_dayweek">MON</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">03</h4>
+                                                <span class="m_dayweek">TUE</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">04</h4>
+                                                <span class="m_dayweek">WED</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">05</h4>
+                                                <span class="m_dayweek">THU</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">06</h4>
+                                                <span class="m_dayweek">FRI</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_sat flex_start_column">
+                                            <h4 class="h4_N_type02">07</h4>
+                                        </button>
+                                    </div>
+                                    <div class="grid_schedule01 grid_schedule01_day flex_center">
+                                        <button class="schedule_day_sun flex_start_column">
+                                            <h4 class="h4_N_type02">08</h4>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">09</h4>
+                                                <span class="m_dayweek">MON</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">10</h4>
+                                                <span class="m_dayweek">TUE</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">11</h4>
+                                                <span class="m_dayweek">WED</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">12</h4>
+                                                <span class="m_dayweek">THU</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">13</h4>
+                                                <span class="m_dayweek">FRI</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_sat flex_start_column">
+                                            <h4 class="h4_N_type02">14</h4>
+                                        </button>
+                                    </div>
+                                    <div class="grid_schedule01 grid_schedule01_day flex_center">
+                                        <button class="schedule_day_sun flex_start_column">
+                                            <h4 class="h4_N_type02">15</h4>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">16</h4>
+                                                <span class="m_dayweek">MON</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">17</h4>
+                                                <span class="m_dayweek">TUE</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">18</h4>
+                                                <span class="m_dayweek">WED</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button id="today" class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">19</h4>
+                                                <span class="m_dayweek">THU</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_week flex_start_column">
+                                            <div class="flex_start_column">
+                                                <h4 class="h4_N_type02">20</h4>
+                                                <span class="m_dayweek">FRI</span>
+                                            </div>
+                                            <div class="m_schedule">
+                                                <ul class="D_toKinder01 D_span">
+                                                    <li><p class="p_14px">출석<span>20</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toHome01 D_span">
+                                                    <li><p class="p_14px">조퇴<span>1</span>명</p></li>
+                                                </ul>
+                                                <ul class="D_toNo01 D_span">
+                                                    <li><p class="p_14px">결석<span>2</span>명</p></li>
+                                                </ul>
+                                            </div>
+                                        </button>
+                                        <button class="schedule_day_sat flex_start_column">
+                                            <h4 class="h4_N_type02">21</h4>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- article -->
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer">
+            <%-/*footer 불러오기*/ include ("./templates/footer") %>
+        </footer>
+        <!-- footer -->
+        
+        <!-- 모바일 내비게이션 -->
+        <nav id="m_nav" class="m_director">
+            <ul class="flex_center">
+                <li>
+                    <a href="Director_Goto_Driver" class="m_nav01 m_active">
+                        <div class="m_icon"><span class="blind">등하원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Attendance_Register" class="m_nav02">
+                        <div class="m_icon"><span class="blind">출석부 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Member_Teacher" class="m_nav03">
+                        <div class="m_icon"><span class="blind">멤버 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Setting_Kinder" class="m_nav04">
+                        <div class="m_icon"><span class="blind">원 관리</span></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="Director_Notice" class="m_nav05">
+                        <div class="m_icon"><span class="blind">공지사항 관리</span></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 모바일 내비게이션 -->
+    </body>
+    <script>
+        // 주간/월간 스케줄 버튼 클릭 이벤트
+        function changeDateType(type) {
+            const scheduleDate = document.querySelector('.schedule_date');
+            scheduleDate.type = type;
+        }
+        // 주간/월간 스케줄 버튼 클릭 이벤트
+        document.getElementById('btn_schedule_week').addEventListener('click', () => {
+            document.getElementById('btn_schedule_week').classList.add('btn_active01');
+            document.getElementById('btn_schedule_month').classList.remove('btn_active01');
+        });
+
+        document.getElementById('btn_schedule_month').addEventListener('click', () => {
+            document.getElementById('btn_schedule_month').classList.add('btn_active01');
+            document.getElementById('btn_schedule_week').classList.remove('btn_active01');
+        });
+    </script>
+</html>
