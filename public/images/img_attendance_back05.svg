@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 625 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1cc60;
+      }
+
+      .cls-2 {
+        fill: #f68e8d;
+      }
+
+      .cls-3 {
+        fill: #61b3ff;
+      }
+
+      .cls-4 {
+        fill: #2d9b7d;
+      }
+    </style>
+  </defs>
+  <circle class="cls-3" cx="24.6" cy="-4.6" r="24.6"/>
+  <circle class="cls-2" cx="62.9" cy="-4.6" r="24.6"/>
+  <circle class="cls-1" cx="101.3" cy="-4.6" r="24.6"/>
+  <circle class="cls-4" cx="139.7" cy="-4.6" r="24.6"/>
+  <circle class="cls-3" cx="178.1" cy="-4.6" r="24.6"/>
+  <circle class="cls-2" cx="216.5" cy="-4.6" r="24.6"/>
+  <circle class="cls-1" cx="254.9" cy="-4.6" r="24.6"/>
+  <circle class="cls-4" cx="293.3" cy="-4.6" r="24.6"/>
+  <circle class="cls-3" cx="331.7" cy="-4.6" r="24.6"/>
+  <circle class="cls-2" cx="370.1" cy="-4.6" r="24.6"/>
+  <circle class="cls-1" cx="408.5" cy="-4.6" r="24.6"/>
+  <circle class="cls-4" cx="446.9" cy="-4.6" r="24.6"/>
+  <circle class="cls-3" cx="485.3" cy="-4.6" r="24.6"/>
+  <circle class="cls-2" cx="523.7" cy="-4.6" r="24.6"/>
+  <circle class="cls-1" cx="562.1" cy="-4.6" r="24.6"/>
+  <circle class="cls-4" cx="600.4" cy="-4.6" r="24.6"/>
+  <rect class="cls-3" x="22.5" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-2" x="60.9" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-1" x="99.2" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-4" x="137.5" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-3" x="175.9" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-2" x="214.5" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-1" x="252.9" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-4" x="291.3" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-3" x="329.7" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-2" x="368.1" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-1" x="406.4" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-4" x="444.8" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-3" x="483.2" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-2" x="521.6" y="-24.9" width="21.2" height="35.6"/>
+  <rect class="cls-1" x="559.9" y="-24.9" width="21.2" height="35.6"/>
+</svg>

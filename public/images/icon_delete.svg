@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_8" data-name="레이어_8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #e1e1e1;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="2.3" y1="4.4" x2="17.7" y2="4.4"/>
+  <g>
+    <path class="cls-1" d="M6.2,4.4v-1.4s-.1-1.9,1.8-1.9h1.9"/>
+    <path class="cls-1" d="M13.8,4.4v-1.4s.1-1.9-1.8-1.9h-1.9"/>
+  </g>
+  <g>
+    <path class="cls-1" d="M4,5.1v12.4s0,1.5,1.6,1.5h4.8"/>
+    <path class="cls-1" d="M16,5.1v12.4s0,1.5-1.6,1.5h-4.8"/>
+  </g>
+  <g>
+    <line class="cls-1" x1="8.3" y1="8.9" x2="8.3" y2="14.2"/>
+    <line class="cls-1" x1="11.7" y1="8.9" x2="11.7" y2="14.2"/>
+  </g>
+</svg>
