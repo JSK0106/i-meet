@@ -1,0 +1,3310 @@
+#section {
+    margin-top: 150px;
+    transition: 0.3s;
+}
+#section .article_wrap {
+    width: calc(100% - 250px);
+}
+
+/* article title */
+#section .article_wrap .article_tit {
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    transition: 0.3s;
+}
+#section .article_wrap .article_tit .h2_G_type02 {
+    margin-top: 30px;
+    position: relative;
+}
+#section .article_wrap .article_tit .article_nav {
+    margin-top: 40px;
+    transition: 0.3s;
+}
+#section .article_wrap .article_tit .article_nav li::after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    background: url(../images/icon_arrow01.svg) no-repeat 0 0/cover;
+    margin: 0 15px;
+    position: relative;
+    transition: 0.3s;
+}
+#section .article_wrap .article_tit .article_nav li:first-child::after {
+    top: -3px;
+}
+#section .article_wrap .article_tit .article_nav li:last-child::after {
+    display: none;
+}
+#section .article_wrap .article_tit .article_nav li a {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+    color: #999;
+    transition: 0.3s;
+}
+#section .article_wrap .article_tit .article_nav li:first-child a {
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    background: url(../images/icon_home.svg) no-repeat 0 0/cover;
+}
+#section .article_wrap .article_tit .article_nav li .nav_active {
+    color: #333;
+}
+
+/* 1~4 */
+#section .article_wrap .article_tit .h2_G_before01::after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 38px;
+    background: url(../images/icon_role01_38.svg) no-repeat 0 0/cover;
+    position: relative;
+    top: -5px;
+    right: 30px;
+    z-index: -1;
+}
+#section .article_wrap .article_tit .h2_G_before02::after {
+    content: "";
+    display: inline-block;
+    width: 39px;
+    height: 38px;
+    background: url(../images/icon_role02_38.svg) no-repeat 0 0/cover;
+    position: relative;
+    top: -5px;
+    right: 20px;
+    z-index: -1;
+}
+#section .article_wrap .article_tit .h2_G_before03::after {
+    content: "";
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: url(../images/icon_role03_38.svg) no-repeat 0 0/cover;
+    position: relative;
+    top: -5px;
+    right: 19px;
+    z-index: -1;
+}
+#section .article_wrap .article_tit .h2_G_before04::after {
+    content: "";
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: url(../images/icon_role04_38.svg) no-repeat 0 0/cover;
+    position: relative;
+    top: -5px;
+    right: 19px;
+    z-index: -1;
+}
+/* 1~4 */
+/* article title */
+
+/* article box */
+#section .article_box {
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* article top */
+#section .article_box .article_top {
+    padding-bottom: 20px;
+    position: relative;
+}
+#section .article_box .article_top .h3_G_type01 {
+    font-weight: 500;
+    margin-top: 5px;
+}
+#section .article_box .article_top .child_choose {
+    position: absolute;
+    top: -17.5px;
+    right: 0px;
+}
+#section .article_box .article_top .child_choose li {
+    margin-left: 15px;
+}
+#section .article_box .article_top .child_choose li button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#section .article_box .article_top .child_choose li button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#section .article_box .article_top .child_choose li button.child_active img {
+    border: 3px solid #F88415;
+}
+#section .article_box .search_box {
+    width: 250px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 10px 0 10px 10px;
+    transition: 0.3s;
+}
+#section .article_box .search_box #search {
+    width: calc(100% - 35px);
+    border: none !important;
+    padding: 0 !important;
+    transition: 0.3s;
+}
+#section .article_box .search_box .label_search {
+    width: 35px;
+    transition: 0.3s;
+}
+#section .article_box .search_box .label_search .icon_search, #section .article_box .search_box .label_search .icon_search02, #section .article_box .search_box .label_search .icon_search03 {
+    width: 15px;
+    height: 15px;
+    transition: 0.3s;
+}
+#section .article_box .search_box .label_search .icon_search {
+    background: url(../images/icon_search.svg) no-repeat 0 0/cover;
+}
+#section .article_box .search_box .label_search .icon_search02 {
+    background: url(../images/icon_search02.svg) no-repeat 0 0/cover;
+}
+#section .article_box .search_box .label_search .icon_search03 {
+    background: url(../images/icon_search03.svg) no-repeat 0 0/cover;
+}
+/* article top */
+
+/* article line */
+#section .article_box .article_line {
+    width: 100%;
+    height: 1px;
+    background: #e1e1e1;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+/* article line */
+
+/* article contents */
+/* pagination */
+#section .article_box .article_contents .pagination {
+    margin-top: 30px;
+}
+#section .article_box .article_contents .pagination li a {
+    width: 25px;
+    height: 25px
+}
+#section .article_box .article_contents .pagination li  .first_page {
+    background: url(../images/icon_arrow_prev02.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .pagination li  .prev_page {
+    background: url(../images/icon_arrow_prev01.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .pagination li  .next_page {
+    background: url(../images/icon_arrow_next01.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .pagination li  .last_page {
+    background: url(../images/icon_arrow_next02.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .pagination li .num {
+    line-height: 27px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 5px;
+}
+#section .article_box .article_contents .pagination li .num_active {
+    color: #fff;
+    background: #0080fb;
+    border-radius: 50%;
+}
+#section .article_box .article_contents .pagination li .num_active02 {
+    color: #fff;
+    background: #FE8A8B;
+    border-radius: 50%;
+}
+#section .article_box .article_contents .pagination li .num_active04 {
+    color: #fff;
+    background: #009C7D;
+    border-radius: 50%;
+}
+/* pagination */
+
+/* 선생님 목록 */
+#section .article_box .article_contents > .flex_between {
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents .list_type01 > li {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+}
+#section .article_box .article_contents .list_type01 > li:nth-child(5), #section .article_box .article_contents .list_type01 > li:nth-child(6) {
+    margin: 0;
+}
+#section .article_box .article_contents .list_type01 > li > a {
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 > li:hover > a {
+    border: 1px solid #61B3FF;
+}
+#section .article_box .article_contents .list_type01 > li > a .list_type01_L {
+    width: calc(100% - 20px);
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_img {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #f5f5f5;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_img img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_text {
+    width: calc(100% - 75px);
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_text .p_20px {
+    font-weight: bold;
+    color: #666;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_text .p_16px {
+    color: #999;
+    margin-top: 8px;
+}
+#section .article_box .article_contents .list_type01 > li > a .profile_text .p_16px span {
+    margin: 0 3px;
+}
+#section .article_box .article_contents .list_type01 > li > a .btn_arrow {
+    width: 18px;
+    height: 20px;
+    background: url(../images/icon_arrow02.svg) no-repeat 0 0/cover;
+}
+/* 선생님 목록 */
+
+/* 선생님 승인/초대 */
+#section .article_box .article_top .article_top_tabs {
+    transition: 0.3s;
+}
+#section .article_box .article_top .article_top_tabs li {
+    margin-left: 15px;
+    transition: 0.3s;
+}
+#section .article_box .article_top .article_top_tabs a {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #999;
+    text-align: center;
+    word-break: keep-all;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+#section .article_box .article_top .article_top_tabs .art_active a {
+    color: #333 !important;
+    border-bottom: 3px solid #0080fb;
+}
+#section .article_box .article_top .article_top_tabs .art_active02 a {
+    color: #333 !important;
+    border-bottom: 3px solid #FE8A8B;
+}
+#section .article_box .article_top .article_top_tabs .art_active03 a {
+    color: #333 !important;
+    border-bottom: 3px solid #F88415;
+}
+#section .article_box .article_top .article_top_tabs .art_active04 a {
+    color: #333 !important;
+    border-bottom: 3px solid #009C7D;
+}
+#section .article_box .article_top .article_top_tabs .art_teacher a {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: url(../images/btn_teacher.svg) no-repeat 0 0/cover;
+}
+/* 선생님 승인/초대 */
+
+/* 초대하기 */
+#section .article_box .article_contents .invite_role ul li {
+    width: calc(33.333% - 10px);
+}
+#section .article_box .article_contents .invite_role ul li a {
+    width: 100%;
+    height: 240px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .invite_role ul li:hover a, #section .article_box .article_contents .invite_role ul li .role_active {
+    border: 1px solid #61B3FF;
+}
+#section .article_box .article_contents .invite_role ul li a .role_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_teacher .role_img {
+    background: url(../images/img_role_teacher.png) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_parents .role_img {
+    background: url(../images/img_role_parents.png) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_driver .role_img {
+    background: url(../images/img_role_driver.png) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .invite_role ul li a .h3_N_type01 {
+    margin-top: 20px;
+    position: relative;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_teacher .h3_N_type01::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background: url(../images/icon_role02_15.svg) no-repeat 0 0/cover;
+    position: absolute;
+    top: 0;
+    left: -19px;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_parents .h3_N_type01::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon_role03_15.svg) no-repeat 0 0/cover;
+    position: absolute;
+    top: 0;
+    left: -18px;
+}
+#section .article_box .article_contents .invite_role ul li #invite_role_driver .h3_N_type01::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(../images/icon_role04_15.svg) no-repeat 0 0/cover;
+    position: absolute;
+    top: 0;
+    left: -18px;
+}
+#section .article_box .article_contents .invite_role ul li a .p_12px {
+    color: #999;
+    margin-top: 10px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+#section .article_box .article_contents .invite_info {
+    margin-top: 30px;
+}
+#section .article_box .article_contents .invite_info.invite_info_parents, #section .article_box .article_contents .invite_info.invite_info_driver {
+    display: none;
+}
+#section .article_box .article_contents .invite_info.invite_info_teacher .h4_N_type01 span {
+    color: #FE8A8B;
+}
+#section .article_box .article_contents .invite_info.invite_info_parents .h4_N_type01 span {
+    color: #F88415;
+}
+#section .article_box .article_contents .invite_info.invite_info_driver .h4_N_type01 span {
+    color: #009C7D;
+}
+#section .article_box .article_contents .invite_info .invite_mention .p_12px {
+    color: #999;
+    margin-top: 10px;
+}
+#section .article_box .article_contents #notice_info #btn_add, #section .article_box .article_contents #car_info #btn_add {
+    margin-top: 20px;
+}
+#section .article_box .article_contents #car_info .car input:first-child {
+    margin-right: 10px;
+}
+#section .article_box .article_contents .form_contents label {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+	margin: 20px 0 10px 0;
+}
+#section .article_box .article_contents .form_contents:first-child label {
+    margin-top: 0;
+}
+#section .article_box .article_contents .invite_info .form_contents .invite_info_text {
+    margin-bottom: 10px;
+}
+#section .article_box .article_contents .invite_info .form_contents .invite_info_text input:first-child {
+    width: 40% !important;
+}
+#section .article_box .article_contents .invite_info .form_contents .invite_info_text input:nth-child(2) {
+    width: 60% !important;
+    margin-left: 10px;
+}
+#section .article_box .article_contents .form_contents .form_delete_wrap {
+    margin-left: 10px;
+}
+#section .article_box .article_contents .form_contents .form_delete_wrap .form_delete {
+    width: 30px;
+    height: 30px;
+    background: url(../images/icon_x_modal.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .form_btn_wrap {
+    margin-top: 30px;
+}
+#section .article_box .article_contents .form_btn_wrap .btn_blue03 {
+    margin-top: 10px;
+}
+/* 초대하기 */
+
+/* 정보 설정 */
+#section .article_box .article_contents #route_info > div {
+    width: 50%;
+}
+#section .article_box .article_contents #option_info .form_contents {
+    margin-top: 20px;
+}
+#section .article_box .article_contents #option_info .form_contents label {
+    width: 15%;
+    white-space: nowrap;
+    margin: 0;
+}
+#section .article_box .article_contents #option_info .form_contents .p_14px {
+    word-break: keep-all;
+}
+#section .article_box .article_contents #option_info .form_contents [class*='option'] {
+    width: 85%;
+}
+#section .article_box .article_contents #option_info .form_contents [class*='option'] ul.flex_start {
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents #option_info .form_contents [class*='option'] ul li {
+    margin-right: 20px;
+}
+#section .article_box .article_contents #option_info .form_contents [class*='option'] ul li .p_14px {
+    line-height: 3.0rem;
+    font-weight: bold;
+}
+#section .article_box .article_contents #option_info [class*='option'] .p_12px {
+    width: 100%;
+    color: #999;
+    margin-top: 10px;
+}
+#section .article_box .article_contents #option_info .user_phone {
+    width: 100%;
+}
+#section .article_box .article_contents #option_info .user_phone .flex_between {
+    width: 70%;
+}
+#section .article_box .article_contents #option_info .option_notset .select_03 {
+    margin: 0 10px;
+}
+
+#section .article_box .article_contents .list_type03.flex_start {
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents .list_type03 {
+    width: 100%;
+}
+#section .article_box .article_contents .list_type03 li {
+    width: calc(25% - 15px);
+    margin-right: 20px;
+    margin-top: 20px;
+}
+#section .article_box .article_contents .list_type03 li:nth-child(4n+4) {
+    margin-right: 0;
+}
+#section .article_box .article_contents .list_type03 li:nth-child(1), #section .article_box .article_contents .list_type03 li:nth-child(2), #section .article_box .article_contents .list_type03 li:nth-child(3), #section .article_box .article_contents .list_type03 li:nth-child(4)  {
+    margin-top: 0;
+}
+#section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+    background: url(../images/img_classlist.png) no-repeat center bottom/contain;
+}
+#section .article_box .article_contents #class_info .list_type03 li:hover button {
+    border: 1px solid #61B3FF;
+}
+#section .article_box .article_contents #child_info .list_type03 li:hover a {
+    border: 1px solid #F88415;
+}
+#section .article_box .article_contents .list_type03 li #img_class, #section .article_box .article_contents .list_type03 li #profile_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+#section .article_box .article_contents .list_type03 li #img_class img, #section .article_box .article_contents .list_type03 li #profile_img img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #f5f5f5;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#section .article_box .article_contents .list_type03 li .p_20px {
+    margin-top: 20px;
+}
+#section .article_box .article_contents .list_type03 li .p_14px {
+    color: #666;
+    margin-top: 10px;
+}
+#section .article_box .article_contents .list_type03 li .class_teacher #teacher_name {
+    margin-left: 5px;
+}
+#section .article_box .article_contents .list_type03 li .class_num .p_14px {
+    color: #61B3FF;
+    margin-top: 80px;
+}
+#section .article_box .article_contents .list_type03 li .child_state .p_14px {
+    color: #F88415;
+    margin-top: 80px;
+}
+#section .article_box .article_contents .list_type03 .class_plus {
+    background: #ecf6ff;
+    border: 1px solid #61B3FF;
+    border-radius: 20px;
+}
+#section .article_box .article_contents .list_type03 .class_plus .p_G_20px {
+    color: #0080fb;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type03 .class_plus:hover .p_G_20px, #section .article_box .article_contents .list_type03 .child_plus:hover .p_G_20px {
+    margin-bottom: 10px;
+}
+#section .article_box .article_contents .list_type03 .child_plus {
+    background: #FFFAE9;
+    border: 1px solid #F88415;
+    border-radius: 20px;
+}
+#section .article_box .article_contents .list_type03 .child_plus a .p_G_20px {
+    color: #F88415;
+    transition: 0.3s;
+}
+/* 정보 설정 */
+
+/* 스케줄 */
+#section .article_box .article_contents .schedule_top {
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .schedule_top .flex_right li {
+    margin-right: 15px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .schedule_top .flex_right li:last-child {
+    margin: 0;
+}
+#section .article_box .article_contents .schedule_top .flex_right li button span {
+    margin-left: 3px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .schedule_top .schedule_date {
+    width: 140px;
+    font-family: "NanumSquareRound";
+    font-size: 2.0rem;
+    line-height: 2.0;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .schedule_top .btn_schedule_wrap button:last-child {
+    margin-left: 5px;
+}
+/* 스케줄 */
+
+/* 차량 예약 관리 */
+#section .article_box .article_contents .list_type01 .img_attendance {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .list_type01 .img_attendance img {
+    width: 75px;
+    height: 75px;
+    transition: 0.3s;
+}
+/* 차량 예약 관리 */
+#section .article_box .article_top .back {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    background: url(../images/btn_teacher.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents #route_plus > div {
+    width: 50%;
+}
+#section .article_box .article_contents #route_plus #route_info {
+    padding-right: 30px;
+}
+#section .article_box .article_contents #route_plus #route_info > div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#section .article_box .article_contents #route_plus #route_info label {
+    width: 25%;
+    margin: 0;
+}
+#section .article_box .article_contents #route_plus #route_info .Text_input05,
+#section .article_box .article_contents #route_plus #route_info select, 
+#section .article_box .article_contents #route_plus #route_info .option_day {
+    width: 75%;
+    margin: 0;
+}
+#section .article_box .article_contents #route_plus #route_line .route_top .p_16px {
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    background: #0080fb;
+    padding: 15px 20px;
+}
+#section .article_box .article_contents #route_plus #route_line .route_top .p_16px:first-child {
+    width: calc(30% + 10px);
+    border-right: 1px solid #fff;
+    border-radius: 10px 0 0 0;
+}
+#section .article_box .article_contents #route_plus #route_line .route_top .p_16px:last-child {
+    width: calc(70% - 10px);
+    border-radius: 0 10px 0 0;
+}
+#section .article_box .article_contents #route_plus #route_line .route_top .p_16px span {
+    margin-right: 5px;
+}
+#section .article_box .article_contents #route_plus #route_line ol {
+    border: 1px solid #e1e1e1;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+}
+#section .article_box .article_contents #route_plus #route_line ol li {
+    margin-top: 10px;
+}
+#section .article_box .article_contents #route_plus #route_line ol li:first-child {
+    margin-top: 0;
+}
+#section .article_box .article_contents #route_plus #route_line ol li #route_time {
+    width: 30%;
+}
+#section .article_box .article_contents #route_plus #route_line ol li #route_location {
+    width: calc(70% - 65px);
+    margin: 0 10px;
+}
+#section .article_box .article_contents #route_plus #route_line ol li .btn_plus {
+    width: 20px;
+    height: 20px;
+    background: url(../images/btn_plus02.svg) no-repeat 0 0/cover;
+    margin-right: 5px;
+}
+#section .article_box .article_contents #route_plus #route_line ol li .btn_plus:disabled {
+    background: url(../images/btn_plus03.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents #route_plus #route_line ol li .btn_delete {
+    width: 20px;
+    height: 20px;
+    background: url(../images/btn_delete02.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents #route_plus #route_line ol li .btn_delete:disabled {
+    background: url(../images/btn_delete03.svg) no-repeat 0 0/cover;
+}
+/* 차량 노선 관리 */
+
+/* 차량 노선 관리 */
+
+/* 출석부 관리 */
+#section .article_box .article_contents .attendance_list {
+    width: 100%;
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents .attendance_list li {
+    width: calc(25% - 15px);
+    margin-top: 20px;
+}
+#section .article_box .article_contents .attendance_list li #attendance {
+    width: 100%;
+    height: 245px;
+    display: inline-block;
+    background: url(../images/img_attendance_back01.svg) no-repeat center top;
+    border: 1px solid #e1e1e1;
+    border-radius: 30px;
+    padding: 50px 30px 30px 30px;
+}
+#section .article_box .article_contents .attendance_list li #attendance:hover {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+#section .article_box .article_contents .attendance_list li:nth-child(1), #section .article_box .article_contents .attendance_list li:nth-child(2), #section .article_box .article_contents .attendance_list li:nth-child(3), #section .article_box .article_contents .attendance_list li:nth-child(4) {
+    margin-top: 0;
+}
+#section .article_box .article_contents .attendance_list li:nth-child(4n+1) #attendaattendancence_list {
+    background: url(../images/img_attendance_back01.svg) no-repeat center top;
+}
+#section .article_box .article_contents .attendance_list li:nth-child(4n+2) #attendance {
+    background: url(../images/img_attendance_back02.svg) no-repeat center top;
+}
+#section .article_box .article_contents .attendance_list li:nth-child(4n+3) #attendance {
+    background: url(../images/img_attendance_back03.svg) no-repeat center top;
+}
+#section .article_box .article_contents .attendance_list li:nth-child(4n+4) #attendance {
+    background: url(../images/img_attendance_back04.svg) no-repeat center top;
+}
+#section .article_box .article_contents .attendance_list li {
+    position: relative;
+}
+#section .article_box .article_contents .attendance_list li .attendance_state {
+    width: calc(100% - 60px);
+    position: absolute;
+    z-index: 1;
+    top: 130px;
+    left: 30px;
+}
+#section .article_box .article_contents .attendance_list li .attendance_state.flex_between {
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents .attendance_list li .attendance_state li {
+    width: calc(50% - 2.5px);
+}
+#section .article_box .article_contents .attendance_list li .attendance_state li:nth-child(3), #section .article_box .article_contents .attendance_list li .attendance_state li:nth-child(4) {
+    margin-top: 5px;
+}
+
+#section .article_box .article_contents .list_type02 li #profile_img {
+	width: 60px !important;
+	height: 60px !important;
+	border-radius: 50%;
+    border: none !important;
+	margin-right: 20px !important;
+}
+
+#section .article_box .article_contents .list_type02 li #profile_img img {
+	width: 60px !important;
+	height: 60px !important;
+	border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0;
+}
+#section .article_box .article_contents .list_type02 li .profile_text .p_18px {
+	font-weight: bold;
+    white-space: nowrap;
+}
+#section .article_box .article_contents .list_type02 li .profile_text .p_14px {
+	color: #666;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+#section .article_box .article_contents .article_R {
+    width: calc(100% - 270px);
+}
+#section .article_box .article_contents .article_R > .flex_between {
+    flex-wrap: wrap;
+}
+#section .article_box .article_contents .article_L {
+    width: 240px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+	border-radius: 30px;
+	margin-right: 30px;
+}
+#section .article_box .article_contents .article_L .profile_box {
+	width: 100%;
+	background: url(../images/img_attendance_back03.svg) no-repeat center top;
+	border-radius: 30px;
+	padding: 30px 30px 0 30px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box #profile_img {
+    width: 175px;
+    height: 175px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box #profile_img img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .child_wrap .p_20px {
+    font-weight: bold;
+    margin-top: 20px;
+}
+#section .article_box .article_contents .article_L .profile_box .child_wrap .info_child {
+    font-weight: 500;
+    color: #666;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .child_wrap .info_child .p_01 {
+    margin-right: 5px;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap {
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li {
+    margin-top: 5px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li:first-child {
+    margin: 0;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li .p_G_12px {
+    width: 25px;
+    height: 25px;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li:first-child .p_G_12px {
+    background: #61B3FF;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li:nth-child(2) .p_G_12px {
+    background: #FE8A8B;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li:nth-child(3) .p_G_12px {
+    background: #F88415;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li .info_parents {
+    width: calc(100% - 25px);
+    height: 25px;
+    line-height: 27px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li .info_parents .p_12px {
+    color: #999;
+}
+#section .article_box .article_contents .article_L .profile_box .parents_wrap li .info_parents .p_01::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #e1e1e1;
+    margin: 0 5px;
+}
+#section .article_box .article_contents .article_L .profile_box .all_state {
+    width: 100%;
+    padding: 20px 0;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .article_L .profile_box .all_state li .p_14px {
+    font-weight: bold;
+    color: #666;
+}
+#section .article_box .article_contents .article_L .profile_box .all_state li .state_flower {
+    width: 55px;
+    height: 54px;
+    line-height: 54px;
+    font-family:'BagelFatOne';
+    font-size: 1.4rem;
+    text-align: center;
+    color: #fff;
+    background: url(../images/img_flower_55.png) no-repeat 0 0/cover;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .profile_bottom {
+    width: 100%;
+    height: 140px;
+    background: url(../images/img_profile_bottom.png) no-repeat center bottom/contain;
+    border-radius: 0 0 30px 30px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .profile_bottom img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .profile_bottom .p_14px {
+    font-weight: 500;
+    color: #F88415;
+    margin-top: 10px;
+}
+/* 출석부 관리 */
+
+/* 마이 페이지 */
+#section .article_box .article_contents > [class*='mypage'] {
+    width: 40%;
+    margin: 100px 0;
+    transition: 0.3s;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap {
+    width: 100%;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents {
+    height: 50px;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents label {
+    width: 10%;
+    transition: 0.3s;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents .icon_user {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents .label_userPW .icon_user {
+    background: url(../images/icon_login_pw.svg) no-repeat center/contain;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents .label_view .icon_user {
+    background: url(../images/icon_login_view.svg) no-repeat center/contain;
+}
+#section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents input {
+    width: 80%;
+    transition: 0.3s;
+}
+/* 마이 페이지 */
+
+/* 자녀 정보 등록 */
+#section .article_box .article_contents .child_info_wrap .form_contents {
+    width: calc(33.333% - 10px);
+    transition: 0.3s;
+}
+#section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .child_info_wrap .child_img .file_btn {
+    margin-top: 10px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .child_info_wrap .child_img .p_12px {
+    color: #999;
+    margin-top: 10px;
+}
+#section .article_box .article_contents .child_info_wrap .form_contents .form_text:first-child label {
+    margin-top: 0;
+}
+#section .article_box .article_contents .child_info_wrap .child_data .child_kiner {
+    width: 100%;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .child_info_wrap .child_data .child_kiner #kinder_change {
+    margin-right: 0;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+#section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+    width: 100%;
+    height: 435px;
+    font-family: "NanumSquareRound";
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #666;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+/* 자녀 정보 등록 */
+
+/* 실시간 위치 */
+#section .article_box .article_contents iframe {
+    width: 100%;
+    height: 475px;
+    border: 3px solid #F88415;
+    border-radius: 20px;
+}
+#section .article_box .article_contents .route_wrap {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #e1e1e1;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+}
+#section .article_box .article_contents .route_wrap #route_now {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top: 10px;
+    padding-left: 5px;
+    margin-top: 30px;
+}
+#section .article_box .article_contents .route_wrap #route_now::-webkit-scrollbar {
+    width: 15px;
+}
+#section .article_box .article_contents .route_wrap #route_now::-webkit-scrollbar-thumb {
+    background: #F88415;
+    border-radius: 10px;
+}
+#section .article_box .article_contents .route_wrap #route_now::-webkit-scrollbar-track {
+    background: #FFFAE9;
+    border-radius: 10px;
+}
+#section .article_box .article_contents .route_wrap #route_now li {
+    padding-bottom: 30px;
+    position: relative;
+}
+#section .article_box .article_contents .route_wrap #route_now li .route_num {
+    width: 20px;
+    height: 20px;
+    line-height: 22px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #e1e1e1;
+    position: absolute;
+    top: -2px;
+    left: 0;
+}
+#section .article_box .article_contents .route_wrap #route_now li::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    background: #e1e1e1;
+    position: absolute;
+    left: 8.5px;
+}
+#section .article_box .article_contents .route_wrap #route_now .route_after::before {
+    background: #F88415;
+}
+#section .article_box .article_contents .route_wrap #route_now li .route_text  {
+    padding-left: 40px;
+}
+#section .article_box .article_contents .route_wrap #route_now li .route_text .p_16px {
+    color: #999;
+    font-weight: bold;
+}
+#section .article_box .article_contents .route_wrap #route_now li .route_text .p_14px {
+    color: #F88415;
+    margin-top: 10px;
+}
+#section .article_box .article_contents .route_wrap #route_now .route_after .route_num {
+    background: #F88415;
+}
+#section .article_box .article_contents .route_wrap #route_now .route_after .route_text .p_16px {
+    color: #333;
+    word-break: keep-all;
+}
+#section .article_box .article_contents .route_wrap #route_now .route_after .route_text .p_14px {
+    color: #666;
+}
+#section .article_box .article_contents .route_wrap #route_now li #location_now  {
+    margin-top: 20px;
+    position: relative;
+    left: -5px;
+}
+#section .article_box .article_contents .route_wrap #route_now li #location_now .icon_location {
+    width: 30px;
+    height: 30px;
+    background: url(../images/icon_location.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .route_wrap #route_now li #location_now .p_12px {
+    font-weight: bold;
+    color: #fff;
+    background: #F88415;
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin-left: 15px;
+}
+/* 실시간 위치 */
+
+/* 운행 기록 */
+#section .article_box .article_contents .speed_info ul li {
+    width: calc(50% - 5px);
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#section .article_box .article_contents .speed_info ul li .speed_icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#section .article_box .article_contents .speed_info ul .speed_info_normal .speed_icon {
+    background: url(../images/icon_speed01.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .speed_info ul .speed_info_fast .speed_icon {
+    background: url(../images/icon_speed02.svg) no-repeat 0 0/cover;
+}
+#section .article_box .article_contents .speed_info ul li .h4_N_type04 {
+    margin: 0 15px;
+}
+#section .article_box .article_contents .speed_info ul .speed_info_normal  .h4_N_type04 {
+    color: #61B3FF;
+}
+#section .article_box .article_contents .speed_info ul .speed_info_fast  .h4_N_type04 {
+    color: #FB5353;
+}
+#section .article_box .article_contents .speed_info ul li .p_12px {
+    color: #999;
+    word-break: keep-all;
+}
+/* 운행 기록 */
+/* article contents */
+/* article box */
+
+
+/* 반응형 1500px */
+@media screen and (max-width: 1500px) {
+    #section {
+        margin-top: 130px;
+    }
+    #section .article_wrap {
+        width: calc(100% - 225px);
+    }
+}
+
+/* 반응형 1400px */
+@media screen and (max-width: 1400px) {
+    /* article contents */
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li {
+        width: calc(25% - 11.25px);
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 325px;
+    }
+    /* 정보 설정 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(25% - 10px);
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 230px;
+        padding: 45px 30px 30px 30px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 120px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        margin-right: 15px !important;
+    }
+
+    #section .article_box .article_contents .article_R {
+        width: calc(100% - 245px);
+    }
+    #section .article_box .article_contents .article_L {
+        width: 225px;
+        margin-right: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box {
+        padding: 25px 25px 0 25px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img {
+        width: 150px;
+        height: 150px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img img {
+        width: 150px;
+        height: 150px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap li .p_G_12px {
+        margin-right: 5px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap li .info_parents .p_01 {
+        display: none;
+    }
+    /* 출석부 관리 */
+    /* article contents */
+}
+
+/* 반응형 1300px */
+@media screen and (max-width: 1300px) {
+    /* article contents */
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 215px;
+        padding: 40px 25px 25px 25px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 105px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 50px !important;
+        height: 50px !important;
+        margin-right: 10px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    /* 출석부 관리 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 375px;
+    }
+    /* 자녀 정보 등록 */
+    /* article contents */
+}
+
+/* 반응형 1200px */
+@media screen and (max-width: 1200px) {
+    /* article contents */
+    /* 차량 예약 관리 */
+    #section .article_box .article_contents #route_plus.flex_between2 {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents #route_plus > div {
+        width: 100%;
+    }
+    #section .article_box .article_contents #route_plus #route_info {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    #section .article_box .article_contents #route_plus #route_info > div {
+        margin-bottom: 15px;
+    }
+    /* 차량 예약 관리 */
+
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul li a {
+        height: 220px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .role_img {
+        width: 90px;
+        height: 90px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li {
+        width: calc(33.333% - 10px);
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(4n+4) {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(4)  {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 325px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class, #section .article_box .article_contents .list_type03 li #profile_img {
+        width: 90px;
+        height: 90px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class img, #section .article_box .article_contents .list_type03 li #profile_img img {
+        width: 90px;
+        height: 90px;
+    }
+    /* 정보 설정 */
+
+     /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(25% - 7.5px);
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 210px;
+        border-radius: 20px;
+        padding: 40px 20px 20px 20px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        width: calc(100% - 40px);
+        top: 105px;
+        left: 20px;
+    }
+
+    #section .article_box .article_contents .article_R {
+        width: calc(100% - 220px);
+    }
+    #section .article_box .article_contents .article_L {
+        width: 200px;
+        border-radius: 25px;
+        margin-right: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box {
+        border-radius: 25px;
+        padding: 25px 25px 0 25px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img {
+        width: 125px;
+        height: 125px;
+        margin-top: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img img {
+        width: 125px;
+        height: 125px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .p_20px {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .info_child {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap {
+        padding: 15px 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li .state_flower {
+        width: 46px;
+        height: 45px;
+        line-height: 46px;
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .profile_bottom {
+        height: 110px;
+        border-radius: 0 0 25px 25px;
+    }
+    #section .article_box .article_contents .profile_bottom img {
+        width: 25px;
+        height: 25px;
+    }
+    #section .article_box .article_contents .profile_bottom .p_14px {
+        margin-top: 12px;
+    }
+    /* 출석부 관리 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 50%;
+    }
+    /* 마이 페이지 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 350px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_img .file_btn {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_img .p_12px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_data .child_kiner #kinder_change {
+        margin-left: 8px;
+    }
+    /* 자녀 정보 등록 */
+
+    /* 운행 기록 */
+    #section .article_box .article_contents .speed_info ul.flex_between {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .speed_info ul li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #section .article_box .article_contents .speed_info ul li:first-child {
+        margin-bottom: 10px;
+    }
+    /* 운행 기록 */
+    /* article contents */
+}
+
+@media screen and (max-width: 1150px) {
+    #section .article_box .article_contents .schedule_top ul.flex_right {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: start;
+    }
+}
+
+/* 반응형 1100px */
+@media screen and (max-width: 1100px) {
+    #section {
+        margin-top: 120px;
+    }
+    #section .article_wrap {
+        width: 100%;
+    }
+
+    /* article title */
+    #section .article_wrap .article_tit .h2_G_type02 {
+        margin-top: 20px;
+    }
+    #section .article_wrap .article_tit .article_nav li::after {
+        margin: 0 12px;
+    }
+    /* article title */
+
+    /* article contents */
+    /* 정보 설정 */
+    #section .article_box .article_contents #option_info .form_contents label {
+        width: 20%;
+    }
+    #section .article_box .article_contents #option_info .form_contents [class*='option'] {
+        width: 80%;
+    }
+    /* 정보 설정 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(25% - 5px);
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 320px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance > .flex_start {
+        flex-direction: column;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        margin-right: 0 !important;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 150px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: 100%;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        margin-top: 3px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text.flex_start_column {
+        justify-content: center;
+        align-items: center;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_14px {
+        margin-top: 3px;
+    }
+    /* 출석부 관리 */
+    /* article contents */
+}
+
+/* 반응형 1024px */
+@media screen and (max-width: 1024px) {
+    #section {
+        margin-top: 100px;
+    }
+
+    /* article title */
+    #section .article_wrap .article_tit .article_nav {
+        margin-top: 35px;
+    }
+    #section .article_wrap .article_tit .article_nav li:first-child a {
+        width: 17px;
+        height: 16px;
+    }
+
+    /* 1~4 */
+    #section .article_wrap .article_tit .h2_G_before01::after {
+        width: 47px;
+        height: 30px;
+        right: 25px;
+    }
+    #section .article_wrap .article_tit .h2_G_before02::after {
+        width: 31px;
+        height: 30px;
+        right: 20px;
+    }
+    #section .article_wrap .article_tit .h2_G_before03::after {
+        width: 30px;
+        height: 30px;
+        right: 20px;
+    }
+    #section .article_wrap .article_tit .h2_G_before04::after {
+        width: 30px;
+        height: 30px;
+        right: 20px;
+    }
+    /* 1~4 */
+    /* article title */
+
+    /* article box */
+    /* article top */
+    #section .article_box .article_top {
+        padding-bottom: 20px;
+    }
+    #section .article_box .article_top .child_choose {
+        top: -13px;
+    }
+    #section .article_box .article_top .child_choose li {
+        margin-left: 10px;
+    }
+    #section .article_box .article_top .child_choose li button {
+        width: 45px;
+        height: 45px;
+    }
+    #section .article_box .article_top .child_choose li button img {
+        width: 45px;
+        height: 45px;
+    }
+    #section .article_box .search_box {
+        width: 200px;
+        height: 32px;
+        border-radius: 8px;
+    }
+    /* article top */
+    /* article box */
+
+    /* article contents */
+    /* pagination */
+    #section .article_box .article_contents .pagination {
+        margin-top: 20px;
+    }
+    #section .article_box .article_contents .pagination li a {
+        width: 20px;
+        height: 20px
+    }
+    #section .article_box .article_contents .pagination li .num {
+        line-height: 21px;
+        margin: 0 3px;
+    }
+    /* pagination */
+
+    /* 선생님 목록 */
+    #section .article_box .article_contents .list_type01 > li {
+        width: 100%;
+    }
+    #section .article_box .article_contents .list_type01 > li:nth-child(5) {
+        margin-bottom: 10px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a {
+        padding: 20px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_img, #section .article_box .article_contents .list_type01 .img_attendance {
+        width: 60px;
+        height: 60px;
+        margin-right: 12px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_img img, #section .article_box .article_contents .list_type01 .img_attendance img {
+        width: 60px;
+        height: 60px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text {
+        width: calc(100% - 60px);
+    }
+    #section .article_box .article_contents .list_type01 > li > a .btn_arrow {
+        width: 14px;
+        height: 16px;
+    }
+    /* 선생님 목록 */
+
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul li {
+        width: calc(33.333% - 7.5px);
+    }
+    #section .article_box .article_contents .invite_role ul li a {
+        height: 190px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .role_img {
+        width: 75px;
+        height: 75px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .h3_N_type01 {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_teacher .h3_N_type01::before {
+        width: 14px;
+        height: 13px;
+        left: -17px;
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_parents .h3_N_type01::before {
+        width: 13px;
+        height: 13px;
+        left: -16px;
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_driver .h3_N_type01::before {
+        width: 13px;
+        height: 13px;
+        left: -16px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .p_12px {
+        margin-top: 8px;
+    }
+
+    #section .article_box .article_contents .invite_info {
+        margin-top: 25px;
+    }
+    #section .article_box .article_contents .invite_info .invite_mention .p_12px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .form_contents label {
+        margin: 20px 0 8px 0;
+    }
+    #section .article_box .article_contents .invite_info .form_contents .invite_info_text input:first-child {
+        width: 35% !important;
+    }
+    #section .article_box .article_contents .invite_info .form_contents .invite_info_text input:nth-child(2) {
+        width: 65% !important;
+        margin-left: 8px;
+    }
+    #section .article_box .article_contents .form_contents .form_delete_wrap {
+        margin-left: 8px;
+    }
+    #section .article_box .article_contents .form_contents .form_delete_wrap .form_delete {
+        width: 25px;
+        height: 25px;
+    }
+    #section .article_box .article_contents .form_btn_wrap {
+        margin-top: 25px;
+    }
+    #section .article_box .article_contents .form_btn_wrap .btn_blue03 {
+        margin-top: 8px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents #option_info .form_contents [class*='option'] ul li {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents #option_info [class*='option'] .p_12px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents #option_info .option_notset .select_03 {
+        margin: 0 8px;
+    }
+
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 275px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class, #section .article_box .article_contents .list_type03 li #profile_img {
+        width: 75px;
+        height: 75px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class img, #section .article_box .article_contents .list_type03 li #profile_img img {
+        width: 75px;
+        height: 75px;
+    }
+    #section .article_box .article_contents .list_type03 li .p_20px {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li .p_14px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .list_type03 li .class_num .p_14px {
+        margin-top: 60px;
+    }
+    #section .article_box .article_contents .list_type03 li .child_state .p_14px {
+        margin-top: 60px;
+    }
+    /* 정보 설정 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top {
+        margin-bottom: 20px;
+    }
+    #section .article_box .article_contents .schedule_top .flex_right li {
+        margin-right: 12px;
+    }
+    #section .article_box .article_contents .schedule_top .flex_right li button span {
+        margin-left: 3px;
+    }
+    #section .article_box .article_contents .schedule_top .schedule_date {
+        width: 125px;
+    }
+    #section .article_box .article_contents .schedule_top .btn_schedule_wrap button:last-child {
+        margin-left: 5px;
+    }
+    /* 스케줄 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 285px;
+        padding: 35px 20px 20px 20px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 135px;
+    }
+
+    #section .article_box .article_contents .article_R {
+        width: calc(100% - 195px);
+    }
+    #section .article_box .article_contents .article_L {
+        width: 175px;
+        border-radius: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box {
+        border-radius: 20px;
+        padding: 20px 20px 0 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img {
+        width: 100px;
+        height: 100px;
+        margin-top: 25px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img img {
+        width: 100px;
+        height: 100px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap li .p_G_12px {
+        width: 22px;
+        height: 22px;
+        line-height: 24px;
+        margin-right: 3px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap li .info_parents {
+        width: calc(100% - 22px);
+        height: 22px;
+        line-height: 24px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li .state_flower {
+        width: 40px;
+        height: 39px;
+        line-height: 40px;
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .profile_bottom {
+        height: 100px;
+        border-radius: 0 0 20px 20px;
+    }
+    #section .article_box .article_contents .profile_bottom img {
+        width: 22px;
+        height: 22px;
+    }
+    /* 출석부 관리 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        margin: 95px 0;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents {
+        height: 45px;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents label {
+        width: 15%;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents input {
+        width: 75%;
+    }
+    /* 마이 페이지 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 400px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 400px;
+        padding: 25px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now {
+        padding-top: 10px;
+        padding-left: 5px;
+        margin-top: 20px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now::-webkit-scrollbar {
+        width: 12px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li {
+        padding-bottom: 25px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li .route_num {
+        width: 18px;
+        height: 18px;
+        line-height: 20px;
+        top: -2px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li::before {
+        width: 3px;
+        left: 7.5px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li .route_text  {
+        padding-left: 35px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li .route_text .p_14px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li #location_now  {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li #location_now .icon_location {
+        width: 30px;
+        height: 30px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li #location_now .p_12px {
+        padding: 6px 12px;
+        margin-left: 12px;
+    }
+    /* 실시간 위치 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap.flex_between2 {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .child_info_wrap .form_contents {
+        width: calc(50% - 7.5px);
+    }
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 375px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect {
+        width: 100%;
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+        height: 200px;
+    }
+    /* 자녀 정보 등록 */
+
+    /* 운행 기록 */
+    #section .article_box .article_contents .speed_info ul li {
+        padding: 15px;
+    }
+    #section .article_box .article_contents .speed_info ul li .speed_icon {
+        width: 15px;
+        height: 15px;
+    }
+    #section .article_box .article_contents .speed_info ul li .h4_N_type04 {
+        margin: 0 12px;
+    }
+    /* 운행 기록 */
+    /* article contents */
+}
+
+@media screen and (max-width: 950px) {
+    #section .article_box .article_contents .schedule_top ul.flex_right {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: start;
+    }
+    #section .article_box .article_contents .schedule_top .flex_right li {
+        margin-right: 20px;
+    }
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(50% - 7.5px);
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li:nth-child(3), #section .article_box .article_contents .attendance_list li:nth-child(4) {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 235px;
+        padding: 50px 30px 30px 30px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance > .flex_start {
+        flex-direction: row;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 60px !important;
+        height: 60px !important;
+        margin-right: 10px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        width: calc(100% - 60px);
+        top: 125px;
+        left: 30px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: calc(50% - 1.5px);
+        margin-top: 3px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text.flex_start_column {
+        justify-content: start;
+        align-items: start;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_14px {
+        margin-top: 5px;
+    }
+
+    #section .article_box .article_contents > .flex_between2 {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .article_R {
+        width: 100%;
+    }
+    #section .article_box .article_contents .article_L {
+        width: 100%;
+        border-radius: 20px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box {
+        background: url(../images/img_attendance_back05.svg) repeat-x center -10px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    #section .article_box .article_contents .article_L .profile_box.flex_center_column {
+        flex-direction: row;
+        align-items: center;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img {
+        width: 75px;
+        height: 75px;
+        margin-top: 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img img {
+        width: 75px;
+        height: 75px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap {
+        width: calc(50% - 60px);
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .p_20px {
+        margin-top: 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .info_child {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .info_child .p_01 {
+        display: inline-block !important;
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .info_child .p_14px {
+        display: none;
+    }
+    #section .article_box .article_contents .article_L .profile_box .parents_wrap {
+        display: none;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state {
+        padding: 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state.flex_between {
+        width: calc(50% - 60px);
+        justify-content: center;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li {
+        margin: 0 10px;
+    }
+    #section .article_box .article_contents .profile_bottom {
+        display: none;
+    }
+    /* 출석부 관리 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 350px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 350px;
+    }
+    /* 실시간 위치 */
+}
+
+/* 반응형 900px */
+@media screen and (max-width: 900px) {
+    #section {
+        margin-top: 90px;
+    }
+
+    /* article contents */
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul li a {
+        height: 150px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .role_img {
+        width: 60px;
+        height: 60px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents #option_info .form_contents label {
+        width: 25%;
+    }
+    #section .article_box .article_contents #option_info .form_contents [class*='option'] {
+        width: 75%;
+    }
+    #section .article_box .article_contents #option_info [class*='option'] .p_02 {
+        display: none;
+    }
+    #section .article_box .article_contents #option_info [class*='option'] .select_03 {
+        width: 50%;
+    }
+
+    #section .article_box .article_contents .list_type03 li {
+        width: calc(50% - 7.5px);
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3)  {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 120%;
+    }
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 275px;
+    }
+    #section .article_box .article_contents .list_type03 li .p_20px {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li .p_14px {
+        margin-top: 8px;
+    }
+    #section .article_box .article_contents .list_type03 li .class_num .p_14px {
+        margin-top: 60px;
+    }
+    #section .article_box .article_contents .list_type03 li .child_state .p_14px {
+        margin-top: 60px;
+    }
+    /* 정보 설정 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 55%;
+    }
+    /* 마이 페이지 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img {
+        width: calc(60% - 7.5px);
+    }
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 375px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_data {
+        width: calc(40% - 7.5px);
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect {
+        width: 100%;
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+        height: 200px;
+    }
+    /* 자녀 정보 등록 */
+    /* article contents */
+}
+
+@media screen and (max-width: 850px) {
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 300px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 350px;
+    }
+    /* 실시간 위치 */
+}
+
+/* 반응형 768px */
+@media screen and (max-width: 768px) {
+    #section {
+        margin-top: 80px;
+    }
+
+    /* article title */
+    #section .article_wrap .article_tit {
+        background: url(../images/img_articletit.png) no-repeat center center/cover;
+        border-bottom: 0;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #section .article_wrap .article_tit .h2_G_type02 {
+        color: #fff;
+        margin-top: 0;
+    }
+    #section .article_wrap .article_tit .article_nav {
+        margin-top: 20px;
+    }
+    #section .article_wrap .article_tit .article_nav li a {
+        color: #fff !important;
+    }
+    #section .article_wrap .article_tit .article_nav li:first-child a {
+        width: 15px;
+        height: 14px;
+        background: url(../images/icon_home2.svg) no-repeat 0 0/cover;
+    }
+    #section .article_wrap .article_tit .article_nav li::after {
+        margin: 0 10px;
+    }
+    #section .article_wrap .article_tit .article_nav li:first-child::after {
+        top: -2px;
+    }
+
+    /* 1~4 */
+    #section .article_wrap .article_tit .h2_G_before01::after,#section .article_wrap .article_tit .h2_G_before02::after, #section .article_wrap .article_tit .h2_G_before03::after, #section .article_wrap .article_tit .h2_G_before04::after {
+        display: none;
+    }
+    /* 1~4 */
+    /* article title */
+
+    /* article box */
+    #section .article_box {
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    /* article top */
+    #section .article_box .article_top {
+        padding-bottom: 15px;
+    }
+    #section .article_box .article_top .child_choose {
+        top: -10px;
+    }
+    #section .article_box .article_top .child_choose li {
+        margin-left: 8px;
+    }
+    #section .article_box .article_top .child_choose li button {
+        width: 40px;
+        height: 40px;
+    }
+    #section .article_box .article_top .child_choose li button img {
+        width: 40px;
+        height: 40px;
+    }
+    #section .article_box .search_box {
+        width: 175px;
+        height: 30px;
+        border-radius: 8px;
+    }
+    #section .article_box .search_box #search {
+        width: calc(100% - 30px);
+    }
+    #section .article_box .search_box .label_search {
+        width: 30px;
+    }
+    #section .article_box .search_box .label_search .icon_search, #section .article_box .search_box .label_search .icon_search02, #section .article_box .search_box .label_search .icon_search03 {
+        width: 13px;
+        height: 13px;
+    }
+    /* article top */
+    /* article box */
+
+    /* article line */
+    #section .article_box .article_line {
+        margin-bottom: 20px;
+    }
+    /* article line */
+
+    /* article contents */
+
+    /* 차량 노선 관리 */
+    #section .article_box .article_contents #route_plus #route_line .route_top .p_16px:first-child {
+        width: calc(20% + 10px);
+    }
+    #section .article_box .article_contents #route_plus #route_line .route_top .p_16px:last-child {
+        width: calc(80% - 10px);
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li #route_time {
+        width: 20%;
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li #route_location {
+        width: calc(80% - 65px);
+    }
+    /* 차량 노선 관리 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top .schedule_date {
+        width: 120px;
+    }
+    /* 스케줄 */
+
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul li {
+        width: calc(33.333% - 5px);
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_teacher .h3_N_type01::before {
+        width: 12px;
+        height: 11px;
+        left: -15px;
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_parents .h3_N_type01::before {
+        width: 11px;
+        height: 11px;
+        left: -14px;
+    }
+    #section .article_box .article_contents .invite_role ul li #invite_role_driver .h3_N_type01::before {
+        width: 11px;
+        height: 11px;
+        left: -14px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .p_12px {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    #section .article_box .article_contents .invite_info {
+        margin-top: 20px;
+    }
+    .article_box .article_contents .form_btn_wrap {
+        margin-top: 20px;
+    }
+    #section .article_box .article_contents .form_btn_wrap .btn_blue03 {
+        margin-top: 5px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents #option_info .form_contents.flex_start {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents #option_info .form_contents {
+        margin-top: 20px;
+    }
+    #section .article_box .article_contents #option_info .form_contents label {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #section .article_box .article_contents #option_info .form_contents [class*='option'] {
+        width: 100%;
+    }
+
+    #section .article_box .article_contents .list_type03 li {
+        width: calc(33.333% - 10px);
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(4n+4) {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2n+2) {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3)  {
+        margin-top: 0;
+    }
+    #section .article_box .article_contents #option_info .form_contents [class*='option'] ul li .p_14px {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    #section .article_box .article_contents #option_info [class*='option'] .p_12px {
+        line-height: 1.8rem;
+    }
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 100%;
+    }
+    /* 정보 설정 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top ul {
+        width: 100%;
+        background: #f5f5f5;
+        border-radius: 50px;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right {
+        justify-content: space-between;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li {
+        width: 25%;
+        margin: 0;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li .btn_graytext01 {
+        width: 100%;
+        text-align: center;
+        padding: 10px 5px;
+        border-radius: 50px;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li .btn_graytext01.btn_textactive01 {
+        color: #fff !important;
+        background: #0080fb;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li .btn_graytext01.btn_textactive02 {
+        color: #fff !important;
+        background: #FE8A8B;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li .btn_graytext01.btn_textactive03 {
+        color: #fff !important;
+        background: #F88415;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li .btn_graytext01.btn_textactive04 {
+        color: #fff !important;
+        background: #009C7D;
+    }
+    /* 스케줄 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(50% - 7.5px);
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li:nth-child(3), #section .article_box .article_contents .attendance_list li:nth-child(4) {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 310px;
+        border-radius: 30px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance > .flex_start {
+        flex-direction: column;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 75px !important;
+        height: 75px !important;
+        margin-right: 0 !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 75px !important;
+        height: 75px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        width: calc(100% - 80px);
+        top: 190px;
+        left: 40px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: calc(50% - 2.5px);
+        margin-top: 5px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text.flex_start_column {
+        justify-content: center;
+        align-items: center;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_18px {
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_14px {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        margin-top: 5px;
+    }
+    /* 출석부 관리 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 325px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 350px;
+        padding: 20px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now {
+        margin-top: 15px;
+    }
+    /* 실시간 위치 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+        height: 150px;
+        font-size: 1.4rem;
+    }
+    /* 자녀 정보 등록 */
+
+    /* 운행 기록 */
+    #section .article_box .article_contents .speed_info ul li:first-child {
+        margin-bottom: 5px;
+    }
+    /* 운행 기록 */
+    /* article contents */
+}
+
+/* 반응형 600px */
+@media screen and (max-width: 600px) {
+    /* article contents */
+
+    /* 차량 노선 관리 */
+    #section .article_box .article_contents #route_plus #route_line .route_top .p_16px span {
+        display: none;
+    }
+    /* 차량 노선 관리 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li {
+        width: calc(50% - 10px);
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 15px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3)  {
+        margin-top: 15px;
+    }
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 120%;
+    }
+    /* 정보 설정 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: calc(50% - 5px);
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .attendance_list li:nth-child(3), #section .article_box .article_contents .attendance_list li:nth-child(4) {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 300px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        width: calc(100% - 60px);
+        top: 185px;
+        left: 30px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: calc(50% - 2px);
+        margin-top: 4px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text {
+        margin-top: 12px;
+    }
+
+    #section .article_box .article_contents .article_L .profile_box {
+        background-position: center -5px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap {
+        width: calc(45% - 60px);
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state.flex_between {
+        width: calc(55% - 60px);
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li {
+        margin: 0 5px;
+    }
+    /* 출석부 관리 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 60%;
+    }
+    /* 마이 페이지 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 275px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 325px;
+    }
+    /* 실시간 위치 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img {
+        width: 100%;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_data {
+        width: 100%;
+        margin-top: 15px;
+    }
+    /* 자녀 정보 등록 */
+    /* article contents */
+}
+
+/* 반응형 575px */
+@media screen and (max-width: 575px) {
+    /* article contents */
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 110%;
+    }
+    /* 정보 설정 */
+    /* article contents */
+}
+
+@media screen and (max-width: 550px) {
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 270px;
+        padding: 40px 20px 20px 20px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 65px !important;
+        height: 65px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        width: calc(100% - 40px);
+        top: 165px;
+        left: 20px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: calc(50% - 1.5px);
+        margin-top: 3px !important;
+    }
+    /* 출석부 관리 */
+}
+
+/* 반응형 500px */
+@media screen and (max-width: 500px) {
+    /* article box */
+    /* article top */
+    #section .article_box .article_top {
+        padding-bottom: 15px;
+    }
+    #section .article_box .article_top.flex_between2 {
+        flex-wrap: wrap;
+    }
+    #section .article_box .search_wrap, #section .article_box .sub_btn_wrap {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #section .article_box .search_box {
+        width: 100%;
+    }
+    #section .article_box .sub_btn_wrap.flex_right {
+        justify-content: space-between;
+    }
+    #section .article_box .sub_btn_wrap a, #section .article_box .sub_btn_wrap button {
+        width: calc(50% - 2.5px);
+        margin: 0;
+    }
+    /* article top */
+    /* article box */
+
+    /* article title */
+    #section .article_wrap .article_tit .article_nav {
+        margin-top: 15px;
+    }
+    /* article title */
+
+    /* pagination */
+    #section .article_box .article_contents .pagination li a {
+        width: 17px;
+        height: 17px
+    }
+    #section .article_box .article_contents .pagination li .num {
+        line-height: 18px;
+        margin: 0 2px;
+    }
+    /* pagination */
+
+    /* article contents */
+
+    /* 차량 노선 관리 */
+    #section .article_box .article_contents #route_plus #route_line ol li {
+        width: 100%;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li:last-child {
+        padding-bottom: 0;
+        border: 0;
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li.flex_start {
+        flex-wrap: wrap
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li #route_time {
+        width: calc(100% - 55px);
+    }
+    #section .article_box .article_contents #route_plus #route_line ol li #route_location {
+        width: calc(100% - 55px);
+        margin: 10px 10px 0 0;
+    }
+    /* 차량 노선 관리 */
+
+    /* 차량 예약 관리 */
+    #section .article_box .article_contents #route_plus #route_line .route_top .p_16px, #section .article_box .article_contents #route_plus #route_line ol {
+        padding: 15px;
+    }
+    #section .article_box .article_contents #route_plus #route_info .option_day ul.flex_between {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    #section .article_box .article_contents #route_plus #route_info .option_day ul li {
+        width: 33.333%;
+        margin: 0 0 5px 0;
+    }
+    /* 차량 예약 관리 */
+
+    /* 선생님 승인/초대 */
+    #section .article_box .article_top .article_top_tabs {
+        width: 100%;
+        background: #f5f5f5;
+        border-radius: 30px;
+        margin-top: 15px;
+    }
+    #section .article_box .article_top .article_top_tabs.flex_right {
+        justify-content: start;
+    }
+    #section .article_box .article_top .article_top_tabs li {
+        margin-left: 0;
+    }
+    #section .article_box .article_top .article_top_tabs .art_approve, #section .article_box .article_top .article_top_tabs .art_invite {
+        width: calc(50% - 20px);
+        margin-right: 10px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_alarm, #section .article_box .article_top .article_top_tabs .art_mypage {
+        width: 50%;
+    }
+    #section .article_box .article_top .article_top_tabs a {
+        width: 100%;
+        height: 30px;
+        line-height: 30px !important;
+        text-align: center;
+        font-weight: bold;
+        white-space: nowrap;
+        border: none;
+    }
+    #section .article_box .article_top .article_top_tabs .art_active a {
+        color: #fff !important;
+        background: #0080fb;
+        border: none;
+        border-radius: 20px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_active02 a {
+        color: #fff !important;
+        background: #FE8A8B;
+        border: none;
+        border-radius: 20px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_active03 a {
+        color: #fff !important;
+        background: #F88415;
+        border: none;
+        border-radius: 20px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_active04 a {
+        color: #fff !important;
+        background: #009C7D;
+        border: none;
+        border-radius: 20px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_teacher a {
+        width: 25px;
+        height: 25px;
+        border: 0;
+        margin-right: 5px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_approve, #section .article_box .article_top .article_top_tabs .art_invite {
+        width: calc(50% - 15px);
+    }
+    #section .article_box .article_top .article_top_tabs .art_kinder, #section .article_box .article_top .article_top_tabs .art_option, #section .article_box .article_top .article_top_tabs .art_class {
+        width: 33.333%;
+        margin: 0;
+    }
+    #section .article_box .article_top .article_top_tabs .art_kinder a, #section .article_box .article_top .article_top_tabs .art_option a, #section .article_box .article_top .article_top_tabs .art_class a {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+    /* 선생님 승인/초대 */
+
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul.flex_between {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .invite_role ul li {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    #section .article_box .article_contents .invite_role ul li:last-child {
+        margin: 0;
+    }
+    #section .article_box .article_contents .invite_role ul li a.flex_center_column {
+        flex-direction: row;
+        justify-content: start;
+    }
+    #section .article_box .article_contents .invite_role ul li a {
+        height: auto;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .role_img {
+        width: 50px;
+        height: 50px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .h3_N_type01 {
+        margin: 0 8px 0 25px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .p_12px {
+        margin-top: 2px;
+    }
+    #section .article_box .article_contents .form_btn_wrap {
+        margin-top: 20px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li {
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(4n+4) {
+        margin-right: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3), #section .article_box .article_contents .list_type03 li:nth-child(4)  {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 250px;
+    }
+    #section .article_box .article_contents .list_type03 li .class_num .p_14px {
+        margin-top: 50px;
+    }
+    #section .article_box .article_contents .list_type03 li .child_state .p_14px {
+        margin-top: 50px;
+    }
+    /* 정보 설정 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top .flex_right li {
+        margin-right: 12px
+    }
+    #section .article_box .article_contents .schedule_top > .flex_start {
+        width: 100%;
+    }
+    #section .article_box .article_contents .schedule_top .search_box {
+        width: calc(100% - 120px);
+    }
+    #section .article_box .article_contents .schedule_top.choose_wrap .search_box {
+        width: 100% !important;
+    }
+    /* 스케줄 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 260px;
+        border-radius: 20px;
+    }
+    
+    #section .article_box .article_contents .article_L .profile_box .child_wrap {
+        width: calc(45% - 30px);
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state.flex_between {
+        width: calc(55% - 30px);
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li {
+        margin: 0 3px;
+    }
+    /* 출석부 관리 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 65%;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents label {
+        width: 20%;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents input {
+        width: 70%;
+    }
+    /* 마이 페이지 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 250px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 300px;
+    }
+    /* 실시간 위치 */
+
+    /* 운행 기록 */
+    #section .article_box .article_contents .speed_info ul li.flex_start {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .speed_info ul li .p_12px {
+        width: 100%;
+        margin: 5px 0 0 27px;
+    }
+    /* 운행 기록 */
+    /* article contents */
+}
+
+/* 반응형 450px */
+@media screen and (max-width: 450px) {
+    /* article box */
+    #section .article_box {
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    /* article top */
+    #section .article_box .article_top.choose_wrap {
+        padding-bottom: 55px;
+    }
+    #section .article_box .article_top .child_choose {
+        top: 30px;
+        left: 0;
+        right: auto;
+    }
+    #section .article_box .article_top .child_choose li {
+        margin-left: 8px;
+    }
+    #section .article_box .article_top .child_choose li:first-child {
+        margin: 0;
+    }
+    #section .article_box .article_top .child_choose li button {
+        width: 40px;
+        height: 40px;
+    }
+    #section .article_box .article_top .child_choose li button img {
+        width: 40px;
+        height: 40px;
+    }
+    /* article top */
+    /* article box */
+
+    /* article contents */
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 225px;
+    }
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 100%;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class, #section .article_box .article_contents .list_type03 li #profile_img {
+        width: 60px;
+        height: 60px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class img, #section .article_box .article_contents .list_type03 li #profile_img img {
+        width: 60px;
+        height: 60px;
+    }
+    #section .article_box .article_contents .list_type03 li .class_num .p_14px {
+        margin-top: 40px;
+    }
+    #section .article_box .article_contents .list_type03 li .child_state .p_14px {
+        margin-top: 40px;
+    }
+    /* 정보 설정 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top ul {
+        border-radius: 20px;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents .schedule_top ul.flex_right li {
+        width: 50%;
+    }
+    /* 스케줄 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 305px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    #section .article_box .article_contents .attendance_list li .profile_text {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_14px {
+        margin-top: 3px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 155px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: 100%;
+    }
+    /* 출석부 관리 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 70%;
+    }
+    /* 마이 페이지 */
+    /* article contents */
+}
+
+/* 반응형 400px */
+@media screen and (max-width: 400px) {
+    /* article title */
+    #section .article_wrap .article_tit .article_nav {
+        margin-top: 10px;
+    }
+    /* article title */
+
+    /* article contents */
+
+    /* 차량 노선 관리 */
+    #section .article_box .article_contents #route_plus #route_info .option_day ul li {
+        width: 50%;
+    }
+    /* 차량 노선 관리 */
+
+    /* 선생님 목록 */
+    #section .article_box .article_contents .list_type01 > li, #section .article_box .article_contents .list_type01 > li:nth-child(5) {
+        margin-bottom: 8px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a {
+        border-radius: 15px;
+        padding: 15px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_img, #section .article_box .article_contents .list_type01 .img_attendance {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_img img, #section .article_box .article_contents .list_type01 .img_attendance img {
+        width: 50px;
+        height: 50px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text {
+        width: calc(100% - 50px);
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text .p_20px {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text .p_16px {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        margin-top: 5px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .btn_arrow {
+        width: 10px;
+        height: 12px;
+    }
+    /* 선생님 목록 */
+
+    /* 초대하기 */
+    #section .article_box .article_contents .invite_role ul li a .role_img {
+        width: 50px;
+        height: 50px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .h3_N_type01 {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin-left: 30px;
+    }
+    #section .article_box .article_contents .invite_role ul li a .p_12px {
+        display: none;
+    }
+    #section .article_box .article_contents .form_contents .form_delete_wrap .form_delete {
+        width: 20px;
+        height: 20px;
+    }
+    /* 초대하기 */
+
+    /* 정보 설정 */
+    #section .article_box .article_contents .list_type03 li {
+        width: 100%;
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(4n+4) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(3n+3) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2n+2) {
+        margin-right: 0;
+    }
+    #section .article_box .article_contents .list_type03 li:nth-child(2) {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li button, #section .article_box .article_contents .list_type03 li a {
+        height: 175px;
+    }
+    #section .article_box .article_contents .list_type03 .class button, #section .article_box .article_contents .list_type03 .child a {
+        background-position: center 100%;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class, #section .article_box .article_contents .list_type03 li #profile_img {
+        width: 50px;
+        height: 50px;
+    }
+    #section .article_box .article_contents .list_type03 li #img_class img, #section .article_box .article_contents .list_type03 li #profile_img img {
+        width: 50px;
+        height: 50px;
+    }
+    #section .article_box .article_contents .list_type03 li .class_num .p_14px {
+        margin-top: 10px;
+    }
+    #section .article_box .article_contents .list_type03 li .child_state .p_14px {
+        margin-top: 10px;
+    }
+    /* 정보 설정 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top .schedule_date {
+        width: 110px;
+    }
+    #section .article_box .article_contents .schedule_top .search_box {
+        width: calc(100% - 100px);
+    }
+    /* 스케줄 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 305px;
+        padding: 32px 20px 20px 20px;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    #section .article_box .article_contents .list_type02 li #profile_img img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    #section .article_box .article_contents .list_type02 li .profile_text .p_18px {
+        font-size: 2.0rem;
+        line-height: 2.0rem;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 135px;
+    }
+
+    #section .article_box .article_contents .article_L {
+        border-radius: 15px;
+    }
+    #section .article_box .article_contents .article_L .profile_box.flex_center_column {
+        flex-direction: column;
+    }
+    #section .article_box .article_contents .article_L .profile_box {
+        background-position: center 0;
+        border-radius: 15px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img {
+        width: 60px;
+        height: 60px;
+    }
+    #section .article_box .article_contents .article_L .profile_box #profile_img img {
+        width: 60px;
+        height: 60px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap {
+        width: 100%;
+        margin: 15px 0;
+    }
+    #section .article_box .article_contents .article_L .profile_box .child_wrap .info_child {
+        margin-top: 5px;
+    }
+    #section .article_box .article_contents .article_L .profile_box .all_state li .state_flower {
+        width: 35px;
+        height: 34px;
+        line-height: 35px;
+        margin-top: 5px;
+    }
+    /* 출석부 관리 */
+
+    /* 마이페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 90%;
+        margin: 85px 0;
+    }
+    #section .article_box .article_contents #option_info .user_phone.flex_between {
+        flex-wrap: wrap;
+    }
+    #section .article_box .article_contents #option_info .user_phone .flex_between {
+        width: 100%;
+        margin-top: 5px;
+    }
+    /* 마이페이지 */
+    /* article contents */
+}
+
+
+/* 반응형 350px */
+@media screen and (max-width: 350px) {
+    #section .article_box {
+        padding: 15px;
+    }
+
+    /* article title */
+    #section .article_wrap .article_tit {
+        padding: 30px 0;
+    }
+    #section .article_wrap .article_tit .article_nav li:nth-child(4) {
+        display: none;
+    }
+    #section .article_wrap .article_tit .article_nav li:nth-child(3):after {
+        display: none;
+    }
+    #section .article_wrap .article_tit .article_nav li::after {
+        margin: 0 8px;
+    }
+    /* article title */
+
+    /* article line */
+    #section .article_box .article_line {
+        margin-bottom: 15px;
+    }
+    /* article line */
+
+    /* article contents */
+    /* 차량 노선 관리 */
+    #section .article_box .article_contents #route_plus #route_info label {
+        width: 30%;
+    }
+    #section .article_box .article_contents #route_plus #route_info .Text_input05, 
+    #section .article_box .article_contents #route_plus #route_info select, 
+    #section .article_box .article_contents #route_plus #route_info .option_day {
+        width: 70%;
+    }
+    /* 차량 노선 관리 */
+
+    /* 선생님 승인/초대 */
+    #section .article_box .article_top .article_top_tabs .art_kinder a, #section .article_box .article_top .article_top_tabs .art_option a, #section .article_box .article_top .article_top_tabs .art_class a {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+    /* 선생님 승인/초대 */
+
+    /* 출석부 관리 */
+    #section .article_box .article_contents .attendance_list li {
+        width: 100%;
+        margin-top: 5px !important;
+    }
+    #section .article_box .article_contents .attendance_list li #attendance {
+        height: 225px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state {
+        top: 135px;
+    }
+    #section .article_box .article_contents .attendance_list li .attendance_state li {
+        width: calc(50% - 1.5px);
+    }
+    /* 출석부 관리 */
+
+    /* 실시간 위치 */
+    #section .article_box .article_contents iframe {
+        height: 250px;
+        border-radius: 15px;
+    }
+    #section .article_box .article_contents .route_wrap {
+        height: 300px;
+        border-radius: 15px;
+        margin-top: 15px;
+        padding: 20px 15px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now::-webkit-scrollbar {
+        width: 10px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li {
+        padding-bottom: 20px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li .route_text {
+        padding-left: 30px;
+    }
+    #section .article_box .article_contents .route_wrap #route_now li #location_now .p_12px {
+        margin-left: 10px;
+    }
+    /* 실시간 위치 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 325px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+        height: 125px;
+    }
+    /* 자녀 정보 등록 */
+    /* article contents */
+}
+
+/* 반응형 300px */
+@media screen and (max-width: 300px) {
+    /* article contents */
+    /* 선생님 목록 */
+    #section .article_box .article_contents .list_type01 > li > a .profile_img, #section .article_box .article_contents .list_type01 .img_attendance {
+        width: 35px;
+        height: 35px;
+        margin-right: 8px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_img img, #section .article_box .article_contents .list_type01 .img_attendance img {
+        width: 35px;
+        height: 35px;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text .p_20px {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+    #section .article_box .article_contents .list_type01 > li > a .profile_text .p_16px {
+        margin-top: 3px;
+    }
+    /* 선생님 목록 */
+
+    /* 선생님 승인/초대 */
+    #section .article_box .article_top .article_top_tabs a {
+        height: 25px;
+        line-height: 26px !important;
+    }
+    #section .article_box .article_top .article_top_tabs .art_teacher a {
+        width: 20px;
+        height: 20px;
+    }
+    #section .article_box .article_top .article_top_tabs .art_kinder a, #section .article_box .article_top .article_top_tabs .art_option a, #section .article_box .article_top .article_top_tabs .art_class a {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    /* 선생님 승인/초대 */
+
+    /* 스케줄 */
+    #section .article_box .article_contents .schedule_top .schedule_date {
+        width: 100px;
+    }
+    #section .article_box .article_contents .schedule_top .search_box {
+        width: calc(100% - 80px);
+    }
+    #section .article_box .article_contents .schedule_top .btn_schedule_wrap {
+        width: 100%
+    }
+    #section .article_box .article_contents .schedule_top .btn_schedule_wrap .btn_gray03 {
+        width: calc(50% - 2.5px);
+        margin-left: 0;
+    }
+    /* 스케줄 */
+
+    /* 마이 페이지 */
+    #section .article_box .article_contents > [class*='mypage'] {
+        width: 100%;
+        margin: 75px 0;
+    }
+    #section .article_box .article_contents > [class*='mypage'] .pw_wrap .login_contents {
+        height: 40px;
+    }
+    /* 마이 페이지 */
+
+    /* 자녀 정보 등록 */
+    #section .article_box .article_contents .child_info_wrap .child_img #profile_img img {
+        height: 250px;
+    }
+    #section .article_box .article_contents .child_info_wrap .child_ect #child_ect {
+        height: 100px;
+    }
+    /* 자녀 정보 등록 */
+    /* article contents */
+}
+
+/* 반응형 250px */
+@media screen and (max-width: 250px) {
+    /* article title */
+    #section .article_wrap .article_tit {
+        padding: 25px 0;
+    }
+    #section .article_wrap .article_tit .article_nav li::after {
+        margin: 0 5px;
+    }
+    /* article title */
+}

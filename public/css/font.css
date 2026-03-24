@@ -1,0 +1,201 @@
+/* NanumSquareRound */
+@font-face{
+	font-family: 'GmarketSans';
+	font-weight: normal;
+	src: url("../font/GmarketSansTTFMedium.ttf") format('truetype');
+}
+@font-face{
+	font-family: 'GmarketSans-Bold';
+	font-weight: bold;
+	src: url("../font/GmarketSansTTFBold.ttf") format('truetype');
+}
+
+/* NanumSquareRound */
+@font-face{
+	font-family:'NanumSquareRound';
+	font-weight: normal;
+	src: url("../font/NanumSquareRoundOTFR.otf") format('truetype');
+}
+@font-face{
+	font-family:'NanumSquareRound-Bold';
+	font-weight: 500;
+	src: url("../font/NanumSquareRoundOTFB.otf") format('truetype');
+}
+
+/* BagelFatOne */
+@font-face{
+	font-family:'BagelFatOne';
+	font-weight: normal;
+	src: url("../font/BagelFatOne-Regular.ttf") format('truetype');
+}
+
+h2, h3, h4, h5, h6 {
+	display: block;
+}
+
+.h2_G_type01 {
+	font-family: "GmarketSans";
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h2_G_type02 {
+	font-family: "GmarketSans";
+	font-size: 3.0rem;
+	line-height: 3.0rem;
+	font-weight: bold;
+}
+.h2_G_type03 {
+	font-family: "GmarketSans";
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h2_G_type04 {
+	font-family: "GmarketSans";
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h3_G_type01 {
+	font-family: "GmarketSans";
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	white-space: nowrap;
+}
+
+
+.h3_N_type01 {
+	font-family: "NanumSquareRound";
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h4_N_type01 {
+	font-family: "NanumSquareRound";
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h4_N_type02 {
+	font-family: "NanumSquareRound";
+	font-size: 2.0rem;
+	line-height: 2.0rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h4_N_type03 {
+	font-family: "NanumSquareRound";
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h4_N_type04 {
+	font-family: "NanumSquareRound";
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.h5_N_type01 {
+	font-family: "NanumSquareRound";
+	font-size: 2.0rem;
+	line-height: 2.0rem;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.h2_B_type01 {
+	font-family: "BagelFatOne";
+	font-size: 4.0rem;
+	line-height: 4.0rem;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+.p_10px {
+	font-family: "NanumSquareRound";
+	font-size: 1.0rem;
+	line-height: 1.0rem;
+}
+.p_12px {
+	font-family: "NanumSquareRound";
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+}
+.p_14px {
+	font-family: "NanumSquareRound";
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+}
+.p_16px {
+	font-family: "NanumSquareRound";
+	font-size: 1.6rem;
+	line-height: 1.6rem;
+}
+.p_18px {
+	font-family: "NanumSquareRound";
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+}
+.p_20px {
+	font-family: "NanumSquareRound";
+	font-size: 2.0rem;
+	line-height: 2.0rem;
+}
+.p_G_10px {
+	font-family: "GmarketSans";
+	font-size: 1.0rem;
+	line-height: 1.0rem;
+	font-weight: bold;
+}
+.p_G_12px {
+	font-family: "GmarketSans";
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	font-weight: bold;
+}
+.p_G_18px {
+	font-family: "GmarketSans";
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	font-weight: bold;
+}
+.p_G_20px {
+	font-family: "GmarketSans";
+	font-size: 2.0rem;
+	line-height: 2.0rem;
+	font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+	.p_10px {
+		font-size: 1.2rem;
+		line-height: 1.2rem;
+	}
+	.p_12px {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+	.p_G_12px {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+	}
+}
+
+/* 반응형 280px */
+@media screen and (max-width: 280px) {
+	.h2_B_type01 {
+		font-size: 3.0rem;
+		line-height: 3.0rem;
+		white-space: wrap;
+		word-break: keep-all;
+	}
+}

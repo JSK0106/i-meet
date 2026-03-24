@@ -1,0 +1,1550 @@
+/* 모달 공통영역 */
+.modal_container {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+.modal_con {
+	width: 700px;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 30px;
+	padding: 0 30px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.3s;
+}
+.modal_con2 {
+	width: 500px;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 30px;
+	padding: 0 30px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.3s;
+}
+.modal_con2 .h2_G_type03 {
+	white-space: wrap;
+	margin-right: 8px;
+}
+.modal_header {
+	background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+	padding: 30px 0;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: 0.3s;
+}
+.modal_header .h2_G_type02 {
+	white-space: wrap;
+}
+.modal_body {
+    width: 100%;
+}
+.modal_body .form_wrap {
+	height: 510px;
+	padding: 30px 0;
+	transition: 0.3s;
+}
+.modal_con2 .modal_body .form_wrap {
+	height: 100%;
+	padding: 30px 0;
+	transition: 0.3s;
+}
+#joinComplete_modal .modal_con2 .modal_body .form_wrap {
+	padding: 30px 0;
+}
+#joinComplete_modal .modal_body .form_wrap .h2_G_type04::before {
+	content: "";
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background: url(../images/favicon/favicon-32x32.png) no-repeat 0 0/cover;
+	margin-right: 10px;
+}
+#joinComplete_modal .modal_body .form_wrap .p_16px {
+	line-height: 2.4rem;
+	color: #666;
+	margin-top: 15px;
+}
+#joinComplete_modal .modal_body .form_wrap .p_16px span {
+	color: #0080fb;
+}
+#joinComplete_modal .modal_btn_wrap #modalRegisterBtn {
+	width: 120px;
+}
+.modal_btn_wrap {
+	background: #fff;
+	border-top: 1px solid #e1e1e1;
+	padding: 30px;
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	transition: 0.3s;
+}
+.modal_btn_wrap li {
+	margin: 0 5px;
+	transition: 0.3s;
+}
+/* 모달 1~4 */
+.modal_01, .modal_02 {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.modal_01::-webkit-scrollbar, .modal_02::-webkit-scrollbar {
+    width: 10px;
+	margin: 30px 0;
+}
+.modal_01::-webkit-scrollbar-thumb {
+    background: #0080fb;
+	margin: 30px 0;
+    border-radius: 10px;
+}
+.modal_01::-webkit-scrollbar-track {
+    background: #ECF6FF;
+	margin: 30px 0;
+    border-radius: 10px;
+}
+.modal_02::-webkit-scrollbar-thumb {
+    background: #FE8A8B;
+	margin: 30px 0;
+    border-radius: 10px;
+}
+.modal_02::-webkit-scrollbar-track {
+    background: #FFEFF0;
+	margin: 30px 0;
+    border-radius: 10px;
+}
+/* 모달 1~4 */
+/* 모달 공통영역 */
+
+/* 원 주소 검색 모달 */
+.modal_body .form_wrap .kinder_addressTop select {
+	width: calc(50% - 5px);
+	margin: 0;
+}
+.modal_body .form_wrap .kinder_addressMain .contents_box {
+	width: calc(85% - 10px);
+}
+.modal_body .form_wrap .kinder_addressMain {
+	margin: 10px 0;
+}
+.modal_body .form_wrap .kinder_addressMain .contents_box .text_input, .modal_body .form_wrap #kinder_addressDetail {
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	padding: 15px;
+}
+.modal_body .form_wrap .kinder_addressMain .btn_search {
+	width: 15% !important;
+	height: 48px !important;
+	border-radius: 5px;
+}
+.modal_body .form_wrap #kinder_list ul {
+	height: 250px;
+	margin-bottom: 10px;
+	padding-right: 20px;
+	overflow-y: scroll;
+}
+.modal_body .form_wrap #kinder_list ul::-webkit-scrollbar {
+    width: 10px;
+}
+.modal_body .form_wrap #kinder_list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+	background: #0080fb;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #kinder_list ul::-webkit-scrollbar-track {
+	background: #ECF6FF;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #kinder_list ul li {
+	padding: 10px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num {
+	margin-top: 10px;
+}
+.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num .p_14px {
+	color: #666;
+}
+.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num #zipcode {
+	margin-right: 5px;
+}
+/* 원 주소 검색 모달 */
+
+/* 프로필 모달 */
+.modal_body .form_wrap #profile_img {
+	width: 350px;
+	height: 450px;
+	background-size: cover;
+    background-position: center;
+	border-radius: 20px;
+	border: 1px solid #e1e1e1;
+	margin-right: 30px;
+	transition: 0.3s;
+	position: relative;
+}
+.modal_body .form_wrap #profile_img img {
+	width: 350px;
+	height: 450px;
+	object-fit: cover;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+.modal_body .form_wrap #profile_img2 {
+	width: 200px;
+	height: 250px;
+	border-radius: 20px;
+	border: 1px solid #e1e1e1;
+	margin-right: 30px;
+	transition: 0.3s;
+}
+.modal_body .form_wrap #profile_img2 img {
+	width: 200px;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 20px;
+	transition: 0.3s;
+}
+.modal_body .form_wrap #profile_img3 {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 1px solid #e1e1e1;
+	margin-right: 20px;
+	transition: 0.3s;
+}
+.modal_body .form_wrap #profile_img3 img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+.modal_body .form_wrap .upload_btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+.modal_body .form_wrap #profile_img_upload .icon_upload {
+	width: 15px;
+	height: 15px;
+	background: url(../images/icon_upload.svg) no-repeat 0 0/cover;
+	margin-right: 5px;
+}
+.modal_body .form_wrap #profile_info {
+	width: calc(100% - 380px);
+	padding-right: 30px;
+}
+.modal_body .form_wrap #profile_info2 {
+	width: 100%;
+	padding: 30px 30px 0 0;
+}
+.modal_body .form_wrap #profile_info3 {
+	width: 100%;
+	border-left: 1px solid #e1e1e1;
+	padding:  0 30px;
+}
+.modal_body .form_wrap #profile_info4 {
+	width: 100%;
+}
+.modal_body .form_request .form_text, .modal_body .form_request .form_select, .modal_body .form_request .form_select02, .modal_body .form_request .form_select03, .form_request .form_text2 {
+	width: 100%;
+	margin-bottom: 20px;
+	position: relative;
+}
+.modal_body .form_request .form_text label, .modal_body .form_request .form_select label, .modal_body .form_request .form_select02 label, .modal_body .form_request .form_select03 label, .modal_body .form_request .form_text2 label {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: bold;
+	white-space: nowrap;
+	margin-bottom: 10px;
+}
+.modal_body .form_request .form_select02 > .flex_between {
+	width: 100%;
+}
+.modal_body .form_request .form_select02 > .flex_between .btn_plus {
+	width: 15px;
+	height: 15px;
+	background: url(../images/btn_plus.svg) no-repeat 0 0/cover;
+}
+.modal_body .form_request .form_select02 #third_input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.modal_body .form_request .form_select02 #second_input {
+	width: 100%;
+}
+#third_input > div, .modal_body .form_request .form_select03 > div, .form_text2 > div {
+	width: 100%;
+}
+.modal_body .form_request .form_select02 #third_input .Text_input {
+	margin-top: 5px;
+}
+.modal_body .form_request .form_select02 #third_input .Text_input02 {
+	width: 70%;
+	padding: 10px;
+}
+.modal_body .form_request .form_select02 .btn_delete {
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_delete.svg) no-repeat 0 0/cover;
+	margin-left: 5px;
+}
+.modal_body .form_request .form_select03 #driver_car01 {
+	width: 25% !important;
+}
+.modal_body .form_request .form_select03 #driver_car02 {
+	width: 75% !important;
+	padding: 10px;
+}
+.modal_body .form_request .input_02 {
+	margin-top: 5px;
+}
+.modal_body .form_request .form_text #parents_relation, .modal_body .form_request .form_text #driver_car01 {
+	width: 15% !important;
+}
+.modal_body .form_request .form_text #parents_name {
+	width: 25% !important;
+	border-radius: 5px 0 0 5px !important;
+	padding: 10px 0 10px 10px !important;
+}
+.modal_body .form_request .form_text #parents_num {
+	width: 60% !important;
+	border-radius:  0 5px 5px 0 !important;
+	padding: 10px 10px 10px 0 !important;
+}
+.modal_body .form_request .form_text #driver_car02 {
+	width: 85% !important;
+	margin-left: 5px;
+}
+.modal_body .form_request .form_text [class*='Auto_input_relation'] {
+	font-family: "GmarketSans";
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 0;
+	margin: 5px 0 3px 0;
+}
+.modal_body .form_request .form_text .Auto_input_relation01 {
+	background: #61B3FF !important;
+}
+.modal_body .form_request .form_text .Auto_input_relation02 {
+	background: #FE8A8B;
+}
+.modal_body .form_request .form_text .Auto_input_relation03 {
+	background: #F88415;
+}
+.modal_body .form_request .form_text .Auto_input_relation04 {
+	background: #009C7D;
+}
+.modal_body .form_request .form_text [class*='Auto_input_relation']::placeholder {
+	color: #fff;
+}
+.modal_body .form_request .form_text2 .toKinder_state {
+	width: 40%;
+    height: 40px;
+    font-family: "GmarketSans";
+	font-size: 1.4rem;
+	line-height: 40px;
+    text-align: center;
+	font-weight: bold;
+    color: #F88415;
+    background: #FFFAE9;
+	border: 1px solid #F88415;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.modal_body .form_request .form_text2 .toHome_state {
+	width: 40%;
+    height: 40px;
+    font-family: "GmarketSans";
+	font-size: 1.4rem;
+	line-height: 40px;
+    text-align: center;
+	font-weight: bold;
+    color: #009C7D;
+    background: #EDFCF8;
+	border: 1px solid #009C7D;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.modal_body .form_request .form_text2 input {
+	height: 40px;
+	padding: 12px;
+}
+.modal_body .form_request .form_text2 ul.flex_between {
+	width: 100%;
+	flex-wrap: wrap;
+}
+.modal_body .form_request .form_text2 ul li {
+	width: calc(50% - 2.5px);
+}
+.modal_body .form_request .form_text2 ul li:nth-child(3), .modal_body .form_request .form_text2 ul li:nth-child(4) {
+	margin-top: 5px;
+}
+
+.modal_body .form_wrap .form_top {
+	margin-bottom: 20px;
+}
+.modal_body .form_wrap .form_top .h5_N_type01 {
+	display: inline-block;
+	white-space: nowrap;
+}
+.modal_body .form_wrap .form_top .p_12px {
+	color: #999;
+	font-weight: 500;
+	margin-left: 10px;
+}
+.modal_body .form_wrap .form_top .form_top_select {
+	width: 30%;
+}
+.modal_body .form_wrap .form_top .form_top_select select {
+	width: 50%;
+}
+
+/* 원장님 - 등하원 관리 */
+.modal_body .form_wrap [class*='route_wrap'] {
+	height: 400px;
+	border: 1px solid #e1e1e1;
+	border-radius: 20px;
+	padding: 30px;
+}
+.modal_body .form_wrap .route_wrap {
+	width: 350px;
+	margin-right: 30px;
+}
+.modal_body .form_wrap .route_wrap02 {
+	width: 100%;
+}
+.modal_body .form_wrap .route_wrap03 {
+	width: 100%;
+	height: 320px;
+}
+.modal_body .form_wrap [id*='route'] {
+	width: 100%;
+	overflow-y: scroll;
+}
+.modal_body .form_wrap [id*='route']::-webkit-scrollbar {
+    width: 10px;
+}
+.modal_body .form_wrap [id*='route'] li {
+	background: #fff;
+	position: relative;
+}
+.modal_body .form_wrap [id*='route'] > li:last-child::before {
+	display: none;
+}
+.modal_body .form_wrap [id*='route'] li .route_num {
+	width: 20px;
+	height: 20px;
+	line-height: 22px;
+	font-size: 1.2rem;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.modal_body .form_wrap [id*='route'] li .route_text {
+	padding: 0 0 30px 40px;
+	position: relative;
+}
+.modal_body .form_wrap [id*='route'] li .route_text > .p_16px {
+	font-weight: bold;
+	margin-top: 1px;
+}
+.modal_body .form_wrap [id*='route'] li .route_text > .p_14px {
+	color: #999;
+	margin-top: 10px;
+}
+.modal_body .form_wrap [id*='route'] li .route_child {
+	padding: 0 20px 10px 40px;
+	margin-top: -20px;
+	flex-wrap: wrap;
+}
+.modal_body .form_wrap [id*='route'] li .route_child li {
+	width: calc(20% - 5px);
+	white-space: nowrap;
+	border: 1px solid #e1e1e1;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 0 5px 5px 0;
+}
+.modal_body .form_wrap [id*='route'] li .route_child li .p_12px {
+	color: #999;
+	margin-left: 5px;
+}
+
+.modal_body .form_wrap #attendance_info {
+	width: calc(100% - 380px);
+}
+.modal_body .form_wrap  .assign_day li .p_14px {
+	margin-right: 15px;
+}
+
+.modal_body .form_wrap .reserveNot_list {
+	width: 100%;
+	height: 400px;
+	padding-right: 20px;
+	overflow-y: scroll;
+}
+.modal_body .form_wrap .reserveNot_list::-webkit-scrollbar {
+    width: 10px;
+}
+.modal_body .form_wrap .reserveNot_list li {
+	background: #fff;
+	border: 1px solid #e1e1e1;
+	border-radius: 20px;
+	padding: 30px;
+	margin-bottom: 10px;
+	transition: 0.3s;
+}
+.modal_body .form_wrap .reserveNot_list li:last-child {
+	margin-bottom: 0;
+}
+.modal_body .form_wrap .reserveNot_list::-webkit-scrollbar-thumb {
+    background: #0080fb;
+    border-radius: 10px;
+}
+.modal_body .form_wrap .reserveNot_list::-webkit-scrollbar-track {
+    background: #ECF6FF;
+    border-radius: 10px;
+}
+.modal_body .form_wrap .reserveNot_list li:hover {
+	border: 1px solid #61B3FF;
+}
+.modal_body .form_wrap .reserveNot_list li .btn_alarm_wrap .p_14px {
+	text-align: right;
+	font-weight: bold;
+	color: #999;
+	margin-right: 10px;
+}
+.modal_body .form_wrap .reserveNot_list li .btn_alarm_wrap .btn_alarm {
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_alarm01.svg) no-repeat 0 0/cover;
+}
+.modal_body .form_wrap .reserveNot_list li .btn_alarm_wrap .btn_alarm:disabled {
+	background: url(../images/icon_alarm02.svg) no-repeat 0 0/cover;
+}
+
+/* 1~4 */
+.modal_body .form_wrap #route_01::-webkit-scrollbar-thumb {
+    background: #0080fb;
+	border-radius: 10px;
+}
+.modal_body .form_wrap #route_01::-webkit-scrollbar-track {
+    background: #ECF6FF;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #route_01 > li::before {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 100%;
+	background: #0080fb;
+	position: absolute;
+	top: 0;
+	left: 9px;
+}
+.modal_body .form_wrap #route_01 li .route_num {
+	background: #0080fb;
+}
+
+.modal_body .form_wrap #route_02::-webkit-scrollbar-thumb {
+    background: #FE8A8B;
+	border-radius: 10px;
+}
+.modal_body .form_wrap #route_02::-webkit-scrollbar-track {
+    background: #FFEFF0;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #route_02 > li::before {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 100%;
+	background: #FE8A8B;
+	position: absolute;
+	top: 0;
+	left: 9px;
+}
+.modal_body .form_wrap #route_02 li .route_num {
+	background: #FE8A8B;
+}
+
+.modal_body .form_wrap #route_03::-webkit-scrollbar-thumb {
+    background: #F88415;
+	border-radius: 10px;
+}
+.modal_body .form_wrap #route_03::-webkit-scrollbar-track {
+    background: #FFFAE9;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #route_03 > li::before {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 100%;
+	background: #F88415;
+	position: absolute;
+	top: 0;
+	left: 9px;
+}
+.modal_body .form_wrap #route_03 li .route_num {
+	background: #F88415;
+}
+
+.modal_body .form_wrap #route_04::-webkit-scrollbar-thumb {
+    background: #009C7D;
+	border-radius: 10px;
+}
+.modal_body .form_wrap #route_04::-webkit-scrollbar-track {
+    background: #EDFCF8;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #route_04 > li::before {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 100%;
+	background: #009C7D;
+	position: absolute;
+	top: 0;
+	left: 9px;
+}
+.modal_body .form_wrap #route_04 li .route_num {
+	background: #009C7D;
+}
+/* 1~4 */
+/* 원장님 - 등하원 관리 */
+
+/* 원장님 - 차량 예약 관리 */
+.modal_body .form_wrap .list_type02 li #profile_img {
+	width: 60px !important;
+	height: 60px !important;
+	border-radius: 50%;
+    border: none !important;
+	margin-right: 20px !important;
+}
+.modal_body .form_wrap .list_type02 li .profile_text .p_16px {
+	font-weight: bold;
+	margin-right: 10px;
+}
+.modal_body .form_wrap .list_type02 li .profile_text .p_14px {
+	color: #666;
+}
+.modal_body .form_wrap .list_type02 li .profile_text .p_02 {
+	margin-top: 5px;
+}
+/* 원장님 - 차량 예약 관리 */
+
+/* 선생님 */
+.modal_body .form_wrap .route_info .flex_start {
+	width: 100%;
+	padding-right: 10px;
+}
+/* 선생님 */
+
+/* 보호자 */
+.modal_body .form_wrap [id*='kinder'] label {
+	width: 10%;
+	font-family: "NanumSquareRound";
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: bold;
+}
+.modal_body .form_wrap [id*='kinder'] .form_item {
+	width: 90%;
+}
+.modal_body .form_wrap #kinder_address .form_item select {
+	width: calc(50% - 5px);
+}
+.modal_body .form_wrap #kinder_search {
+	margin-top: 10px;
+}
+.modal_body .form_wrap #kinder_search .form_item button {
+	margin-right: 0;
+	margin-left: 10px;
+}
+.modal_body .form_wrap #kinder_list {
+	margin-top: 20px;
+}
+.modal_body .form_wrap #kinder_list .form_item {
+	height: 315px;
+	border: 1px solid #e1e1e1;
+	border-radius: 20px;
+	padding: 20px;
+}
+.modal_body .form_wrap #kinder_list .form_item > .p_12px {
+	color: #F88415;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap {
+	height: 260px;
+	padding-right: 20px;
+	overflow-y: scroll;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap::-webkit-scrollbar {
+    width: 10px;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap::-webkit-scrollbar-thumb {
+    background: #F88415;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap::-webkit-scrollbar-track {
+    background: #FFFAE9;
+    border-radius: 10px;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap ul li {
+	padding: 20px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap ul li .kinder_wrap .p_12px {
+	font-weight: bold;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap ul li .kinder_wrap .kinder_address_num {
+	color: #999;
+	margin-top: 8px;
+}
+.modal_body .form_wrap #kinder_list .form_item .kinder_list_wrap ul li .kinder_wrap .kinder_address_num  .p_10px:last-child {
+	margin-top: 3px;
+}
+
+.modal_body .form_wrap .reserve {
+	height: 400px;
+	padding-right: 20px;
+	overflow-y: scroll;
+}
+.modal_body .form_wrap #reserve02 {
+	margin-top: 30px;
+}
+.modal_body .form_wrap .reserve::-webkit-scrollbar {
+    width: 10px;
+}
+.modal_body .form_wrap .reserve::-webkit-scrollbar-thumb {
+    background: #F88415;
+    border-radius: 10px;
+}
+.modal_body .form_wrap .reserve::-webkit-scrollbar-track {
+    background: #FFFAE9;
+	border-radius: 10px;
+}
+.modal_body .form_wrap [id*='state_wrap'] .flex_between {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.modal_body .form_wrap [id*='state_wrap'] label {
+	margin-top: 0;
+}
+.modal_body .form_wrap [id*='state_wrap'] .btn_gray04 {
+	margin-left: 5px;
+}
+.modal_body .form_wrap [id*='state_wrap'] .reserve_car {
+	width: 100%;
+}
+.modal_body .form_wrap [id*='state_wrap'] select:first-child {
+	width: 40%;
+	margin-right: 10px;
+}
+.modal_body .form_wrap [id*='reserve_day'] label {
+	width: 20%;
+	font-family: "NanumSquareRound";
+	font-size: 1.4rem;
+	line-height: 1.4rem;
+	font-weight: bold;
+}
+.modal_body .form_wrap [id*='reserve_day'] .form_item {
+	width: 80%;
+}
+.modal_body .form_wrap [id*='reserve_day'] .form_item li {
+	width: 16.666%;
+}
+.modal_body .form_wrap [id*='reserve_day'] .form_item li .p_14px {
+	white-space: nowrap;
+}
+.modal_body .form_wrap #notreserve_box {
+	background: #f5f5f5;
+	border: 1px solid #e1e1e1;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 20px;
+}
+.modal_body .form_wrap #notreserve_box .p_12px {
+	color: #999;
+	margin-bottom: 10px;
+}
+.modal_body .form_wrap #notreserve_box select {
+	width: 35%;
+	margin-right: 10px;
+}
+.modal_body .form_wrap #notreserve_box input {
+	width: 65%;
+}
+.modal_body .form_wrap #notreserve_box.box_active {
+	background: #fff;
+	border: 1px solid #F88415;
+}
+/* 보호자 */
+
+
+/* 반응형 1400px */
+@media screen and (max-width: 1400px) {
+	/* 모달 공통영역 */
+	.modal_header {
+		padding: 30px 0 20px 0;
+	}
+	.modal_body .form_wrap {
+		height: 490px;
+		padding: 20px 0;
+	}
+	.modal_con2 .modal_body .form_wrap {
+		padding: 20px 0;
+	}
+	.modal_btn_wrap {
+		padding: 20px;
+	}
+
+	/* 모달 1~4 */
+	.modal_01::-webkit-scrollbar, .modal_02::-webkit-scrollbar, .modal_01::-webkit-scrollbar-thumb, .modal_01::-webkit-scrollbar-track, .modal_02::-webkit-scrollbar-thumb, .modal_02::-webkit-scrollbar-track {
+		margin: 20px 0;
+	}
+	/* 모달 1~4 */
+	/* 모달 공통영역 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap .route_wrap {
+		margin-right: 20px;
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 1024px */
+@media screen and (max-width: 1024px) {
+	/* 모달 공통영역 */
+	.modal_con {
+		width: 600px;
+	}
+	.modal_con2 {
+		width: 450px;
+	}
+	.modal_body .form_wrap {
+		height: 425px;
+	}
+	.modal_btn_wrap li {
+		margin: 0 4px;
+	}
+	/* 모달 공통영역 */
+
+	/* 원 주소 검색 모달 */
+	.modal_body .form_wrap .kinder_addressTop select {
+		width: calc(50% - 4px);
+		padding: 12px;
+	}
+	.modal_body .form_wrap .kinder_addressMain .contents_box {
+		width: calc(85% - 8px);
+	}
+	.modal_body .form_wrap .kinder_addressMain {
+		margin: 8px 0;
+	}
+	.modal_body .form_wrap .kinder_addressMain .contents_box .text_input, .modal_body .form_wrap #kinder_addressDetail {
+		padding: 12px;
+	}
+	.modal_body .form_wrap .kinder_addressMain .btn_search {
+		height: 40px !important;
+		line-height: 40px !important;
+	}
+	.modal_body .form_wrap #kinder_list ul {
+		height: 220px;
+		margin-bottom: 8px;
+	}
+	.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num {
+		margin-top: 8px;
+	}
+	/* 원 주소 검색 모달 */
+
+	/* 프로필 모달 */
+	.modal_body .form_wrap #profile_img {
+		width: 300px;
+		height: 385px;
+		margin-right: 20px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		width: 300px;
+		height: 385px;
+	}
+	.modal_body .form_wrap #profile_img2 {
+		width: 175px;
+		height: 215px;
+		margin-right: 20px;
+	}
+	.modal_body .form_wrap #profile_img2 img {
+		width: 175px;
+		height: 215px;
+	}
+	.modal_body .form_wrap #profile_img #profile_img_upload .icon_upload {
+		width: 12px;
+		height: 12px;
+		position: relative;
+		top: -2px;
+	}
+	.modal_body .form_wrap #profile_info {
+		width: calc(100% - 320px);
+		padding-right: 20px;
+	}
+	.modal_body .form_wrap #profile_info2 {
+		padding: 20px 20px 0 0;
+	}
+	.modal_body .form_wrap #profile_info3 {
+		padding:  0 20px;
+	}
+	.modal_body .form_request .form_text, .modal_body .form_request .form_select, .modal_body .form_request .form_select02, .modal_body .form_request .form_select03, .form_request .form_text2 {
+		margin-bottom: 15px;
+	}
+	.modal_body .form_request .form_text2 .toKinder_state, .modal_body .form_request .form_text2 .toHome_state {
+		width: 35%;
+		height: 35px;
+		line-height: 35px;
+		margin-right: 8px;
+	}
+	.modal_body .form_request .form_text2 input {
+		height: 35px;
+	}
+	/* 프로필 모달 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap [class*='route_wrap'] {
+		height: 330px;
+		padding: 20px;
+	}
+	.modal_body .form_wrap .route_wrap {
+		width: 300px;
+		margin-right: 20px;
+	}
+	.modal_body .form_wrap .route_wrap03 {
+		height: 255px;
+	}
+	.modal_body .form_wrap #route_01 > li::before {
+		left: 8px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_num {
+		width: 18px;
+		height: 18px;
+		line-height: 20px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text {
+		padding: 0 0 25px 35px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text > .p_14px {
+		margin-top: 8px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child {
+		padding: 0 20px 10px 35px;
+		margin-top: -15px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li {
+		width: calc(25% - 5px);
+		padding: 10px 8px;
+		margin: 0 5px 5px 0;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li .p_12px {
+		margin-left: 5px;
+	}
+	.modal_body .form_wrap #attendance_info {
+		width: calc(100% - 320px);
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 768px */
+@media screen and (max-width: 768px) {
+	/* 모달 공통영역 */
+	.modal_con {
+		width: 500px;
+		padding: 0 25px;
+	}
+	.modal_con2 {
+		width: 400px;
+		padding: 0 25px;
+	}
+	.modal_header {
+		padding: 25px 0 20px 0;
+	}
+	.modal_body .form_wrap {
+		height: 470px;
+	}
+	.modal_btn_wrap li {
+		margin: 0 3px;
+	}
+	.modal_body .form_request .form_text, .modal_body .form_request .form_select, .modal_body .form_request .form_select02, .modal_body .form_request .form_select03, .form_request .form_text2 {
+		margin-bottom: 10px;
+	}
+	/* 모달 공통영역 */
+
+	/* 원 주소 검색 모달 */
+	.modal_body .form_wrap #kinder_list ul {
+		height: 265px;
+	}
+	/* 원 주소 검색 모달 */
+
+	/* 프로필 모달 */
+	.modal_body .form_wrap.flex_start2 {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap #profile_img {
+		width: 100%;
+		height: 300px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		width: 100%;
+		height: 300px;
+	}
+	.modal_body .form_wrap .side_profile {
+		width: 100%;
+		border-bottom: 1px solid #e1e1e1;
+		padding-bottom: 20px;
+		margin-right: 20px;
+		display: flex;
+		justify-content: start;
+	}
+	.modal_body .form_wrap #profile_img2 {
+		width: 150px;
+		height: 200px;
+		margin-right: 20px;
+	}
+	.modal_body .form_wrap #profile_img2 img {
+		width: 150px;
+		height: 200px;
+	}
+	.modal_body .form_wrap #profile_img #profile_img_upload .icon_upload {
+		width: 10px;
+		height: 10px;
+		margin-right: 3px;
+		top: 0;
+	}
+	.modal_body .form_wrap #profile_info {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.modal_body .form_wrap #profile_info2 {
+		padding: 0;
+	}
+	.modal_body .form_wrap #profile_info3 {
+		border: none;
+		padding: 0 20px 0 0;
+		margin-top: 20px;
+	}
+	.modal_body .form_wrap #profile_info .form_text, .modal_body .form_wrap #profile_info .form_select, .modal_body .form_wrap #profile_info .form_select02 {
+		margin-bottom: 10px;
+	}
+	.modal_body .form_wrap #profile_info .flex_start_column {
+		flex-direction: row;
+		align-items: center;
+	}
+	.modal_body .form_wrap #profile_info label {
+		width: 35%;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		margin: 0;
+	}
+	.modal_body .form_request .form_select02 > .flex_between {
+		width: 35%;
+	}
+	.modal_body .form_request .form_select02 > .flex_between .btn_plus {
+		margin-right: 15px;
+	}
+	/* 프로필 모달 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap .form_top .form_top_select {
+		width: 40%;
+	}
+	.modal_body .form_wrap .form_top .form_top_select select {
+		font-size: 1.4rem;
+		line-height: 1.4rem;
+		background-position: 85% center !important;
+	}
+	.modal_body .form_wrap .route_modal.flex_start2 {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap [class*='route_wrap'] {
+		height: 200px;
+	}
+	.modal_body .form_wrap .route_wrap {
+		width: 100%;
+		margin-right: 0;
+	}
+	.modal_body .form_wrap .route_wrap03 {
+		height: 270px;
+		margin-top: 10px;
+	}
+	.modal_body .form_wrap #route_01 > li::before, .modal_body .form_wrap #route_02 > li::before {
+		left: 7px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_num {
+		width: 15px;
+		height: 15px;
+		line-height: 17px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text {
+		padding: 0 0 20px 30px;
+	}
+	.modal_body .form_wrap .route_info.flex_between {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap .route_info .form_select.flex_start_column {
+		flex-direction: row;
+		align-items: center;
+	}
+	.modal_body .form_wrap .route_info .flex_start {
+		padding: 0;
+	}
+	.modal_body .form_wrap .route_info .form_select label {
+		width: 35%;
+		font-size: 1.6rem !important;
+		line-height: 1.6rem !important;
+		margin-bottom: 0;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child {
+		padding: 0 20px 10px 30px;
+		margin-top: -10px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li {
+		width: calc(20% - 3px);
+		padding: 8px 5px;
+		margin: 0 3px 3px 0;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li .p_14px {
+		width: 100%;
+		text-align: center;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li .p_12px {
+		display: none;
+	}
+	.modal_body .form_wrap #attendance_info {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02.flex_start_column {
+		flex-direction: row;
+		align-items: center;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 label {
+		width: 35%;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		margin: 0;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 > .flex_between {
+		width: 35%;
+	}
+	.modal_body .form_request .form_select02 #third_input {
+		margin-bottom: 0
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 550px */
+@media screen and (max-width: 550px) {
+	/* 모달 공통영역 */
+	.modal_con {
+		width: 100%;
+		margin: 0 20px;
+	}
+	.modal_con2 {
+		width: 100%;
+		margin: 0 20px;
+	}
+	.modal_header {
+		padding: 25px 0 15px 0;
+	}
+	/* 모달 공통영역 */
+}
+
+/* 반응형 500px */
+@media screen and (max-width: 500px) {
+	/* 프로필 모달 */
+	.modal_body .form_wrap #profile_img {
+		height: 250px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		height: 250px;
+	}
+	.modal_body .form_wrap #profile_info label, .modal_body .form_request .form_select02 > .flex_between {
+		width: 40%;
+	}
+	/* 프로필 모달 */
+
+	/* 원 주소 검색 모달 */
+	.modal_body .form_wrap .kinder_addressMain.flex_between {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap .kinder_addressMain .contents_box {
+		width: 100% !important;
+	}
+	.modal_body .form_wrap .kinder_addressMain .btn_search {
+		width: 100% !important;
+		margin-top: 8px;
+	}
+	.modal_body .form_wrap #kinder_list ul {
+		height: 215px;
+		padding-right: 10px;
+	}
+	.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num.flex_start {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap #kinder_list ul li .kinder_wrap .kinder_address_num #address {
+		margin-top: 5px;
+	}
+	/* 원 주소 검색 모달 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap .form_top.flex_between {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap .form_top .h5_N_type01, .modal_body .form_wrap .form_top .form_top_select {
+		width: 100%;
+	}
+	.modal_body .form_wrap .form_top .form_top_select {
+		margin-top: 10px;
+	}
+	.modal_body .form_wrap .form_top .form_top_select select {
+		background-position: 90% center !important;
+	}
+	.modal_body .form_wrap [class*='route_wrap'] {
+		height: 175px;
+		padding: 15px;
+	}
+	.modal_body .form_wrap .route_wrap03 {
+		height: 250px;
+	}
+	.modal_body .form_wrap .route_info .form_select label {
+		width: 40%;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li {
+		width: calc(25% - 3px);
+	}
+	.modal_body .form_wrap #attendance_info {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 label {
+		width: 40%;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 > .flex_between {
+		width: 40%;
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 400px */
+@media screen and (max-width: 400px) {
+	/* 모달 공통영역 */
+	.modal_con {
+		border-radius: 20px;
+		padding: 0 20px;
+	}
+	.modal_header {
+		padding: 25px 0 15px 0;
+	}
+	.modal_header .h2_G_type02 {
+		font-size: 2.4rem;
+		line-height: 2.4rem;
+	}
+	.modal_body .form_wrap {
+		height: 400px;
+		padding: 15px 0;
+	}
+	.modal_btn_wrap {
+		padding: 15px;
+	}
+	/* 모달 1~4 */
+	.modal_01::-webkit-scrollbar, .modal_02::-webkit-scrollbar, .modal_01::-webkit-scrollbar-thumb, .modal_01::-webkit-scrollbar-track, .modal_02::-webkit-scrollbar-thumb, .modal_02::-webkit-scrollbar-track {
+		margin: 15px 0;
+	}
+	/* 모달 1~4 */
+	/* 모달 공통영역 */
+
+	/* 원 주소 검색 모달 */
+	.modal_body .form_wrap #kinder_list ul {
+		height: 155px;
+	}
+	/* 원 주소 검색 모달 */
+
+	/* 프로필 모달 */
+	.modal_body .form_wrap #profile_img {
+		height: 200px;
+		border-radius: 15px;
+		margin-right: 15px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		height: 200px;
+		border-radius: 15px;
+	}
+	.modal_body .form_wrap .side_profile {
+		padding-bottom: 0;
+		margin-right: 15px;
+	}
+	.modal_body .form_wrap #profile_img2 {
+		width: 130px;
+		height: 190px;
+		border-radius: 15px;
+		margin-right: 15px;
+	}
+	.modal_body .form_wrap #profile_img2 img {
+		width: 130px;
+		height: 190px;
+		border-radius: 15px;
+	}
+	.modal_body .form_wrap #profile_img #profile_img_upload .icon_upload {
+		display: none;
+	}
+	.modal_body .form_wrap #profile_info {
+		margin-top: 15px;
+		padding-right: 15px;
+	}
+	.modal_body .form_wrap #profile_info3 {
+		padding: 0 15px 0 0;
+		margin-top: 15px;
+	}
+	.modal_body .form_wrap #profile_info label, .modal_body .form_request .form_select02 > .flex_between {
+		width: 50%;
+	}
+	.modal_body .form_request .form_select02 > .flex_between .btn_plus {
+		margin-right: 10px;
+	}
+	.modal_body .form_request .form_text2 .toKinder_state, .modal_body .form_request .form_text2 .toHome_state {
+		margin-right: 5px;
+	}
+	.modal_body .form_request .form_text2 ul li {
+		width: calc(50% - 1.5px);
+	}
+	.modal_body .form_request .form_text2 ul li:nth-child(3), .modal_body .form_request .form_text2 ul li:nth-child(4) {
+		margin-top: 3px;
+	}
+	/* 프로필 모달 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap .form_top {
+		margin-bottom: 15px;
+	}
+	.modal_body .form_wrap .form_top.flex_between {
+		flex-wrap: wrap;
+	}
+	.modal_body .form_wrap .form_top .h5_N_type01, .modal_body .form_wrap .form_top .form_top_select {
+		width: 100%;
+	}
+	.modal_body .form_wrap .form_top .form_top_select {
+		margin-top: 8px;
+	}
+	.modal_body .form_wrap .form_top .form_top_select select {
+		background-position: 90% center !important;
+	}
+	.modal_body .form_wrap [class*='route_wrap'] {
+		height: 150px;
+		border-radius: 15px;
+	}
+	.modal_body .form_wrap .route_wrap03 {
+		height: 195px;
+		margin-top: 10px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li {
+		width: calc(33.333% - 3px);
+	}
+	.modal_body .form_wrap #attendance_info {
+		width: 100%;
+		margin-top: 20px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text > .p_14px {
+		margin-top: 5px;
+	}
+	.modal_body .form_wrap  .assign_day li .p_14px {
+		margin-right: 10px;
+	}
+	.modal_body .form_wrap #attendance_info {
+		margin-top: 15px;
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 350px */
+@media screen and (max-width: 350px) {
+	/* 모달 공통영역 */
+	.modal_con {
+		padding: 0 15px;
+	}
+	/* 모달 공통영역 */
+
+	/* 프로필 모달 */
+	#joinComplete_modal .modal_con2 .modal_body .form_wrap {
+		padding: 20px 0;
+	}
+	#joinComplete_modal .modal_body .form_wrap .h2_G_type04 {
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+		white-space: wrap;
+	}
+	#joinComplete_modal .modal_body .form_wrap .h2_G_type04::before {
+		width: 16px;
+		height: 16px;
+		margin: 0 8px -2px 0;
+	}
+	#joinComplete_modal .modal_body .form_wrap .p_16px {
+		margin-top: 10px;
+	}
+	#joinComplete_modal .modal_body .form_wrap .p_16px br {
+		display: none;
+	}
+	#joinComplete_modal .modal_btn_wrap #modalRegisterBtn {
+		width: 100px;
+	}
+
+	.modal_body .form_wrap #profile_img {
+		height: 175px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		height: 175px;
+	}
+	.modal_body .form_wrap .side_profile {
+		padding-bottom: 0;
+		margin-right: 15px;
+	}
+	.modal_body .form_wrap #profile_img2 {
+		width: 100px;
+		height: 125px;
+		border-radius: 10px;
+		margin-right: 15px;
+	}
+	.modal_body .form_wrap #profile_img2 img {
+		width: 100px;
+		height: 125px;
+		border-radius: 10px;
+	}
+	.modal_body .form_wrap #profile_info2 label {
+		display: none;
+	}
+	.modal_body .form_wrap #profile_info3 {
+		padding: 0 15px 0 0;
+		margin-top: 15px;
+	}
+	.modal_body .form_request .form_text2 .toKinder_state, .modal_body .form_request .form_text2 .toHome_state {
+		height: 30px;
+		line-height: 30px;
+		margin-right: 5px;
+	}
+	.modal_body .form_wrap #profile_info .flex_start_column {
+		flex-direction: column;
+		align-items: start;
+	}
+	.modal_body .form_wrap #profile_info label {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	.modal_body .form_request .form_select02 > .flex_between {
+		width: 100%;
+	}
+	.modal_body .form_request .form_select02 > .flex_between .btn_plus {
+		width: 11px;
+		height: 11px;
+		margin-right: 5px;
+	}
+	.modal_body .form_request .form_text2 input {
+		height: 30px;
+		padding: 10px;
+	}
+	/* 프로필 모달 */
+}
+
+/* 반응형 300px */
+@media screen and (max-width: 300px) {
+	/* 모달 공통영역 */
+	.modal_btn_wrap li {
+		margin: 0 2px;
+	}
+	/* 모달 공통영역 */
+
+	/* 프로필 모달 */
+	.modal_body .form_wrap #profile_img {
+		height: 150px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		height: 150px;
+	}
+	/* 프로필 모달 */
+
+	/* 원장님 - 등하원 관리 */
+	.modal_body .form_wrap .form_top {
+		margin-bottom: 10px;
+	}
+	.modal_body .form_wrap [class*='route_wrap'] {
+		height: 110px;
+		padding: 10px;
+	}
+	.modal_body .form_wrap .route_wrap03 {
+		height: 170px;
+		margin-top: 5px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child {
+		padding: 0 15px 10px 25px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_child li {
+		width: calc(50% - 2px);
+		padding: 5px 3px;
+		margin: 0 2px 2px 0;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text {
+		padding: 0 0 15px 25px;
+	}
+	.modal_body .form_wrap [id*='route'] li .route_text > .p_14px {
+		margin-top: 5px;
+	}
+	.modal_body .form_wrap  .assign_day li .p_14px {
+		margin-right: 8px;
+	}
+	.modal_body .form_wrap #attendance_info {
+		margin-top: 10px;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02.flex_start_column, .modal_body .form_wrap .route_info .form_select.flex_start_column {
+		flex-direction: column;
+		align-items: start;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 label, .modal_body .form_wrap .route_info .form_select label {
+		margin-bottom: 5px;
+	}
+	.modal_body .form_wrap #attendance_info .form_select02 > .flex_between {
+		width: 100%;
+	}
+	/* 원장님 - 등하원 관리 */
+}
+
+/* 반응형 250px */
+@media screen and (max-width: 250px) {
+	/* 프로필 모달 */
+	.modal_body .form_wrap #profile_img {
+		height: 125px;
+	}
+	.modal_body .form_wrap #profile_img img {
+		height: 125px;
+	}
+	/* 프로필 모달 */
+}
