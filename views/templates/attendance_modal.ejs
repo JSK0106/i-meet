@@ -1,0 +1,89 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">출석 상세</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap modal_01 flex_start2">
+            <!-- 프로필 이미지 -->
+            <div class="side_profile form_request"> 
+                <div id="profile_img2">
+                    <img src="/images/img_profile02_modal.png" alt="원아 프로필 이미지">
+                </div>
+                <div id="profile_info2" class="flex_start_column">
+                    <div class="form_text flex_start_column">
+                        <label for="이름">이름</label>
+                        <input id="child_name" type="text" placeholder="서하린" disabled>
+                    </div>
+                    <div class="form_text flex_start_column">
+                        <label for="생년월일">생년월일</label>
+                        <input id="child_birth" type="text" placeholder="20210901" disabled>
+                    </div>
+                    <div class="form_select flex_start_column">
+                        <label for="성별">성별</label>
+                        <select name="child_sex" class="select_01" disabled>
+                            <option disabled>선택</option>
+                            <option value="남">남</option>
+                            <option value="여" selected>여</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 프로필 정보 -->
+            <div id="profile_info3" class="form_request flex_start_column">
+                <div class="form_top form_request flex_between">
+                    <h5 class="h5_N_type01">2024년 9월 19일 (목)</h5>
+                </div>
+                <div class="form_text2 flex_start_column">
+                    <label for="등원 상태">등원 상태</label>
+                    <div class="flex_start">
+                        <div class="toKinder_state">등원</div>
+                        <input id="toKinder_time" type="text" placeholder="08:50">
+                    </div>
+                </div>
+                <div class="form_text2 flex_start_column">
+                    <label for="수정 사유">수정 사유</label>
+                    <ul class="toKinder_btn flex_between">
+                        <li><button class="btn_white btn_active01" onclick="toKinderButtonClick(this)">전자 출결 사용 누락</button></li>
+                        <li><button class="btn_white" onclick="toKinderButtonClick(this)">현장 학습</button></li>
+                        <li><button class="btn_white" onclick="toKinderButtonClick(this)">인식기 미지참</button></li>
+                        <li><button class="btn_white" onclick="toKinderButtonClick(this)">인식기 오류</button></li>
+                    </ul>
+                </div>
+                <div class="modal_line"></div>
+                <div class="form_text2 flex_start_column">
+                    <label for="하원 상태">하원 상태</label>
+                    <div class="flex_start">
+                        <div class="toHome_state">하원</div>
+                        <input id="toHome_time" type="text" placeholder="08:50">
+                    </div>
+                </div>
+                <div class="form_text2 flex_start_column">
+                    <label for="수정 사유">수정 사유</label>
+                    <ul class="toHome_btn flex_between">
+                        <li><button class="btn_white btn_active01" onclick="toHomeButtonClick(this)">전자 출결 사용 누락</button></li>
+                        <li><button class="btn_white" onclick="toHomeButtonClick(this)">현장 학습</button></li>
+                        <li><button class="btn_white" onclick="toHomeButtonClick(this)">인식기 미지참</button></li>
+                        <li><button class="btn_white" onclick="toHomeButtonClick(this)">인식기 오류</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalModifyBtn" class="modal_btn_blue01">수정</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

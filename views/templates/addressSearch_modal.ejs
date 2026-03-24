@@ -1,0 +1,78 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">주소 검색</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap">
+            <!-- 원 정보 -->
+            <div class="kinder_addressTop flex_between">
+                <select name="address01" id="address01" class="select_03">
+                    <option disabled selected>전국</option>
+                    <option value="서울특별시">서울특별시</option>
+                    <option value="부산광역시">부산광역시</option>
+                    <option value="대구광역시">대구광역시</option>
+                    <option value="인천광역시">인천광역시</option>
+                    <option value="광주광역시">광주광역시</option>
+                    <option value="대전광역시">대전광역시</option>
+                    <option value="울산광역시">울산광역시</option>
+                    <option value="세종특별자치시">세종특별자치시</option>
+                    <option value="경기도">경기도</option>
+                    <option value="강원도">강원도</option>
+                    <option value="충청북도">충청북도</option>
+                    <option value="충청남도">충청남도</option>
+                    <option value="전라북도">전라북도</option>
+                    <option value="전라남도">전라남도</option>
+                    <option value="경상북도">경상북도</option>
+                    <option value="경상남도">경상남도</option>
+                    <option value="제주특별자치도">제주특별자치도</option>
+                </select>
+                <select name="address02" id="address02" class="select_03">
+                    <option disabled selected>시/군구</option>
+                </select>
+            </div>
+            <div class="kinder_addressMain flex_between">
+                <div class="contents_box search_wrap flex_start">
+                    <input type="text" placeholder="유치원/어린이집 도로명 주소를 검색해 주세요" id="kinder_name" class="text_input">
+                    <label for="text_delete" class="label_tdelete flex_center">
+                        <button type="button" class="btn_tdelete" onclick="clearInputText(this)">
+                            <span class="blind">삭제</span>
+                        </button>
+                    </label>
+                </div>
+                <button type="button" class="btn_search user_btn_blue04">검색</button>
+            </div>
+            <div id="kinder_list">
+                <p class="p_16px">총 -개</p>
+                <ul>
+                    <li class="flex_between">
+                        <div class="kinder_wrap">
+                            <p class="p_16px">e편한산들어린이집</p>
+                            <div class="kinder_address_num flex_start">
+                                <p id="zipcode" class="p_14px">12280</p>
+                                <p id="address" class="p_14px">경기도 남양주시 오남읍 양지로 240번길 37 관리동</p>
+                            </div>
+                        </div>
+                        <button class="btn_blueline02">선택</button>
+                    </li>
+                </ul>
+            </div>
+            <input type="text" placeholder="상세 주소를 입력해 주세요" id="kinder_addressDetail" class="text_input">
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalRegisterBtn" class="modal_btn_blue01">등록</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

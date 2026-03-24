@@ -1,0 +1,239 @@
+<div class="header_wrap">
+    <div class="center">
+        <div class="flex_between">
+            <div class="header_L flex_start">
+                <!-- header 로고 영역 -->
+                <a href="login">
+                    <h1 class="h1_logo">
+                        <span class="blind">아이타요 로고</span>
+                    </h1>
+                </a>
+                <!-- header 로고 영역 -->
+        
+                <!-- gnb 영역 -->
+                <nav id="gnb">
+                    <ul class="flex_start">
+                        <li>
+                            <a href="#none">등하원 관리</a>
+                            <div class="sub_menu01">
+                                <ul>
+                                    <li>
+                                        <a href="/Teacher_Goto_Schedule">인솔 스케줄</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">출석부 관리</a>
+                            <div class="sub_menu01">
+                                <ul>
+                                    <li>
+                                        <a href="/Teacher_Attendance_Register">출석부 작성</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Teacher_Attendance_CheckChild">출석부 조회</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- gnb 영역 -->
+            </div>
+        
+            <!-- snb -->
+            <div id="snb" class="flex_right">
+                <div class="logout">
+                    <a href="#none">LOGOUT</a>
+                </div>
+                <a href="/Teacher_Mypage_Option" id="user_mypage">
+                    <div class="img_mypage">
+                        <span class="blind">마이페이지</span>
+                    </div>
+                </a>
+            </div>
+            <!-- snb -->
+        </div>
+    </div>
+</div>
+
+<!-- 모바일 메뉴 -->
+<div id="m_menu">
+    <a href="#none" class="m_menu02">
+        <span class="blind">모바일 메뉴</span>
+    </a>
+</div>
+<div class="m_wrap m_02">
+    <div class="m_top">
+        <div class="flex_between">
+            <div class="flex_start">
+                <a href="/Teacher_Mypage_Option" id="m_profile_img">
+                    <img src="/images/img_profile.png" alt="프로필 이미지">
+                </a>
+                <h2 class="h2_G_type01">이아현</h2>
+                <p class="p_16px">선생님</p>
+            </div>
+            <button class="m_x">
+                <span class="blind">닫기</span>
+            </button>
+        </div>
+    </div>
+    <div class="m_notice">
+        <ul>
+            <li>
+                <p class="p_20px">금일 공지사항입니다.</p>
+            </li>
+            <li>
+                <p class="p_20px">금일 공지사항입니다.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="m_list">
+        <ul>
+            <li>
+                <a href="#none" class="flex_between">
+                    <p class="p_G_18px">등하원 관리</p>
+                    <div class="m_icon01"><span class="blind">꽃 아이콘</span></div>
+                </a>
+                <ol class="m_sub">
+                    <li>
+                        <a href="/Teacher_Goto_Schedule" class="flex_between">
+                            <p class="p_16px">인솔 스케줄</p>
+                            <div class="m_icon02"><span class="blind">화살표 아이콘</span></div>
+                        </a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="#none" class="flex_between">
+                    <p class="p_G_18px">출석부 관리</p>
+                    <div class="m_icon01"><span class="blind">꽃 아이콘</span></div>
+                </a>
+                <ol class="m_sub">
+                    <li>
+                        <a href="/Teacher_Attendance_Register" class="flex_between">
+                            <p class="p_16px">출석부 작성</p>
+                            <div class="m_icon02"><span class="blind">화살표 아이콘</span></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Teacher_Attendance_CheckChild" class="flex_between">
+                            <p class="p_16px">출석부 조회</p>
+                            <div class="m_icon02"><span class="blind">화살표 아이콘</span></div>
+                        </a>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="m_logout">
+        <p class="p_16px">LOGOUT</p>
+    </div>
+</div>
+<div class="m_back"></div>
+<!-- 모바일 메뉴 -->
+
+<script>
+    // gnb 서브메뉴 표시
+    document.querySelectorAll('#gnb > ul > li').forEach(item => {
+        item.addEventListener('mouseenter', (e) => {
+            const subMenu = e.currentTarget.querySelector('.sub_menu01');
+            if(subMenu) {
+                subMenu.style.display = 'block';
+            }
+        });
+        
+        item.addEventListener('mouseleave', (e) => {
+            const subMenu = e.currentTarget.querySelector('.sub_menu01');
+            if(subMenu) {
+                // 서브메뉴에 마우스가 있는지 확인
+                if(!subMenu.matches(':hover')) {
+                    subMenu.style.display = 'none';
+                }
+            }
+        });
+    });
+
+    // 서브메뉴 마우스 이벤트
+    document.querySelectorAll('.sub_menu01').forEach(subMenu => {
+        subMenu.addEventListener('mouseleave', (e) => {
+            e.currentTarget.style.display = 'none';
+        });
+    });
+    
+    // 모바일 메뉴 열기 
+    document.querySelector('#m_menu > a').addEventListener('click', () => {
+        const mWrap = document.querySelector('.m_wrap');
+        const mBack = document.querySelector('.m_back');
+        
+        mWrap.style.transition = 'transform 0.3s ease';
+        
+        mWrap.style.transform = 'translateX(100%)';
+        mBack.style.transform = 'translateX(100%)';
+        
+        mWrap.style.display = 'block';
+        mBack.style.display = 'block';
+        
+        setTimeout(() => {
+            mWrap.style.transform = 'translateX(0)';
+            mBack.style.transform = 'translateX(0)';
+        }, 0);
+    });
+
+    // 모바일 메뉴 닫기
+    document.querySelector('.m_x').addEventListener('click', () => {
+        const mWrap = document.querySelector('.m_wrap');
+        const mBack = document.querySelector('.m_back');
+        
+        mWrap.style.transform = 'translateX(100%)';
+        mBack.style.transform = 'translateX(100%)';
+        
+        setTimeout(() => {
+            mWrap.style.display = 'none';
+            mBack.style.display = 'none';
+        }, 300);
+    });
+
+    document.querySelector('.m_back').addEventListener('click', () => {
+        const mWrap = document.querySelector('.m_wrap');
+        const mBack = document.querySelector('.m_back');
+        
+        mWrap.style.transform = 'translateX(100%)';
+        mBack.style.transform = 'translateX(100%)';
+        
+        setTimeout(() => {
+            mWrap.style.display = 'none';
+            mBack.style.display = 'none';
+        }, 300);
+    });
+
+    // 모바일 메뉴 서브메뉴 토글
+    document.querySelectorAll('.m_list > ul > li > a').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const currentLi = e.currentTarget.parentElement;
+            const currentSubMenu = currentLi.querySelector('.m_sub');
+            
+            // 다른 모든 서브메뉴 닫기
+            document.querySelectorAll('.m_list > ul > li > .m_sub').forEach(subMenu => {
+                if(subMenu !== currentSubMenu) {
+                    subMenu.style.maxHeight = '0';
+                    subMenu.style.display = 'none';
+                }
+            });
+            
+            // 현재 클릭한 메뉴의 서브메뉴 토글
+            if(currentSubMenu) {
+                if(currentSubMenu.style.display === 'block') {
+                    currentSubMenu.style.maxHeight = '0';
+                    currentSubMenu.style.display = 'none';
+                } else {
+                    currentSubMenu.style.transition = 'max-height 0.2s ease';
+                    currentSubMenu.style.display = 'block';
+                    currentSubMenu.style.maxHeight = currentSubMenu.scrollHeight + 10 + 'px';
+                }
+            }
+        });
+    });
+</script>

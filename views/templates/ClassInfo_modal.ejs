@@ -1,0 +1,57 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">반 상세</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap modal_01 flex_start2">
+            <!-- 프로필 이미지 -->
+            <div id="profile_img" class="form_request">
+                <img src="/images/img_profile02_modal.png" alt="원아 프로필 이미지">
+            </div>
+
+            <!-- 프로필 정보 -->
+            <div id="profile_info" class="form_request flex_start_column">
+                <div class="form_text flex_start_column">
+                    <label for="반 이름">반 이름</label>
+                    <input id="class_name" type="text" placeholder="햇님반" disabled>
+                </div>
+                <div class="form_select02 flex_start_column">
+                    <div class="flex_between">
+                        <label for="담당 선생님">담당 선생님</label>
+                    </div>
+                    <div id="second_input" class="flex_start">
+                        <select name="teacher_name" class="select_01" disabled>
+                            <option disabled selected>선택</option>
+                            <option value="이아현" selected>이아현</option>
+                            <option value="김유진">김유진</option>
+                            <option value="최재현">최재현</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="반 인원">반 인원</label>
+                    <input id="class_number" type="text" placeholder="반 인원을 숫자만 입력하세요" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalModifyBtn" class="modal_btn_blue01">수정</button>
+        </li>
+        <li>
+            <button type="button" id="modalDeleteBtn" class="modal_btn_blue01">삭제</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

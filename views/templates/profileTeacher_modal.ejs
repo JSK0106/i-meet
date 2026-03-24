@@ -1,0 +1,64 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">선생님 상세</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap modal_01 flex_start2">
+            <!-- 프로필 이미지 -->
+            <div id="profile_img" class="form_request">
+                <img src="/images/img_profile01_modal.png" alt="선생님 프로필 이미지">
+            </div>
+
+            <!-- 프로필 정보 -->
+            <div id="profile_info" class="form_request flex_start_column">
+                <div class="form_text flex_start_column">
+                    <label for="이름">이름</label>
+                    <input id="teacher_name" type="text" placeholder="이아현" disabled>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="휴대폰 번호">휴대폰 번호</label>
+                    <input id="teacher_phone" type="text" placeholder="010-XXXX-XXXX" disabled>
+                </div>
+                <div class="form_select flex_start_column">
+                    <label for="직급">직급</label>
+                    <select name="teacher_rank" class="select_01" disabled>
+                        <option disabled selected>선택</option>
+                        <option value="정교사">정교사</option>
+                        <option value="보육교사" selected>보육교사</option>
+                        <option value="체육교사">체육교사</option>
+                        <option value="특수교사">특수교사</option>
+                        <option value="인턴교사">인턴교사</option>
+                    </select>
+                </div>
+                <div class="form_select flex_start_column">
+                    <label for="담당 반">담당 반</label>
+                    <select name="class_name" class="select_01" disabled>
+                        <option disabled selected>선택</option>
+                        <option value="햇님반" selected>햇님반</option>
+                        <option value="달님반">달님반</option>
+                        <option value="별님반">별님반</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalModifyBtn" class="modal_btn_blue01">수정</button>
+        </li>
+        <li>
+            <button type="button" id="modalDeleteBtn" class="modal_btn_blue01">삭제</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">차량 예약</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap">
+            <div class="form_top form_request flex_between">
+                <h5 class="h5_N_type01">2024년 9월 19일 (목)</h5>
+                <div class="form_top_select flex_right">
+                    <select name="child_list" class="select_02 select_parents">
+                        <option value="서하린" selected>서하린</option>
+                        <option value="서하준">서하준</option>
+                    </select>
+                </div>
+            </div>
+            <div class="reserve">
+                <div id="reserve01" class="reserve_yes">
+                    <div id="state_wrap01" class="form_request">
+                        <div class="form_select flex_start_column">
+                            <div class="flex_between">
+                                <label for="등원 차량">등원 차량</label>
+                                <div class="flex_right">
+                                    <button onclick="handleReserveClick('reserve01', this)" id="btn_reserve" class="btn_gray04 btn_active03">예약</button>
+                                    <button onclick="handleReserveClick('reserve01', this)" id="btn_notreserve" class="btn_gray04">미예약</button>
+                                </div>
+                            </div>
+                            <div class="reserve_car flex_start">
+                                <select name="car_num" class="select_01 select_parents">
+                                    <option disabled selected>선택</option>
+                                    <option value="1호차(12가 1234)">1호차(12가 1234)</option>
+                                    <option value="2호차(34가 3456)">2호차(34가 3456)</option>
+                                    <option value="3호차(56가 5678)">3호차(56가 5678)</option>
+                                </select>
+                                <select name="탑승위치(시간)" class="select_01 select_parents">
+                                    <option disabled selected>선택</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reserve_day01" class="form_request flex_between">
+                        <label for="일괄 적용">일괄 적용</label>
+                        <ul class="form_item flex_right">
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="전체" class="checkbox03">
+                                <p class="p_14px">평일 전체</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="월요일" class="checkbox03">
+                                <p class="p_14px">월요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="화요일" class="checkbox03">
+                                <p class="p_14px">화요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="수요일" class="checkbox03">
+                                <p class="p_14px">수요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="목요일" class="checkbox03">
+                                <p class="p_14px">목요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day01" value="금요일" class="checkbox03">
+                                <p class="p_14px">금요일</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="notreserve_box">
+                        <p class="p_12px">미예약 사유를 선택해 주세요</p>
+                        <div class="flex_start">
+                            <select name="car_num" class="select_01 select_parents" disabled>
+                                <option disabled selected>선택</option>
+                                <option value="결석 예정">결석 예정</option>
+                                <option value="지각 예정">지각 예정</option>
+                            </select>
+                            <input type="text" placeholder="사유를 작성하세요" disabled>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="reserve02">
+                    <div id="state_wrap02" class="form_request">
+                        <div class="form_select flex_start_column">
+                            <div class="flex_between">
+                                <label for="하원 차량">하원 차량</label>
+                                <div class="flex_right">
+                                    <button onclick="handleReserveClick('reserve02', this)" id="btn_reserve" class="btn_gray04">예약</button>
+                                    <button onclick="handleReserveClick('reserve02', this)" id="btn_notreserve" class="btn_gray04 btn_active03">미예약</button>
+                                </div>
+                            </div>
+                            <div class="reserve_car flex_start">
+                                <select name="car_num" class="select_01 select_parents" disabled>
+                                    <option disabled selected>선택</option>
+                                    <option value="1호차(12가 1234)">1호차(12가 1234)</option>
+                                    <option value="2호차(34가 3456)">2호차(34가 3456)</option>
+                                    <option value="3호차(56가 5678)">3호차(56가 5678)</option>
+                                </select>
+                                <select name="탑승위치(시간)" class="select_01 select_parents" disabled>
+                                    <option disabled selected>선택</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                    <option value="대명아파트(09:30)">대명아파트(09:30)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reserve_day02" class="form_request flex_between">
+                        <label for="일괄 적용">일괄 적용</label>
+                        <ul class="form_item flex_right">
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="전체" class="checkbox03" disabled>
+                                <p class="p_14px">평일 전체</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="월요일" class="checkbox03" disabled>
+                                <p class="p_14px">월요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="화요일" class="checkbox03" disabled>
+                                <p class="p_14px">화요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="수요일" class="checkbox03" disabled>
+                                <p class="p_14px">수요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="목요일" class="checkbox03" disabled>
+                                <p class="p_14px">목요일</p>
+                            </li>
+                            <li class="flex_right">
+                                <input type="checkbox" name="reserve_day02" value="금요일" class="checkbox03" disabled>
+                                <p class="p_14px">금요일</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="notreserve_box" class="box_active">
+                        <p class="p_12px">미예약 사유를 선택해 주세요</p>
+                        <div class="flex_start">
+                            <select name="reason" class="select_01 select_parents">
+                                <option disabled selected>선택</option>
+                                <option value="결석 예정">결석 예정</option>
+                                <option value="지각 예정">지각 예정</option>
+                            </select>
+                            <input type="text" placeholder="사유를 작성하세요" id="reason">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalRegisterBtn" class="modal_btn_orange01">등록</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_orangeline01">닫기</button>
+        </li>
+    </div>
+</div>
+
+<script>
+function handleReserveClick(reserveId, clickedButton) {
+    // 해당 reserve 영역의 모든 버튼에서 btn_active03 클래스 제거
+    const buttons = document.querySelectorAll(`#${reserveId} .btn_gray04`);
+    buttons.forEach(button => {
+        button.classList.remove('btn_active03');
+    });
+    
+    // 클릭된 버튼에 btn_active03 클래스 추가
+    clickedButton.classList.add('btn_active03');
+
+    // reserve_yes 클래스 및 disabled 상태 관리
+    const reserveDiv = document.getElementById(reserveId);
+    const isReserveBtn = clickedButton.id === 'btn_reserve';
+    
+    if(isReserveBtn) {
+        reserveDiv.classList.add('reserve_yes');
+    } else {
+        reserveDiv.classList.remove('reserve_yes');
+    }
+
+    // select와 input 요소들의 disabled 상태 설정
+    const stateWrapId = reserveId === 'reserve01' ? 'state_wrap01' : 'state_wrap02';
+    const reserveDayId = reserveId === 'reserve01' ? 'reserve_day01' : 'reserve_day02';
+    
+    const selects = document.querySelectorAll(`#${stateWrapId} select, #${reserveDayId} select`);
+    const inputs = document.querySelectorAll(`#${stateWrapId} input, #${reserveDayId} input`);
+    
+    selects.forEach(select => {
+        select.disabled = !isReserveBtn;
+    });
+    
+    inputs.forEach(input => {
+        input.disabled = !isReserveBtn;
+    });
+
+    // notreserve_box 관련 처리
+    const notreserveBox = reserveDiv.querySelector('#notreserve_box');
+    const notreserveBtn = reserveDiv.querySelector('#btn_notreserve');
+    
+    if(notreserveBtn.classList.contains('btn_active03')) {
+        notreserveBox.classList.add('box_active');
+    } else {
+        notreserveBox.classList.remove('box_active');
+    }
+
+    // notreserve_box의 select와 input disabled 처리
+    const notreserveSelects = notreserveBox.querySelectorAll('select');
+    const notreserveInputs = notreserveBox.querySelectorAll('input');
+
+    if(!notreserveBox.classList.contains('box_active')) {
+        notreserveSelects.forEach(select => {
+            select.disabled = true;
+        });
+        notreserveInputs.forEach(input => {
+            input.disabled = true;
+        });
+    } else {
+        notreserveSelects.forEach(select => {
+            select.disabled = false;
+        });
+        notreserveInputs.forEach(input => {
+            input.disabled = false;
+        });
+    }
+}
+</script>

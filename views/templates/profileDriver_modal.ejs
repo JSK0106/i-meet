@@ -1,0 +1,73 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">기사님 상세</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap modal_01 flex_start2">
+            <!-- 프로필 이미지 -->
+            <div id="profile_img" class="form_request">
+                <img src="/images/img_profile03_modal.png" alt="기사님 프로필 이미지">
+            </div>
+
+            <!-- 프로필 정보 -->
+            <div id="profile_info" class="form_request flex_start_column">
+                <div class="form_text flex_start_column">
+                    <label for="이름">이름</label>
+                    <input id="driver_name" type="text" placeholder="김운혁" disabled>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="생년월일">생년월일</label>
+                    <input id="driver_birth" type="text" placeholder="19760202" disabled>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="휴대폰 번호">휴대폰 번호</label>
+                    <input id="driver_phone" type="text" placeholder="010-XXXX-XXXX" disabled>
+                </div>
+                <div class="form_select flex_start_column">
+                    <label for="면허 종류">면허 종류</label>
+                    <select name="driver_license01" class="select_01" disabled>
+                        <option disabled selected>선택</option>
+                        <option value="1종 대형">1종 대형</option>
+                        <option value="1종 보통" selected>1종 보통</option>
+                        <option value="2종 보통">2종 보통</option>
+                    </select>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="갱신 만료일자">갱신 만료일자</label>
+                    <input id="driver_license02" type="text" placeholder="20300101" disabled>
+                </div>
+                <div class="form_select03 flex_start_column">
+                    <label for="차량">차량</label>
+                    <div class="flex_start">
+                        <select name="driver_car01" class="select_02 select_inner" disabled>
+                            <option disabled selected>번호</option>
+                            <option value="1호" selected>1호</option>
+                            <option value="2호">2호</option>
+                            <option value="3호">3호</option>
+                        </select>
+                        <input id="driver_car02" type="text" placeholder="차량 번호를 입력하세요" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalModifyBtn" class="modal_btn_blue01">수정</button>
+        </li>
+        <li>
+            <button type="button" id="modalDeleteBtn" class="modal_btn_blue01">삭제</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">원아 상세</h2>
+        <button id="modalCloseBtn" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap modal_01 flex_start2">
+            <!-- 프로필 이미지 -->
+            <div id="profile_img" class="form_request">
+                <img src="/images/img_profile02_modal.png" alt="원아 프로필 이미지">
+            </div>
+
+            <!-- 프로필 정보 -->
+            <div id="profile_info" class="form_request flex_start_column">
+                <div class="form_text flex_start_column">
+                    <label for="이름">이름</label>
+                    <input id="child_name" type="text" placeholder="서하린" disabled>
+                </div>
+                <div class="form_text flex_start_column">
+                    <label for="생년월일">생년월일</label>
+                    <input id="child_birth" type="text" placeholder="010-XXXX-XXXX" disabled>
+                </div>
+                <div class="form_select flex_start_column">
+                    <label for="성별">성별</label>
+                    <select name="child_sex" class="select_01" disabled>
+                        <option disabled>선택</option>
+                        <option value="남">남</option>
+                        <option value="여" selected>여</option>
+                    </select>
+                </div>
+                <div class="form_select flex_start_column">
+                    <label for="반">반</label>
+                    <select name="child_class" class="select_01" disabled>
+                        <option disabled>선택</option>
+                        <option value="햇님반">햇님반</option>
+                        <option value="달님반">달님반</option>
+                        <option value="별님반" selected>별님반</option>
+                    </select>
+                </div>
+                <div class="form_select02 flex_start_column">
+                    <label for="보호자">보호자</label>
+                    <div id="third_input" class="flex_start">
+                        <div>
+                            <div class="flex_start">
+                                <select name="parents_relation" class="select_02 select_inner" disabled>
+                                    <option disabled selected>관계</option>
+                                    <option value="부" id="parents_relation">부</option>
+                                    <option value="모" id="parents_relation" selected>모</option>
+                                    <option value="조부" id="parents_relation">조부</option>
+                                    <option value="조모" id="parents_relation">조모</option>
+                                    <option value="기타" id="parents_relation">기타</option>
+                                </select>
+                                <input id="parents_name" type="text" placeholder="서하모" disabled>
+                            </div>
+                            <input id="parents_phone" type="text" class="input_02" placeholder="010-XXXX-XXXX" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalModifyBtn" class="modal_btn_blue01">수정</button>
+        </li>
+        <li>
+            <button type="button" id="modalDeleteBtn" class="modal_btn_blue01">삭제</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>

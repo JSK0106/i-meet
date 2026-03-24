@@ -1,0 +1,101 @@
+<div class="modal_con">
+    <!-- modal header -->
+    <div class="modal_header flex_between">
+        <h2 class="h2_G_type02">기사님 배정</h2>
+        <button id="modalCloseBtn2" class="btn_x_modal">
+            <span class="blind">모달창 닫기</span>
+        </button>
+    </div>
+
+    <!-- modal body -->
+    <div class="modal_body">
+        <div class="form_wrap">
+            <div class="form_top form_request flex_between">
+                <h5 class="h5_N_type01">2024년 9월 19일 (목)</h5>
+                <div class="form_top_select flex_right">
+                    <select name="driver_car01" class="select_02">
+                        <option value="1호" selected>1호</option>
+                        <option value="2호">2호</option>
+                        <option value="3호">3호</option>
+                    </select>
+                    <select name="attendance_state" class="select_02">
+                        <option value="등원" selected>등원</option>
+                        <option value="하원">하원</option>
+                    </select>
+                </div>
+            </div>
+            <div class="route_modal flex_start2">
+                <!-- 운행 루트 -->
+                <div class="route_wrap form_request flex_start_column">
+                    <ul id="route_01">
+                        <li>
+                            <div class="route_num">1</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="route_num">2</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="route_num">3</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="route_num">4</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="route_num">5</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="route_num">6</div>
+                            <div class="route_text flex_start_column">
+                                <p class="p_16px">한마음 어린이집</p>
+                                <p class="p_14px">출발 (09:00)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 기사님 정보 -->
+                <div id="attendance_info" class="form_request flex_start_column">
+                    <div class="form_select02 flex_start_column">
+                        <label for="기사님">기사님</label>
+                        <select name="driver_name" class="select_01">
+                            <option disabled selected>선택</option>
+                            <option value="김운혁">김운혁</option>
+                            <option value="최운혁">최운혁</option>
+                            <option value="전운혁">전운혁</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 하단 버튼 -->
+    <div class="modal_btn_wrap flex_center">
+        <li>
+            <button type="button" id="modalRegisterBtn" class="modal_btn_blue01">등록</button>
+        </li>
+        <li>
+            <button type="button" id="modalCancelBtn2" class="modal_btn_blueline01">닫기</button>
+        </li>
+    </div>
+</div>
